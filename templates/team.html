@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block style %}
+
+<style>
+    .card {
+        margin-top: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+</style>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid"
+    style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+    <div class=" container">
+        <h1 class="display-4 pt-5">Our Team</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Omanshu Mahawar</h2>
+                </div>
+                <div class="card-body">
+                    181C0237
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
