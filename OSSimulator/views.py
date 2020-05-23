@@ -6,3 +6,6 @@ def index(request):
 
 def team(request):
     return render(request, 'team.html')
+
+def terminal(request):
+    return render(request, 'terminal.html')
