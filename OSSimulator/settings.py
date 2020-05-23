@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'systemcalls.apps.SystemcallsConfig',
     'deadlock',
     'pagerep',
+    'cpusch',
 ]
 
 MIDDLEWARE = [
