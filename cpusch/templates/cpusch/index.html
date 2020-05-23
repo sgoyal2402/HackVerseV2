@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,64 +10,103 @@
 		</div>
 	</div>
 </nav>
-<br><br><br>
+<br><br><br> -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
 <style>
-body{
-	background-color: .bg-light;
-	text-align: left;
-}
-.table{
-	width:50%;
-	margin:0 auto;
-}
-.algorithms{
-	margin: 0 auto;
-}
-ul{
-	list-style-type: none;
-}
-h1{
-	font-style:normal;
-	font-size:3.0em;
-}
-td{
-	font-size: 1em;
-}
+	/* body {
+		background-color: .bg-light;
+		text-align: left;
+	} */
+
+	.table {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	.algorithms {
+		margin: 0 auto;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	h1 {
+		font-style: normal;
+		font-size: 3.0em;
+	}
+
+	td {
+		font-size: 1em;
+	}
 </style>
-<body>
-	<h1 align="center">CPU Scheduling</h1>
-	<div class="algorithms">
-		<table class="table">
-	<tr>
-		<td><a></a></td>
-	</tr>
-	<td><a href='fcfs.html'>First Come First Serve</a></td>
-	</tr>
-	<tr>
-	<td><a href='srtf.html'>Shortest Job First (Preemptive) / Shortest Remaining Time First</a></td>
-	</tr>
-	<tr>
-		<td><a href='sjf.html'>Shortest Job First (Non-Preemptive)</a></td>
-	</tr>
-	<tr>
-		<td><a href='ljf.html'>Longest Job first</a></td>
-	</tr>
-	<tr>
-		<td><a href='lrtf.html'>Longest Remaining Time first</a></td>
-	</tr>
-	<tr>
-		<td><a href='priority.html'>Priority (Preemptive)</a></td>
-	</tr>
-	<tr>
-		<td><a href='prioritynonpre.html'>Priority (Non-Preemptive)</a></td>
-	</tr>
-	<tr>
-		<td><a href="round-robin.html">Round Robin</a></td>
-	</tr>
-	<tr>
-		<td><a href='hrrn.html'>Highest Response Ratio Next</a></td>
-	</tr>
-</table>
+{% endblock %}
+
+{% block js %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+	crossorigin="anonymous"></script>
+
+{% endblock %}
+
+<!-- <body> -->
+{% block body %}
+<div class="jumbotron jumbotron-fluid"
+	style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+	<div class=" container">
+		<h1 class="display-4 pt-5">CPU Scheduling</h1>
+		<!-- <p class="lead">Deadlock Detection with Resource Allocation Graph</p> -->
+	</div>
 </div>
-</body>
-</html>
+<div class="algorithms">
+	<table class="table">
+		<tr>
+			<td><a></a></td>
+		</tr>
+		<td><a href='fcfs.html'>First Come First Serve</a></td>
+		</tr>
+		<tr>
+			<td><a href='srtf.html'>Shortest Job First (Preemptive) / Shortest Remaining Time First</a></td>
+		</tr>
+		<tr>
+			<td><a href='sjf.html'>Shortest Job First (Non-Preemptive)</a></td>
+		</tr>
+		<tr>
+			<td><a href='ljf.html'>Longest Job first</a></td>
+		</tr>
+		<tr>
+			<td><a href='lrtf.html'>Longest Remaining Time first</a></td>
+		</tr>
+		<tr>
+			<td><a href='priority.html'>Priority (Preemptive)</a></td>
+		</tr>
+		<tr>
+			<td><a href='prioritynonpre.html'>Priority (Non-Preemptive)</a></td>
+		</tr>
+		<tr>
+			<td><a href="round-robin.html">Round Robin</a></td>
+		</tr>
+		<tr>
+			<td><a href='hrrn.html'>Highest Response Ratio Next</a></td>
+		</tr>
+	</table>
+
+	<div style="margin-bottom: 100px;">
+
+	</div>
+</div>
+
+{% endblock %}
+<!-- </body> -->
+
+<!-- </html> -->

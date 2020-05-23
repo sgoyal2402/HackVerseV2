@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html> {% load static %}
 
 <head>
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 
@@ -41,145 +46,387 @@
 </style>
 
 <body>
-    <div class="tite" style="background-color:#00b894;opacity:0.8;color:black;width: 0;height: 0">
-        <div class="tite1" style="opacity: 0">
-            <h1 style="margin:0px"> Belady's Anomaly</h1>
-        </div>
-    </div>
-    <div class="container-fluid" style="margin-top:2px;">
-        <a href="/">
-            <button type="button" class="btn btn-primary" style="float:right">Go To Desktop</button>
-        </a>
-    </div>
-    <div class="panel panel-secondary" style="background-color: #00b894 ;margin-top:0px;color: white;opacity:0.7">
-        <div class="panel-heading">
-            <h1 style="text-alig
-        var text = JSON.strn:center;">
-        </div>
 
-        <div class="panel-body row">
-            <div class="col-md-8">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">OS Simulator</a>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-wifi icon"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-bluetooth icon"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-volume-up icon"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-battery-three-quarters icon"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-power-off icon"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="flyoutMenu">
+        <div class="container">
+            <div class="row col-12 mt-3">
+                <h4 class="text-white">Documentation</h4>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="tab text-white" style="text-align: center;">
+                        <i class="fa fa-file-code-o mt-3"></i>
+                        <p>System calls</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="tab text-white" style="text-align: center;">
+                        <i class="fa fa-file-code-o mt-3"></i>
+                        <p>CPU Scheduling</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="tab text-white" style="text-align: center;">
+                        <i class="fa fa-file-code-o mt-3"></i>
+                        <p>Disk Scheduling</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="tab text-white" style="text-align: center;">
+                        <i class="fa fa-file-code-o mt-3"></i>
+                        <p>Memory Allocation</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="tab text-white" style="text-align: center;">
+                        <i class="fa fa-file-code-o mt-3"></i>
+                        <p>File Allocation</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="tab text-white" style="text-align: center;">
+                        <i class="fa fa-file-code-o mt-3"></i>
+                        <p>Page Replacement</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="tab text-white" style="text-align: center;">
+                        <i class="fa fa-file-code-o mt-3"></i>
+                        <p>Banker's Algorithm</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="tab text-white" style="text-align: center;">
+                        <i class="fa fa-file-code-o mt-3"></i>
+                        <p>Deadlock Detection</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-12" style="margin-top: 80px;">
+                <h4 class="text-white">Simulations</h4>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <a href="/systemcalls/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-terminal mt-3"></i>
+                            <p>System calls</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/cpusch/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>CPU Scheduling</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/discsch/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Disk Scheduling</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/memalloc/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Memory Allocation</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/filealloc/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>File Allocation</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/pagerep/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Page Replacement</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/bankers/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Banker's Algorithm</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/deadlock/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Deadlock Detection</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid"
+        style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+        <div class=" container">
+            <h1 class="display-4 pt-5">Belady's Anomaly</h1>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2 ml-auto">
+                <a href="/">
+                    <button type="button" class="btn btn-primary" style="float:right">Go To Desktop</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="panel-heading">
+        <h1 style="text-alig
+        var text = JSON.strn:center;">
+    </div> -->
+
+    <div class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-md-12">
 
                 <input type="text" class="requests  infield form-control" style="color: darkred;"
                     placeholder="Enter requests"></input>
             </div>
-
-
-
-
-        </div>
-        <div class="row" style="margin-left: 10px;">
-            1 2 3 4 1 2 5 1 2 3 4 5<br>
-            3 2 1 0 3 2 4 3 2 1 0 4<br>
         </div>
         <div class="row">
-            <div class="col-md-5">
-
+            <div class="col-3 mt-3">
+                Anomaly Sequence
             </div>
-            <div class="col-md-5">
-                <button style="width: 30% ;" id="submit" class="btn btn-submit ">Submit</button>
-            </div>
-        </div>
-
-
-    </div>
-
-    <div class="container  " style="opacity: 0.8">
-
-
-        <div class="row my-4  ">
-
-            <button class="proceed hidden btn btn-primary" id="proceed1">Proceed</button><br><br>
-
-            <div style="background-color: #F3D250;">
-
-                <h1 style="border-bottom: 2px solid black">FIFO</h1>
-
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-5">
-                        <div class="row">
-                            <div id="fifo">
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="answer" id="answers1"></div>
-
-                        </div>
-
-
-
-
-                    </div>
-
-
-                    <div class="col-md-5">
-                        <div class="row">
-                            <div id="fifo2">
-
-                            </div>
-                        </div>
-
-                        <div class="answer" id="answers21"></div>
-
-
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div id="conclusion1">
-                    </div>
-                </div>
-            </div>
-            <div class="row my-4">
+            <div class="col-9 mt-3">
+                1 2 3 4 1 2 5 1 2 3 4 5
             </div>
 
-
-
-            <div style="background-color: #90CCF4;">
-
-                <h1 style="border-bottom: 2px solid black">LRU</h1>
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-5">
-                        <div class="row">
-                            <div id="lru">
-
-                            </div>
-                        </div>
-
-                        <div class="answer" id="answers2"></div>
-
-
-                    </div>
-
-                    <div class="col-md-5">
-                        <div class="row">
-                            <div id="lru2">
-
-                            </div>
-                        </div>
-
-                        <div class="answer" id="answers22"></div>
-
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="conclusion2">
-                    </div>
-                </div>
+            <div class="col-3">
+                Anomaly Sequence
+            </div>
+            <div class="col-9">
+                3 2 1 0 3 2 4 3 2 1 0 4
             </div>
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-5 mt-3">
+            <button style="width: 30% ;" id="submit" class="btn btn-submit ">Submit</button>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+
+        <button class="proceed hidden btn btn-primary" id="proceed1">Proceed</button><br><br>
+
+        <div class="row">
+
+
+            <div class="col-12">
+
+                <div class="card" style="width: 100%;">
+
+                    <div class="card-header">
+                        <h1>FIFO</h1>
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <div id="fifo">
+
+                                        </div>
+
+
+                                        <div class="answer" id="answers1"></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <div id="fifo2">
+
+                                        </div>
+
+
+
+                                        <div class="answer" id="answers21">
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="z-index: 50;">
+                            <div id="conclusion1">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>LRU</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <div id="lru">
+
+                                        </div>
+
+
+                                        <div class="answer" id="answers2"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <div id="lru2">
+
+                                        </div>
+
+
+                                        <div class="answer" id="answers22"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="z-index: 50;">
+                            <div id="conclusion2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     </div>
     </div>
+
+    <footer class="fixed-bottom">
+        <div class="row">
+            <div class="col-2">
+                <a class="nav-link" id="WindowButton" href="#"><i class="fa fa-windows"
+                        style="font-size: 40px;"></i></a>
+            </div>
+
+            <div class="col-2">
+
+                <a class="nav-link" href="#"><i class="fa fa-folder" style="font-size: 40px;"></i></a>
+
+            </div>
+            <div class="col-2">
+
+                <a class="nav-link" href="#"><i class="fa fa-chrome" style="font-size: 40px;"></i></a>
+
+            </div>
+            <div class="col-2">
+
+                <a class="nav-link" href="#"><i class="fa fa-cog" style="font-size: 40px;"></i></a>
+
+            </div>
+            <div class="col-2">
+
+                <a class="nav-link" href="#"><i class="fa fa-terminal" style="font-size: 40px;"></i></a>
+
+            </div>
+            <div class="col-2">
+
+                <a class="nav-link" href="#"><i class="fa fa-users" style="font-size: 40px;"></i></a>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <div style="margin-bottom: 100px;">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 
 
 </body>
@@ -189,16 +436,35 @@
 <script>
 
 
-    $(document).ready(function () {
+    // $(document).ready(function () {
 
 
-        $(".tite").animate({ width: '100%', height: '60px', innerhtml: 'PAGE REPLACEMENT ALGORITHMS' }, 1200, function () {
-            $(".tite1").animate({ opacity: '1' });
-        });
+    //     $(".tite").animate({ width: '100%', height: '60px', innerhtml: 'PAGE REPLACEMENT ALGORITHMS' }, 1200, function () {
+    //         $(".tite1").animate({ opacity: '1' });
+    //     });
 
 
 
-    });
+    // });
+
+    var WindowButton = document.querySelector('#WindowButton');
+    var flyoutMenu = document.querySelector('#flyoutMenu');
+
+    WindowButton.addEventListener("click", showMenu, false);
+    flyoutMenu.addEventListener("click", hideMenu, false);
+
+    function showMenu(e) {
+        flyoutMenu.classList.add("show");
+
+        document.body.style.overflow = 'hidden';
+    }
+
+    function hideMenu(e) {
+        flyoutMenu.classList.remove("show");
+        e.stopPropagation();
+
+        document.body.style.overflow = "auto";
+    }
 
     $("#submit").click(function () {
 
@@ -209,7 +475,7 @@
         $("#fifo,#lru,#fifo2,#lru2,.answer").empty();
         // $("#lru").empty();
         // $("#opt").empty();
-        $('#fifo,#lru,#fifo2,#lru2').css('height', (data.length / 8) * 180 + 'px');
+        // $('#fifo,#lru,#fifo2,#lru2').css('height', (data.length / 8) * 180 + 'px');
         var reqs = JSON.stringify(data.map(Number));
         var csize = 3;
         var csize2 = 4;
@@ -309,11 +575,11 @@
 
         if (output[idname]["states"][i]["status"] == 'H') {
             div0.innerHTML = "HIT";
-            div0.className += " hit";
+            div0.className += " hit bg-success";
         }
         else {
             div0.innerHTML = "MISS";
-            div0.className += " miss";
+            div0.className += " miss bg-danger";
         }
 
         card.appendChild(div0);
@@ -387,11 +653,11 @@
 
         if (output2[s]["states"][i]["status"] == 'H') {
             div0.innerHTML = "HIT";
-            div0.className += " hit";
+            div0.className += " hit bg-success";
         }
         else {
             div0.innerHTML = "MISS";
-            div0.className += " miss";
+            div0.className += " miss bg-danger";
         }
 
         card.appendChild(div0);
@@ -407,8 +673,8 @@
         $("#proceed" + no).addClass("hidden");
 
         div0 = document.getElementById("answers2" + no);
-        div0.innerHTML = "<br><h2 style='text-align: center;'>HITS    : " + hits2[no - 1] + "<br>  PAGE FAULTS  : " + misses2[no - 1] + "<br>  HIT RATIO: " + hitratio2[no - 1] + "</h2>";
-        div0.setAttribute("text-align", "center");
+        div0.innerHTML = "<br><h4>Hits    : " + hits2[no - 1] + "<br>  Page Faults  : " + misses2[no - 1] + "<br>  Hit Ratio    : " + hitratio2[no - 1] + "</h4>";
+        // div0.setAttribute("text-align", "center");
         br = document.createElement("br");
         $(div0).hide().fadeIn(1000);
 
@@ -417,17 +683,17 @@
             div3 = document.getElementById("conclusion1");
             div4 = document.getElementById("conclusion2");
             if (misses[0] >= misses2[0]) {
-                div3.innerHTML = " Request Pattern does not suffer from belady's anomaly";
+                div3.innerHTML = " <h2>Request Pattern does not suffer from belady's anomaly </h2>";
             }
             else {
-                div3.innerHTML = " Request Pattern suffers from belady's anomaly";
+                div3.innerHTML = "<h2>Request Pattern suffers from belady's anomaly</h2>";
             }
 
             if (misses[1] >= misses2[1]) {
-                div4.innerHTML = " Request Pattern does not suffer from belady's anomaly";
+                div4.innerHTML = "<h2>Request Pattern does not suffer from belady's anomaly</h2>";
             }
             else {
-                div4.innerHTML = " Request Pattern suffers from belady's anomaly";
+                div4.innerHTML = "<h2>Request Pattern suffers from belady's anomaly</h2>";
             }
 
         }
@@ -453,8 +719,8 @@
         $("#proceed" + no).addClass("hidden");
 
         div0 = document.getElementById("answers" + no);
-        div0.innerHTML = "<br><h2 style='text-align: center;'>HITS    : " + hits[no - 1] + "<br>  PAGE FAULTS   : " + misses[no - 1] + "<br>  HIT RATIO: " + hitratio[no - 1] + "</h2>";
-        div0.setAttribute("text-align", "center");
+        div0.innerHTML = "<br><h4>Hits    : " + hits[no - 1] + "<br>  Page Faults   : " + misses[no - 1] + "<br>  Hit Ratio : " + hitratio[no - 1] + "</h4>";
+        // div0.setAttribute("text-align", "center");
         br = document.createElement("br");
         $(div0).hide().fadeIn(1000);
 
@@ -481,9 +747,62 @@
 
 </script>
 <style>
-    .tab-content,
+    /* .tab-content,
     .nav nav-tabs {
         padding: 30px;
+    } */
+
+    .navbar {
+        background-color: rgb(33, 20, 71);
+    }
+
+    body {
+        overflow-x: hidden;
+        font-family: 'Didact Gothic';
+        background-color: #f2f7f7;
+    }
+
+    footer {
+        background-color: rgb(33, 20, 71);
+    }
+
+    #flyoutMenu {
+        width: 100%;
+        height: 93%;
+
+        position: fixed;
+        bottom: 0;
+
+        z-index: 100;
+
+        background: rgba(10, 0, 73, 0.8);
+        /* background-color: black; */
+
+        backdrop-filter: blur(3px);
+
+        transform: translate3d(-100%, 100%, 0);
+
+        transition: transform .3s cubic-bezier(0, .52, 0, 1);
+
+        overflow: hidden;
+    }
+
+    #flyoutMenu.show {
+        transform: translate3d(0, 0, 0);
+    }
+
+    .tab {
+        transition: transform .2s;
+        background: rgba(1, 119, 216, 0.5);
+    }
+
+    .tab i {
+        font-size: 30px;
+    }
+
+    .tab:hover {
+        transform: scale(1.1);
+        background: rgb(1, 119, 216);
     }
 
     #result {
@@ -495,6 +814,18 @@
     }
 
     .card {
+        margin-top: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+    }
+
+    /* .card {
         position: relative;
         border: 1px solid black;
         float: left;
@@ -502,7 +833,7 @@
         width: 100px;
         margin-left: 10px;
         margin-bottom: 20px;
-    }
+    } */
 
     .card1 {
         font-size: 13px;
@@ -512,7 +843,7 @@
         text-align: center;
         height: 0px;
 
-        width: 90%;
+        width: 100%;
 
         margin-left: 10px;
         margin-bottom: 20px;
@@ -533,9 +864,10 @@
         float: right;
         text-align: center;
         color: white;
+        width: 40px;
     }
 
-    .hit {
+    /* .hit {
         background-color: green;
         border: 2px solid black;
 
@@ -547,7 +879,7 @@
         background-color: red;
         border: red;
 
-    }
+    } */
 
     .status {
         color: black;
@@ -566,9 +898,9 @@
         text-transform: capitalize;
     }
 
-    .answer {
+    /* .answer {
         font-family: Verdana;
-    }
+    } */
 
     .nav.nav-tabs {
         margin-left: 10px;
@@ -623,23 +955,21 @@
         background-color: #ddffff;
     }
 
-    body {
-
-        background-image: url("http://www.izzness.com/postpic/2015/08/free-professional-web-page-backgrounds_667343.jpg");
-    }
-
-    #conclusion1 {
+    /* #conclusion1 {
         text-align: center;
         margin-top: 10px;
         background-color: #ddffff;
         margin-bottom: 20px;
 
+    } */
+
+    #conclusion1 {
+        margin-top: 30px;
+        text-align: center;
     }
 
     #conclusion2 {
         text-align: center;
-        margin-top: 10px;
-        background-color: #ddffff;
-        margin-bottom: 20px;
+        margin-top: 30px;
     }
 </style>
