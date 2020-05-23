@@ -1,0 +1,56 @@
+{% extends "ossim/base.html" %}
+
+{% block title %} <title> Disk Scheduling Algorithms </title> {% endblock %}
+
+
+{% block links %}
+{% load static %}
+<link href="{%static 'filesystem/styles.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<nav role="navigation" class="navbar navbar-default">
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/process/">Process Scheduling</a></li>
+            <li><a href="/memory/page/">Page Replacement</a></li>
+            <li class="active"><a href="/disk/">Disk Scheduling</a></li>
+            <li><a href="/synchro/semaphores/">Semaphores</a></li>
+            <li><a href="/synchro/socket/">Sockets</a></li>
+            <li><a href="/filesystem/">File Structure</a></li>
+            <li><a href="/mat/">Memory Allocation</a></li>
+            <li><a href="/synchro/deadlocks/">Banker's Algorithm</a></li>
+        </ul>
+    </div>
+</nav>
+
+<h1>Disk Scheduling</h1>
+<div id="choice">
+    <ul id="ulchoice">
+        <a href="/disk/demo/"><li id="lichoice">Demo</li></a>
+        <a href="/wiki/disk/"><li id="wikichoice">Wiki</li></a>
+    </ul>
+</div>
+
+<!-- <div class="main-container">
+{% for alg in algos %}
+    <div class="alg-container">
+      <div class="alg-name">  {{alg.name}} </div>
+      <div class="alg-description">
+        {{alg.description}}
+      </div>
+    </div>
+    <br>
+{% endfor %}
+<a href="/disk/demo/" class="btn btn-primary">Demo</a><br>
+
+
+</div> -->
+{% endblock %}
+{% block style %}
+<style>
+
+</style>
+
+{% endblock %}

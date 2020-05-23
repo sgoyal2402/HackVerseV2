@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class DiscschConfig(AppConfig):
-    name = 'discsch'
+class DiskConfig(AppConfig):
+    name = 'disksch'
