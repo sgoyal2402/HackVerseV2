@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<style>
+    #submit {
+
+        background-color: red;
+
+    }
+
+    #submit:hover {
+        background-color: blue;
+    }
+
+    .sub {}
+
+    .infield {
+
+        border: 2px solid darkred;
+
+    }
+
+    .cachefield {
+
+        float: left;
+        margin-right: 20px;
+    }
+</style>
+
+<body>
+    <div class="tite" style="background-color:#00b894;opacity:0.8;color:black;width: 0;height: 0">
+        <div class="tite1" style="opacity: 0">
+            <h1 style="margin:0px"> Belady's Anomaly</h1>
+        </div>
+    </div>
+    <div class="container-fluid" style="margin-top:2px;">
+        <a href="/">
+            <button type="button" class="btn btn-primary" style="float:right">Go To Desktop</button>
+        </a>
+    </div>
+    <div class="panel panel-secondary" style="background-color: #00b894 ;margin-top:0px;color: white;opacity:0.7">
+        <div class="panel-heading">
+            <h1 style="text-alig
+        var text = JSON.strn:center;">
+        </div>
+
+        <div class="panel-body row">
+            <div class="col-md-8">
+
+                <input type="text" class="requests  infield form-control" style="color: darkred;"
+                    placeholder="Enter requests"></input>
+            </div>
+
+
+
+
+        </div>
+        <div class="row" style="margin-left: 10px;">
+            1 2 3 4 1 2 5 1 2 3 4 5<br>
+            3 2 1 0 3 2 4 3 2 1 0 4<br>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-5">
+                <button style="width: 30% ;" id="submit" class="btn btn-submit ">Submit</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container  " style="opacity: 0.8">
+
+
+        <div class="row my-4  ">
+
+            <button class="proceed hidden btn btn-primary" id="proceed1">Proceed</button><br><br>
+
+            <div style="background-color: #F3D250;">
+
+                <h1 style="border-bottom: 2px solid black">FIFO</h1>
+
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div id="fifo">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="answer" id="answers1"></div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div id="fifo2">
+
+                            </div>
+                        </div>
+
+                        <div class="answer" id="answers21"></div>
+
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div id="conclusion1">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-4">
+            </div>
+
+
+
+            <div style="background-color: #90CCF4;">
+
+                <h1 style="border-bottom: 2px solid black">LRU</h1>
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div id="lru">
+
+                            </div>
+                        </div>
+
+                        <div class="answer" id="answers2"></div>
+
+
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div id="lru2">
+
+                            </div>
+                        </div>
+
+                        <div class="answer" id="answers22"></div>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="conclusion2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+
+    $(document).ready(function () {
+
+
+        $(".tite").animate({ width: '100%', height: '60px', innerhtml: 'PAGE REPLACEMENT ALGORITHMS' }, 1200, function () {
+            $(".tite1").animate({ opacity: '1' });
+        });
+
+
+
+    });
+
+    $("#submit").click(function () {
+
+        data = $(".requests").val().trim().split(" ");
+
+        count1 = count2 = count3 = count4 = count5 = 0;
+
+        $("#fifo,#lru,#fifo2,#lru2,.answer").empty();
+        // $("#lru").empty();
+        // $("#opt").empty();
+        $('#fifo,#lru,#fifo2,#lru2').css('height', (data.length / 8) * 180 + 'px');
+        var reqs = JSON.stringify(data.map(Number));
+        var csize = 3;
+        var csize2 = 4;
+        cacheSize = 3;
+        cacheSize2 = 4;
+
+        $.post('algo/', { requests: reqs, size: csize }, function (result) {
+
+            output = result;
+
+            hits = [output['fifo']["hits"], output['lru']["hits"]];
+            misses = [output['fifo']["miss"], output['lru']["miss"]];
+            hitratio = [output['fifo']["hit-ratio"], output['lru']["hit-ratio"]];
+            for (i = 0; i < data.length; i++) {
+
+                proceed1();
+
+            }
+
+        });
+
+        $.post('algo/', { requests: reqs, size: csize2 }, function (result) {
+
+
+            output2 = result;
+
+            hits2 = [output2['fifo']["hits"], output2['lru']["hits"]];
+            misses2 = [output2['fifo']["miss"], output2['lru']["miss"]];
+            hitratio2 = [output2['fifo']["hit-ratio"], output2['lru']["hit-ratio"]];
+
+
+            for (i = 0; i < data.length; i++) {
+
+                proceed2();
+
+            }
+
+
+        });
+
+
+    });
+
+    function drawCard1(idname, count) {
+
+        var i, j;
+        var input = document.getElementById("input");
+        var result = document.getElementById("idname");
+        if (count == -7) {
+
+            var card = document.createElement("div");
+            card.setAttribute("class", "card");
+
+            var div = document.createElement("div");
+            div.setAttribute("class", "request");
+            div.innerHTML = "Request :";
+            card.appendChild(div);
+            for (j = 0; j < cacheSize; ++j) {
+                var div1 = document.createElement("div");
+                div1.innerHTML = "Cache[" + j + "]";
+                card.appendChild(div1);
+            }
+
+            var div0 = document.createElement("div");
+            div0.setAttribute("class", "hitmiss status");
+            div0.innerHTML = "Status : ";
+            card.appendChild(div0);
+
+            $(card).hide().appendTo("#" + idname).fadeIn(1000);
+
+
+        }
+
+        i = count;
+        var card = document.createElement("div");
+        card.setAttribute("class", "card1");
+        var tempCache = output[idname]["states"][i]["cache"].split(" ");
+
+        var div = document.createElement("div");
+        div.setAttribute("class", "request cachefield");
+        div.innerHTML = data[i];
+        card.appendChild(div);
+
+        for (j = 0; j < cacheSize; ++j) {
+
+            var div1 = document.createElement("div");
+            div1.setAttribute("class", " cachefield");
+            if (tempCache[j] == "-1") div1.innerHTML = "#"
+            else div1.innerHTML = tempCache[j];
+
+            card.appendChild(div1);
+        }
+
+
+        var div0 = document.createElement("div");
+        div0.setAttribute("class", " hitmiss ");
+
+        if (output[idname]["states"][i]["status"] == 'H') {
+            div0.innerHTML = "HIT";
+            div0.className += " hit";
+        }
+        else {
+            div0.innerHTML = "MISS";
+            div0.className += " miss";
+        }
+
+        card.appendChild(div0);
+
+        $(card).hide().appendTo("#" + idname).fadeIn(1);
+        //result.appendChild(card);
+        $(card).animate({ height: '+=40px' }, 0, function () {
+
+        });
+    }
+
+
+    function drawCard2(idname, count) {
+
+        var i, j;
+        var input = document.getElementById("input");
+        var result = document.getElementById("idname");
+        if (count == -7) {
+
+            var card = document.createElement("div");
+            card.setAttribute("class", "card");
+
+            var div = document.createElement("div");
+            div.setAttribute("class", "request");
+            div.innerHTML = "Request :";
+            card.appendChild(div);
+            for (j = 0; j < cacheSize2; ++j) {
+                var div1 = document.createElement("div");
+                div1.innerHTML = "Cache[" + j + "]";
+                card.appendChild(div1);
+            }
+
+            var div0 = document.createElement("div");
+            div0.setAttribute("class", "hitmiss status");
+            div0.innerHTML = "Status : ";
+            card.appendChild(div0);
+
+            $(card).hide().appendTo("#" + idname).fadeIn(1000);
+
+
+        }
+
+        i = count;
+        var card = document.createElement("div");
+        card.setAttribute("class", "card1");
+        if (idname == "fifo2") {
+            s = "fifo";
+        }
+        else
+            s = "lru";
+        var tempCache = output2[s]["states"][i]["cache"].split(" ");
+
+        var div = document.createElement("div");
+        div.setAttribute("class", "request cachefield");
+        div.innerHTML = data[i];
+        card.appendChild(div);
+
+        for (j = 0; j < cacheSize2; ++j) {
+
+            var div1 = document.createElement("div");
+            div1.setAttribute("class", " cachefield");
+            if (tempCache[j] == "-1") div1.innerHTML = "#"
+            else div1.innerHTML = tempCache[j];
+
+            card.appendChild(div1);
+        }
+
+
+        var div0 = document.createElement("div");
+        div0.setAttribute("class", " hitmiss ");
+
+        if (output2[s]["states"][i]["status"] == 'H') {
+            div0.innerHTML = "HIT";
+            div0.className += " hit";
+        }
+        else {
+            div0.innerHTML = "MISS";
+            div0.className += " miss";
+        }
+
+        card.appendChild(div0);
+
+        $(card).hide().appendTo("#" + idname).fadeIn(1);
+        //result.appendChild(card);
+        $(card).animate({ height: '+=40px' }, 0, function () {
+
+        });
+    }
+
+    function cleanup2(no) {
+        $("#proceed" + no).addClass("hidden");
+
+        div0 = document.getElementById("answers2" + no);
+        div0.innerHTML = "<br><h2 style='text-align: center;'>HITS    : " + hits2[no - 1] + "<br>  PAGE FAULTS  : " + misses2[no - 1] + "<br>  HIT RATIO: " + hitratio2[no - 1] + "</h2>";
+        div0.setAttribute("text-align", "center");
+        br = document.createElement("br");
+        $(div0).hide().fadeIn(1000);
+
+        div0 = document.getElementById("conclusion" + no);
+        if (no == 2) {
+            div3 = document.getElementById("conclusion1");
+            div4 = document.getElementById("conclusion2");
+            if (misses[0] >= misses2[0]) {
+                div3.innerHTML = " Request Pattern does not suffer from belady's anomaly";
+            }
+            else {
+                div3.innerHTML = " Request Pattern suffers from belady's anomaly";
+            }
+
+            if (misses[1] >= misses2[1]) {
+                div4.innerHTML = " Request Pattern does not suffer from belady's anomaly";
+            }
+            else {
+                div4.innerHTML = " Request Pattern suffers from belady's anomaly";
+            }
+
+        }
+    }
+
+    function proceed2() {
+
+        drawCard2("fifo2", count3);
+        count3++;
+        if (count3 == data.length) {
+            cleanup2(1);
+        }
+        drawCard2("lru2", count4);
+        count4++;
+        if (count4 == data.length) {
+            cleanup2(2);
+        }
+
+
+    }
+
+    function cleanup1(no) {
+        $("#proceed" + no).addClass("hidden");
+
+        div0 = document.getElementById("answers" + no);
+        div0.innerHTML = "<br><h2 style='text-align: center;'>HITS    : " + hits[no - 1] + "<br>  PAGE FAULTS   : " + misses[no - 1] + "<br>  HIT RATIO: " + hitratio[no - 1] + "</h2>";
+        div0.setAttribute("text-align", "center");
+        br = document.createElement("br");
+        $(div0).hide().fadeIn(1000);
+
+    }
+
+    function proceed1() {
+
+        drawCard1("fifo", count1);
+        count1++;
+        if (count1 == data.length) {
+            cleanup1(1);
+        }
+        drawCard1("lru", count2);
+        count2++;
+        if (count2 == data.length) {
+            cleanup1(2);
+        }
+
+
+    }
+
+
+
+
+</script>
+<style>
+    .tab-content,
+    .nav nav-tabs {
+        padding: 30px;
+    }
+
+    #result {
+        margin-top: 25px;
+    }
+
+    #input {
+        margin: 10px;
+    }
+
+    .card {
+        position: relative;
+        border: 1px solid black;
+        float: left;
+        text-align: center;
+        width: 100px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .card1 {
+        font-size: 13px;
+        position: relative;
+        border: 1px dotted black;
+
+        text-align: center;
+        height: 0px;
+
+        width: 90%;
+
+        margin-left: 10px;
+        margin-bottom: 20px;
+        background-color: #ECECEC;
+
+    }
+
+    .request {
+        border-right: 3px dashed black;
+        margin-right: 20px;
+        margin-left: 10px;
+        width: 40px;
+    }
+
+    .hitmiss {
+
+        height: 100%;
+        float: right;
+        text-align: center;
+        color: white;
+    }
+
+    .hit {
+        background-color: green;
+        border: 2px solid black;
+
+
+
+    }
+
+    .miss {
+        background-color: red;
+        border: red;
+
+    }
+
+    .status {
+        color: black;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #answers {
+        display: block;
+        padding: 30px;
+    }
+
+    .ans {
+        text-transform: capitalize;
+    }
+
+    .answer {
+        font-family: Verdana;
+    }
+
+    .nav.nav-tabs {
+        margin-left: 10px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #csize {
+        width: 300px;
+        position: relative;
+        float: left;
+    }
+
+    #submit {
+        margin-left: 10px;
+    }
+
+    .proceed {
+        float: right;
+        margin-right: 10px;
+        background-color: #00b894;
+
+    }
+
+    .proceed:hover {
+        float: right;
+        margin-right: 10px;
+        background-color: darkolivegreen;
+
+
+    }
+
+    .btn-submit {
+
+        background-color: lightseagreen;
+        color: whitesmoke;
+    }
+
+    .btn-submit:hover {
+
+        background-color: slateblue;
+        color: whitesmoke;
+    }
+
+    .panel-heading {
+        background-color: #00b894;
+    }
+
+    .panel-footer {
+        background-color: #ddffff;
+    }
+
+    body {
+
+        background-image: url("http://www.izzness.com/postpic/2015/08/free-professional-web-page-backgrounds_667343.jpg");
+    }
+
+    #conclusion1 {
+        text-align: center;
+        margin-top: 10px;
+        background-color: #ddffff;
+        margin-bottom: 20px;
+
+    }
+
+    #conclusion2 {
+        text-align: center;
+        margin-top: 10px;
+        background-color: #ddffff;
+        margin-bottom: 20px;
+    }
+</style>

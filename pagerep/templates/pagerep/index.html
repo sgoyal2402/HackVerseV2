@@ -1,0 +1,462 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<style>
+    #submit {
+
+        background-color: red;
+
+    }
+
+    #submit:hover {
+        background-color: blue;
+    }
+
+    .sub {}
+
+    .infield {
+
+        border: 2px solid darkred;
+
+    }
+
+    .cachefield {
+
+        float: left;
+        margin-right: 20px;
+    }
+</style>
+
+<body>
+    <!-- <div class="tite" style="background-color:#00b894;opacity:0.8;color:black;width: 0;height: 0">
+        <div class="tite1" style="opacity: 0">
+            <h1 style="margin:0px"> PAGE &nbsp; REPLACEMENT &nbsp; ALGORITHMS</h1>
+        </div>
+    </div> -->
+
+    <div class="jumbotron jumbotron-fluid"
+        style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+        <div class=" container">
+            <h1 class="display-4 pt-5">Page Replacement Algorothms</h1>
+        </div>
+    </div>
+
+
+
+
+    <div class="row" style="margin-bottom: 50px;">
+        <div class="col-2 ml-auto">
+            <a href="/pagerep/page2">
+                <button type="button" class="btn btn-primary">Belady's Anomaly</button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-bottom: 50px;">
+        <div class="row">
+
+
+
+            <div class="col-md-5">
+
+                <input type="text" class="requests form-control" placeholder="Enter requests"></input>
+            </div>
+            <div class="col-md-5">
+
+                <input type="text" class="size form-control" id="csize" placeholder="Enter number of frames"></input>
+            </div>
+            <div class="col-md-2">
+                <button id="submit" class="btn btn-submit ">Submit</button>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="row">
+            <button class="proceed hidden btn btn-primary" id="proceed1">Start</button>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        <h1 style="border-bottom: 2px solid black">FIFO</h1>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div id="fifo">
+
+                            </div>
+                        </div>
+
+                        <div clas="row">
+                            <div class="answer" id="answers1"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4" style="background-color: #90CCF4;">
+
+                <h1 style="border-bottom: 2px solid black">LRU</h1>
+                <div class="row">
+                    <div id="lru">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="answer" id="answers2"></div>
+                </div>
+            </div>
+
+            <div class="col-md-4" style="background-color: #F78888;">
+
+                <h1 style="border-bottom: 2px solid black">OPTIMUM</h1>
+                <div class="row">
+                    <div id="opt">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="answer" id="answers3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            --
+        </div>
+        <div class="row my-4">
+            <div class="col-md-4" style="background-color: #F78888;">
+
+                <h1 style="border-bottom: 2px solid black">LFU</h1>
+                <div class="row">
+                    <div id="lfu">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="answer" id="answers4"> </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="background-color: #F3D250;">
+
+                <h1 style="border-bottom: 2px solid black">SECOND CHANCE</h1>
+                <div class="row">
+                    <div id="sc">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="answer" id="answers5"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+
+    $("#submit").click(function () {
+        data = $(".requests").val().trim().split(" ");
+        cacheSize = parseInt($(".size").val().trim());
+        count1 = count2 = count3 = count4 = count5 = 0;
+        $("#fifo,#lru,#opt,#lfu,#sc,.answer").empty();
+        // $("#lru").empty();
+        // $("#opt").empty();
+        $('#fifo,#lru,#opt,#lfu,#sc').css('height', (data.length / 8) * 180 + 'px');
+        var reqs = JSON.stringify(data.map(Number));
+        var csize = JSON.stringify(cacheSize);
+        $.post('/pagerep/algo/', { requests: reqs, size: csize }, function (result) {
+
+            output = result;
+
+            hits = [output['fifo']["hits"], output['lru']["hits"], output['opt']["hits"], output['lfu']["hits"], output['sc']["hits"]];
+            misses = [output['fifo']["miss"], output['lru']["miss"], output['opt']["miss"], output['lfu']["miss"], output['sc']["miss"]];
+            hitratio = [output['fifo']["hit-ratio"], output['lru']["hit-ratio"], output['opt']["hit-ratio"], output['lfu']["hit-ratio"], output['sc']["hit-ratio"]];
+            $(".proceed").removeClass("hidden");
+        });
+        div0 = document.getElementById("proceed1");
+        div0.innerHTML = "Start";
+
+
+
+    });
+
+    function drawCard(idname, count) {
+        var i, j;
+        var input = document.getElementById("input");
+        var result = document.getElementById("idname");
+        if (count == -7) {
+
+            var card = document.createElement("div");
+            card.setAttribute("class", "card");
+
+            var div = document.createElement("div");
+            div.setAttribute("class", "request");
+            div.innerHTML = "Request :";
+            card.appendChild(div);
+            for (j = 0; j < cacheSize; ++j) {
+                var div1 = document.createElement("div");
+                div1.innerHTML = "Cache[" + j + "]";
+                card.appendChild(div1);
+            }
+
+            var div0 = document.createElement("div");
+            div0.setAttribute("class", "hitmiss status");
+            div0.innerHTML = "Status : ";
+            card.appendChild(div0);
+
+            $(card).hide().appendTo("#" + idname).fadeIn(1000);
+
+
+
+
+        }
+        i = count;
+        var card = document.createElement("div");
+        card.setAttribute("class", "card1");
+        var tempCache = output[idname]["states"][i]["cache"].split(" ");
+
+        var div = document.createElement("div");
+        div.setAttribute("class", "request cachefield");
+        div.innerHTML = data[i];
+        card.appendChild(div);
+        for (j = 0; j < cacheSize; ++j) {
+            var div1 = document.createElement("div");
+            div1.setAttribute("class", " cachefield");
+            if (tempCache[j] == "-1") div1.innerHTML = "#"
+            else div1.innerHTML = tempCache[j];
+            card.appendChild(div1);
+        }
+
+        var div0 = document.createElement("div");
+        div0.setAttribute("class", " hitmiss ");
+
+        if (output[idname]["states"][i]["status"] == 'H') {
+            div0.innerHTML = "HIT";
+            div0.className += " hit";
+        }
+        else {
+            div0.innerHTML = "MISS";
+            div0.className += " miss";
+        }
+        card.appendChild(div0);
+
+        $(card).hide().appendTo("#" + idname).fadeIn(1);
+        //result.appendChild(card);
+        $(card).animate({ height: '+=40px' }, 700, function () {
+
+        });
+    }
+
+    function cleanup(no) {
+        $("#proceed" + no).addClass("hidden");
+
+        div0 = document.getElementById("answers" + no);
+        div0.innerHTML = "<br><h2 style='text-align: center;'>HITS    : " + hits[no - 1] + "<br> PAGE FAULTS   : " + misses[no - 1] + "<br>  HIT RATIO: " + hitratio[no - 1] + "</h2>";
+        div0.setAttribute("text-align", "center");
+        br = document.createElement("br");
+        $(div0).hide().fadeIn(1000);
+
+    }
+    $("#proceed1").click(function () {
+        div0 = document.getElementById("proceed1");
+        div0.innerHTML = "continue";
+        drawCard("fifo", count1);
+        count1++;
+        if (count1 == data.length) {
+            cleanup(1);
+        }
+        drawCard("lru", count2);
+        count2++;
+        if (count2 == data.length) {
+            cleanup(2);
+        }
+        drawCard("opt", count3);
+        count3++;
+        if (count3 == data.length) {
+            cleanup(3);
+        }
+        drawCard("lfu", count4);
+        count4++;
+        if (count4 == data.length) {
+            cleanup(4);
+        }
+        drawCard("sc", count5);
+        count5++;
+        if (count5 == data.length) {
+            cleanup(5);
+        }
+
+    });
+
+
+</script>
+<style>
+    .tab-content,
+    .nav nav-tabs {
+        padding: 30px;
+    }
+
+    #result {
+        margin-top: 25px;
+    }
+
+    #input {
+        margin: 10px;
+    }
+
+    .card {
+        position: relative;
+        border: 1px solid black;
+        float: left;
+        text-align: center;
+        width: 100px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .card1 {
+        font-size: 13px;
+        position: relative;
+        border: 1px dotted black;
+
+        text-align: center;
+        height: 0px;
+
+        width: 90%;
+
+        margin-left: 10px;
+        margin-bottom: 20px;
+        background-color: #ECECEC;
+
+    }
+
+    .request {
+        border-right: 3px dashed black;
+        margin-right: 20px;
+        margin-left: 10px;
+        width: 40px;
+    }
+
+    .hitmiss {
+
+        height: 100%;
+        float: right;
+        text-align: center;
+        color: white;
+    }
+
+    .hit {
+        background-color: green;
+        border: 2px solid black;
+
+
+
+    }
+
+    .miss {
+        background-color: red;
+        border: red;
+
+    }
+
+    .status {
+        color: black;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #answers {
+        display: block;
+        padding: 30px;
+    }
+
+    .ans {
+        text-transform: capitalize;
+    }
+
+    .answer {
+        font-family: Verdana;
+    }
+
+    .nav.nav-tabs {
+        margin-left: 10px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #csize {
+        width: 300px;
+        position: relative;
+        float: left;
+    }
+
+    #submit {
+        margin-left: 10px;
+    }
+
+    .proceed {
+        float: right;
+        margin-right: 10px;
+        background-color: #00b894;
+
+    }
+
+    .proceed:hover {
+        float: right;
+        margin-right: 10px;
+        background-color: darkolivegreen;
+
+
+    }
+
+    .btn-submit {
+
+        background-color: lightseagreen;
+        color: whitesmoke;
+    }
+
+    .btn-submit:hover {
+
+        background-color: slateblue;
+        color: whitesmoke;
+    }
+
+    .panel-heading {
+        background-color: #00b894;
+    }
+
+    .panel-footer {
+        background-color: #ddffff;
+    }
+</style>
