@@ -10,7 +10,6 @@ urlpatterns = [
     path('lrtf.html/', views.lrtf, name='lrtf'),
     path('priority.html/', views.priority, name='priority'),
     path('prioritynonpre.html/', views.prioritynonpre, name='prioritynonpre'),
-    path('compare.html/', views.compare, name='compare'),
     path('round-robin.html/', views.rr, name='rr'),
     path('hrrn.html/', views.hrrn, name='hrrn'),
 ]

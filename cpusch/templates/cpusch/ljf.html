@@ -15,18 +15,14 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="../os_sim.html">OS simulator</a>
+      <a class="navbar-brand" href="../">Go Back</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li class="active"><a href="wiki.html">Wiki</a></li>
-    </ul>
   </div>
 </nav>
 <br><br><br>
 
 <script>
-  /*FCFS SCHEDULING*/
+  /*LJF*/
 
 var sequence;
 var complete;
@@ -240,10 +236,10 @@ $(document).ready(function(){
   }
   else
   {
-    $("#Average").append("<b>The average waiting time of the given processes is "+average_wt+"</b><br>");
-    $("#Average").append("<b>The average turn around time of the given processes is "+average_tat+"</b><br>");
-    $("#Average").append("<b>The throughput of the given processes is "+throughput+"</b><br>");
-    $("#Average").append("<b>The CPU efficiency is "+cpu_efficiency+"%</b><br>");
+    $("#Average").append("<b>Average Wait Time: "+average_wt.toFixed(2)+"</b><br>");
+    $("#Average").append("<b>Average Turn Around Time: "+average_tat.toFixed(2)+"</b><br>");
+    $("#Average").append("<b>Throughput: "+throughput.toFixed(2)+"</b><br>");
+    $("#Average").append("<b>CPU Efficiency: "+cpu_efficiency.toFixed(2)+"%</b><br>");
   }
 
 }
@@ -281,23 +277,23 @@ body{
   text-align: center;
 }
 th {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
 }
 #b{
   font-size:2 em;
 }
 h1{
-  font-style: italic;
+  font-style: normal;
 }
 .btn{
   border-radius:12px;
-  background-color: #4CAF50;
+  background-color: #000000;
   color:white;
 }
 p{
   font-size: 3 em;
-  font-style: italic;
+  font-style: normal;
 }
 #ptab{
   display: none;
@@ -337,15 +333,13 @@ p{
   <h1>
     Longest Job First
   </h1>
-  <h2>
-    Gantt Chart
-  </h2>
-  <br>
+  <h2>_____________</h2>
+  <br> 
   <div>
-      <h3>Entered Processes:</h3>
+      <h5>Please enter Arrival and Burst time:</h5>
     <table id="ep" class="table table-bordered" style="width:500px">
       <thead>
-      <th>PNO.</th>
+      <th>Process Id</th>
       <th>Arrival Time </th>
       <th>Burst Time  </th>
 
@@ -355,15 +349,19 @@ p{
   </thead>
 </table>
   </div>
-  <input type='number' min="0" id='at1' placeholder="arrival time"></input>
-  <input type='number' min="0" id='bt1' placeholder="burst time "></input>
+  <br>
+  <input type='number' min="0" id='at1' placeholder="Arrival time"></input>
+  <input type='number' min="0" id='bt1' placeholder="Burst time "></input>
   <input type='hidden' min="0" value="0" id='io' placeholder="io time"></input>
   <input type='hidden' min="0" value="0" id='bt2'  placeholder="burst time 2"></input>
   <button id="add" class="btn" onclick="AddtoList()">Add</button>
+  <br><br>
+  <button id="start" class="btn">Schedule</button>
   <br>
-  <button id="start" class="btn">Start</button>
   <br>
-  <br>
+  <h3>
+    Gantt Chart
+  </h3>
   <div id="outer-div">
   </div>
   <br><br><br>
@@ -371,10 +369,10 @@ p{
   <table id="ptab" class="table table-bordered" style="width:600px">
   <thead>
   <tr id="thead">
-  <th>PNO.</th>
+  <br>
+  <th>Process Id</th>
   <th>Arrival time</th>
   <th>Burst time1</th>
-
   <th>Waiting time</th>
   <th>Turn Around Time</th>
   </tr>
@@ -383,7 +381,10 @@ p{
   </tbody>
   </thead>
   </table>
-    </div>
-    <p id="Average"></p>
+  <br>
+
+  </div>
+  <p id="Average"></p>
+  <br><br>
 </body>
 </html>

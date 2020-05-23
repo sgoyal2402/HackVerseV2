@@ -26,9 +26,6 @@ def priority(request):
 def prioritynonpre(request):
     return render(request = request, template_name = 'cpusch/prioritynonpre.html' )
 
-def compare(request):
-    return render(request = request, template_name = 'cpusch/compare.html' )
-
 def rr(request):
     return render(request = request, template_name = 'cpusch/round-robin.html' )
 
