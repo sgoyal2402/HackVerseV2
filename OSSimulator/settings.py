@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'cpusch',
     'wikipages',
     'systemcalls',
+    'discsch',
 ]
 
 MIDDLEWARE = [
