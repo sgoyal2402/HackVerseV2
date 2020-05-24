@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+    <title>Deadlock Detection Algorithm Wiki</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        body {font-family: "Times New Roman", Georgia, Serif;}
+        h1,h2,h3,h4,h5,h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+    </style>
+
+<body style="background-color:black;color:white">
+
+<!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <a href="#home" class="w3-bar-item w3-button">Deadlock Detection Algorithm Wiki Page</a>
+            <!-- Right-sided navbar links. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#menu" class="w3-bar-item w3-button">Steps</a>
+            </div>
+        </div>
+    </div>
+
+<!-- Page content -->
+    <div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+    <div class="w3-row w3-padding-64" id="about">
+        
+
+        <div class="w3-col m6 w3-padding-large">
+            <h1 class="w3-center">About Deadlock Detection Algorithm</h1><br>
+            <p class="w3-large">If a system does not employ either a deadlock prevention or deadlock avoidance algorithm then a deadlock situation may occur. In this case-
+
+Apply an algorithm to examine state of system to determine whether deadlock has occurred or not.</p>
+            <p class="w3-large w3-text-grey w3-hide-medium">Let us assume that there are n processes and m resource types. Some data structures that are used to implement the deadlock detection algorithm are:
+                                                            1.<u>Available</u><br>
+                                                            A vector of length m indicates the number of available resources of each type.<br>
+                                                            
+                                                            2.<u>Allocation</u><br>
+                                                            An n*m matrix defines the number of resources of each type currently allocated to a process. Column represents resource and resource represent process.<br>
+                                                            3.<u>Request</u><br>
+                                                            An n*m matrix indicates the current request of each process. If request[i][j] equals k then process Pi is requesting k more instances of resource type Rj</p>
+        </div>
+    </div>
+    <hr>
+
+  <!-- Menu Section -->
+    <div class="w3-row w3-padding-64" id="menu">
+        <div class="w3-col l6 w3-padding-large">
+            <h1 class="w3-center">Algorithms</h1><br>
+            <h4>Steps of Algorithm</h4>
+            <p class="w3-text-grey">1.Let Work and Finish be vectors of length m and n respectively. Initialize<br> 
+				    -------------------------------------<br>	
+				    <code>Work= Available<br>
+				          For i=0, 1, …., n-1<br>
+				            if Requesti = 0, then Finish[i] = true;<br>
+					    else Finish[i]= false. <br>
+                                    
+                                    
+                                    -------------------------------------<br>
+                               
+                                    2.Find an index i such that both<br>
+                                    -------------------------------------<br>
+                                    <code>Finish[i] ==false<br>
+                                    Request(i) <= Work<br></code>
+                                    -------------------------------------<br>
+                                    If there is no such i present, then proceed to step 4.<br>
+                                  
+                                    3.Perform the following: <br>
+                                    -------------------------------------<br>
+                                    <code>Work = Work + Allocation(i);<br>
+                                    Finish[i] = true;<br></code>
+                                    -------------------------------------<br>
+                                    Go to step 2.<br>
+                                    4.If Finish[i]== false for some i<=n or i=0 then<br>
+				      the system is in a deadlocked state.<br>
+				      Moreover, if Finish[i]==false the process Pi is deadlocked.</p>
+        </div>
+        
+    </div>
+    <hr>
+
+<!-- End page content -->
+    </div>
+
+
+
+</body>
+</html>

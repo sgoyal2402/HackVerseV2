@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'deadlock',
     'pagerep',
     'cpusch',
+    'wikipages',
 ]
 
 MIDDLEWARE = [
