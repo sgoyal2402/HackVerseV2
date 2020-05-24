@@ -37,11 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'systemcalls.apps.SystemcallsConfig',
     'deadlock',
     'pagerep',
     'cpusch',
     'wikipages',
+    'systemcalls',
 ]
 
 MIDDLEWARE = [
