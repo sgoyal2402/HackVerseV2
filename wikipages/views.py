@@ -23,3 +23,6 @@ def pagerep(request):
 
 def syscall(request):
     return render(request, 'wikipages/syscallman.html');
+
+def memalloc(request):
+    return render(request, 'wikipages/MVT.html');

@@ -23,7 +23,7 @@
 <div class="jumbotron jumbotron-fluid"
     style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
     <div class=" container">
-        <h1 class="display-4 pt-5">About Banker's Algorithm</h1>
+        <h1 class="display-4 pt-5" style="text-align: center;">Banker's Algorithm</h1>
     </div>
 </div>
 
@@ -55,8 +55,7 @@
                 needs of all its customers. The bank would try to be in safe state always.
             </p>
 
-            <h4 style="margin-top: 80px; margin-bottom: 30px;">Following Data structures are used to implement the
-                Banker’s Algorithm:</h4>
+            <h2 style="margin-top: 80px; margin-bottom: 30px;text-align: center;">Data Structures Needed:</h2>
 
             <p>Let ‘n’ be the number of processes in the system and ‘m’ be the number of resources types.</p>
 
@@ -84,12 +83,8 @@
 
             <p>Need [ i, j ] = Max [ i, j ] – Allocation [ i, j ]</p>
 
-            <p>Allocationi specifies the resources currently allocated to process Pi and Needi specifies the additional
+            <p>Allocation specifies the resources currently allocated to process Pi and Needi specifies the additional
                 resources that process Pi may still request to complete its task.</p>
-
-            <h4 style="margin-top: 80px; margin-bottom: 30;">Banker’s algorithm consists of Safety algorithm and
-                Resource request algorithm
-            </h4>
         </div>
     </div>
 
@@ -97,8 +92,8 @@
     <!-- Menu Section -->
     <div class="w3-row w3-padding-64" id="menu">
         <div class="w3-col l6 w3-padding-large">
-            <h1 class="w3-center">Algorithms</h1><br>
-            <h4>Safety Algorithm</h4>
+            <h1 class="w3-center" style="text-align: center;"><strong>Algorithms</strong></h1><br>
+            <h4 style="text-align: center;"><strong>Safety Algorithm</strong></h4><br><br>
             <p class="w3-text-grey">1.Let Work and Finish be vectors of length m and n, respectively. Initially, <br>
                 -------------------------------------<br>
                 <code>Work = Available<br>
@@ -123,8 +118,8 @@
                 When an unfinished process is found, then the resources are allocated and the process is marked
                 finished. And then, the loop is repeated to check the same for all other processes.<br>
                 4.If Finish[i] == true for all i, then the system is in a safe state.<br>
-                That means if all processes are finished, then the system is in safe state.</p>
-            <h4>Resource Request Algorithm</h4>
+                That means if all processes are finished, then the system is in safe state.</p><br>
+            <h4 style="text-align: center;"><strong>Resource Request Algorithm</strong></h4><br><br>
             <p class="w3-text-grey">1.If number of requested instances of each resource is less than the need (which was
                 declared previously by the process), go to step 2.<br>
                 2.If number of requested instances of each resource type is less than the available resources of each
