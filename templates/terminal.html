@@ -13,7 +13,7 @@
 {% block style %}
 <style>
     body {
-        background-color: #000;
+        background-color: rgb(10, 0, 73);
         color: #fff
     }
 
@@ -25,7 +25,7 @@
     }
 
     #terminal .command {
-        background-color: #000;
+        background-color: rgb(10, 0, 73);
         font-family: "Lucida Console", Monaco, monospace;
         font-weight: 200;
         font-size: 15px;
@@ -498,35 +498,35 @@
             console.log(a[0]);
             if (a[0] == 'deadlock') {
 
-                window.location.href = '/deadlock'
+                window.location.href = '/wikipages/deadlock'
 
             }
             else if (a[0] == 'disk') {
 
-
+                window.location.href = '/wikipages/discsch'
 
             }
             else if (a[0] == 'bankalgo') {
-
+                window.location.href = '/wikipages/banker'
 
             }
             else if (a[0] == 'filealloc') {
-
+                window.location.href = '/wikipages/filealloc'
 
             }
             else if (a[0] == 'page') {
-
+                window.location.href = '/wikipages/pagerep'
 
             }
             else if (a[0] == 'memdemo') {
-
+                window.location.href = '/wikipages/memalloc'
 
             }
             else if (a[0] == 'syscall') {
-
+                window.location.href = '/wikipages/syscall'
             }
             else if (a[0] == 'cpusch') {
-
+                window.location.href = '/wikipages/cpusch'
             }
             else self.printa("Please enter a valid man command");
 

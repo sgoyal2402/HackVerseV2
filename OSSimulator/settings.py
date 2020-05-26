@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'wikipages',
     'systemcalls',
     'discsch',
+    'bankers',
 ]
 
 MIDDLEWARE = [
