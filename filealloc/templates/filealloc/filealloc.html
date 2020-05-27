@@ -1,61 +1,126 @@
-{% load static %}
-
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <script type = "text/javascript" src = "{% static 'js/filealloc.js' %}" >
+    <title>System Calls</title>
+    
     </script>
   </head>
-  <body>
-    <h1>File Allocation</h1>
-    <form id = "contAllocForm" method = "post" name = "contAllocForm">
+  <body> -->
 
-      <h2>Contiguous Allocation</h2>
-      <label>Enter filename: </label>
-      <input type="text" name="contAllocTF1" id="contAllocTF1">
-      <br><br>
-      <label>Enter size of file: </label>
-      <input type="text" name="contAllocTF2" id="contAllocTF2">
-      <br><br>
-      <input type="button" name="contAlloc" id="contAlloc" value="Allocate Memory">
-      <br><br>
+{% extends 'base.html' %}
+{% load static %}
 
-      <label>Enter filename to delete: </label>
-      <input type="text" name="contAllocTF3" id="contAllocTF3">
-      <br><br>
-      <input type="button" name="contDelete" id="contDelete" value="Delete">
-      <br><br>
 
-      <input type="button" name="contDisplayDir" id="contDisplayDir" value="Display Directory">
-      <br><br>
+{% block js %}
+<script type="text/javascript" src="{% static 'js/filealloc.js' %}"></script>
+{% endblock %}
 
-      <input type="button" name="contDisplayDiskBlocks" id="contDisplayDiskBlocks" value="Display Disk Blocks">
-      <br><br>
+{% block style %}
 
-      <h2>Linked Allocation</h2>
-      <label>Enter filename: </label>
-      <input type="text" name="linkedAllocTF1" id="linkedAllocTF1">
-      <br><br>
-      <label>Enter size of file: </label>
-      <input type="text" name="linkedAllocTF2" id="linkedAllocTF2">
-      <br><br>
-      <input type="button" name="linkedAlloc" id="linkedAlloc" value="Allocate Memory">
-      <br><br>
+<style>
+  .card {
+    margin-top: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
-      <label>Enter filename to delete: </label>
-      <input type="text" name="linkedAllocTF3" id="linkedAllocTF3">
-      <br><br>
-      <input type="button" name="linkedDelete" id="linkedDelete" value="Delete">
-      <br><br>
+  input {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
 
-      <input type="button" name="linkedDisplayDir" id="linkedDisplayDir" value="Display Directory">
-      <br><br>
+  input:hover {
+    transform: scale(1.05);
+  }
+</style>
 
-      <input type="button" name="linkedDisplayDiskBlocks" id="linkedDisplayDiskBlocks" value="Display Disk Blocks">
-      <br><br>
+{% endblock %}
 
-    </form>
-  </body>
-</html>
+
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid"
+  style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+  <div class=" container">
+    <h1 class="display-4 pt-5">File Allocation</h1>
+  </div>
+</div>
+
+<form id="contAllocForm" method="post" name="contAllocForm">
+
+  <div class="container">
+
+    <div class="col-6 m-auto">
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Contiguous Allocation</h2>
+        </div>
+        <div class="card-body">
+          <label>Enter filename: </label>
+          <input type="text" name="contAllocTF1" id="contAllocTF1">
+          <br><br>
+          <label>Enter size of file: </label>
+          <input type="text" name="contAllocTF2" id="contAllocTF2">
+          <br><br>
+          <input class="btn btn-primary" type="button" name="contAlloc" id="contAlloc" value="Allocate Memory">
+          <br><br>
+
+          <label>Enter filename to delete: </label>
+          <input type="text" name="contAllocTF3" id="contAllocTF3">
+          <br><br>
+          <input class="btn btn-primary" type="button" name="contDelete" id="contDelete" value="Delete">
+          <br><br>
+
+          <input class="btn btn-primary" type="button" name="contDisplayDir" id="contDisplayDir"
+            value="Display Directory">
+          <br><br>
+
+          <input class="btn btn-primary" type="button" name="contDisplayDiskBlocks" id="contDisplayDiskBlocks"
+            value="Display Disk Blocks">
+          <br><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 m-auto">
+      <div class="card">
+        <div class="card-header">
+          <h2>Linked Allocation</h2>
+        </div>
+        <div class="card-body">
+          <label>Enter filename: </label>
+          <input type="text" name="linkedAllocTF1" id="linkedAllocTF1">
+          <br><br>
+          <label>Enter size of file: </label>
+          <input type="text" name="linkedAllocTF2" id="linkedAllocTF2">
+          <br><br>
+          <input class="btn btn-primary" type="button" name="linkedAlloc" id="linkedAlloc" value="Allocate Memory">
+          <br><br>
+
+          <label>Enter filename to delete: </label>
+          <input type="text" name="linkedAllocTF3" id="linkedAllocTF3">
+          <br><br>
+          <input class="btn btn-primary" type="button" name="linkedDelete" id="linkedDelete" value="Delete">
+          <br><br>
+
+          <input class="btn btn-primary" type="button" name="linkedDisplayDir" id="linkedDisplayDir"
+            value="Display Directory">
+          <br><br>
+
+          <input class="btn btn-primary" type="button" name="linkedDisplayDiskBlocks" id="linkedDisplayDiskBlocks"
+            value="Display Disk Blocks">
+          <br><br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</form>
+
+<div style="margin-bottom: 100px;">
+</div>
+
+{% endblock %}
