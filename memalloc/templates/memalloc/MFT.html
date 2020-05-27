@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block js %}
+<script>
+	var in1;
+	var in2;
+	var processes;
+	var memmax;
+	var memblock = [];
+	var mem2 = [];
+	var proc = [];
+	var selector;
+	function submit_data() {
+		if (document.getElementById("FFselect").checked) {
+			selector = 1;
+		}
+		else if (document.getElementById("BFselect").checked) {
+			selector = 2;
+		}
+		else if (document.getElementById("WFselect").checked) {
+			selector = 3;
+		}
+		else {
+			window.alert("Please select a method to follow");
+			return;
+		}
+		in1 = document.getElementById("maxblock").value;
+		in2 = document.getElementById("totalprocesses").value;
+		memmax = parseInt(in1);
+		processes = parseInt(in2);
+		if (processes > 0 && memmax > 0) {
+			var d1 = document.getElementById("membloc");
+			d1.innerHTML = "";
+			var p = document.createElement("h4");
+			p.setAttribute("style", "text-align:center");
+			p.textContent = "Enter the memory block sizes";
+			d1.appendChild(p);
+			var br = document.createElement("br");
+			for (var i = 0; i < memmax; i++) {
+				var inp1 = document.createElement("input");
+				inp1.setAttribute("id", "MB" + i);
+				inp1.setAttribute("placeholder", "Mem-" + (i + 1));
+				inp1.setAttribute("type", "Number");
+				inp1.setAttribute("style", "width:60px;text-align:center;margin-right:50px;float:center;");
+				d1.appendChild(inp1);
+			}
+
+			var d2 = document.getElementById("processmem");
+			d2.innerHTML = "";
+			var p1 = document.createElement("h4");
+			p1.setAttribute("style", "text-align:center");
+			p1.textContent = "Enter the memory requirements of each Process";
+			d2.appendChild(p1);
+			for (i = 0; i < processes; i++) {
+				var inp2 = document.createElement("input");
+				inp2.setAttribute("id", "PM" + i);
+				inp2.setAttribute("placeholder", "Proc-" + (i + 1));
+				inp2.setAttribute("type", "Number");
+				inp2.setAttribute("style", "width:60px;text-align:center;margin-right:50px;float:center;");
+				d2.appendChild(inp2);
+			}
+			var btn = document.getElementById("fsubmit");
+			btn.style.visibility = "visible";
+
+		}
+		else {
+			window.alert("Please enter positive input");
+			return;
+		}
+	}
+
+	function data_compile() {
+		for (var i = 0; i < memmax; i++) {
+			var inp1 = document.getElementById("MB" + i).value;
+			if (parseInt(inp1) <= 0) {
+				window.alert("Please enter valid input");
+				return;
+			}
+			memblock.push(parseInt(inp1));
+			mem2.push(parseInt(inp1));
+		}
+		for (i = 0; i < processes; i++) {
+			var inp2 = document.getElementById("PM" + i).value;
+			if (parseInt(inp2) <= 0) {
+				window.alert("Please enter valid input");
+				return;
+			}
+			proc.push(parseInt(inp2));
+		}
+		if (selector == 1) {
+			first_Fit();
+		}
+		if (selector == 2)
+			best_Fit();
+		if (selector == 3)
+			worst_Fit();
+		var d1 = document.getElementById("output");
+		var p5 = document.createElement("h4");
+		var br = document.createElement("br");
+		d1.appendChild(br);
+		d1.appendChild(br);
+		p5.setAttribute("style", "text-align:center");
+		p5.textContent = "Please Clear before running the process again";
+		d1.appendChild(p5);
+	}
+
+	function first_Fit() {
+		var out1 = document.getElementById("output");
+		out1.innerHTML = "";
+		var allocation = [];
+		for (var i = 0; i < processes; i++) {
+			allocation[i] = -1;
+		}
+		for (i = 0; i < processes; i++) {
+			for (var j = 0; j < memmax; j++) {
+				if (memblock[j] >= proc[i]) {
+					allocation[i] = j + 1;
+					memblock[j] = memblock[j] - proc[i];
+					break;
+				}
+			}
+		}
+		var br = document.createElement("br");
+		var p1 = document.createElement("h4");
+		p1.setAttribute("style", "text-align:center");
+		p1.textContent = "Process ID_____Process Size____Block no.____Original Blocksize";
+		out1.appendChild(p1);
+		for (var i = 0; i < processes; i++) {
+			out1.appendChild(br);
+			if (allocation[i] != -1) {
+				var p2 = document.createElement("p");
+				p2.setAttribute("style", "text-align:center");
+				p2.textContent = (i + 1) + "___________________" + proc[i] + "___________________" + allocation[i] + "______________________" + mem2[(allocation[i] - 1)];
+			}
+			else {
+				var p2 = document.createElement("p");
+				p2.setAttribute("style", "text-align:center");
+				p2.textContent = (i + 1) + "______________________" + proc[i] + "___________" + "Not allocated" + "___________________" + "N/A";
+			}
+			out1.appendChild(p2);
+		}
+	}
+	function best_Fit() {
+		var out1 = document.getElementById("output");
+		out1.innerHTML = "";
+		var allocation = [];
+		for (var i = 0; i < processes; i++) {
+			allocation[i] = -1;
+		}
+		for (var i = 0; i < processes; i++) {
+			var bestIdx = -1;
+			for (var j = 0; j < memmax; j++) {
+				if (memblock[j] >= proc[i]) {
+					if (bestIdx == -1)
+						bestIdx = j;
+					else if (memblock[bestIdx] > memblock[j])
+						bestIdx = j;
+				}
+			}
+
+			if (bestIdx != -1) {
+				allocation[i] = bestIdx;
+				memblock[bestIdx] = memblock[bestIdx] - proc[i];
+			}
+		}
+		var br = document.createElement("br");
+		var p1 = document.createElement("h4");
+		p1.setAttribute("style", "text-align:center");
+		p1.textContent = "Process ID_____Process Size____Block no.____Original Blocksize";
+		out1.appendChild(p1);
+		for (var i = 0; i < processes; i++) {
+			out1.appendChild(br);
+			if (allocation[i] != -1) {
+				var p2 = document.createElement("p");
+				p2.setAttribute("style", "text-align:center");
+				p2.textContent = (i + 1) + "___________________" + proc[i] + "___________________" + (allocation[i] + 1) + "______________________" + mem2[allocation[i]];
+			}
+			else {
+				var p2 = document.createElement("p");
+				p2.setAttribute("style", "text-align:center");
+				p2.textContent = (i + 1) + "______________________" + proc[i] + "___________" + "Not allocated" + "___________________" + "N/A";
+			}
+			out1.appendChild(p2);
+		}
+	}
+	function worst_Fit() {
+		var out1 = document.getElementById("output");
+		out1.innerHTML = "";
+		var allocation = [];
+		for (var i = 0; i < processes; i++) {
+			allocation[i] = -1;
+		}
+		for (var i = 0; i < processes; i++) {
+			var wstIdx = -1;
+			for (var j = 0; j < memmax; j++) {
+				if (memblock[j] >= proc[i]) {
+					if (wstIdx == -1)
+						wstIdx = j;
+					else if (memblock[wstIdx] < memblock[j])
+						wstIdx = j;
+				}
+			}
+			if (wstIdx != -1) {
+				allocation[i] = wstIdx;
+
+				memblock[wstIdx] = memblock[wstIdx] - proc[i];
+			}
+		}
+		var br = document.createElement("br");
+		var p1 = document.createElement("h4");
+		p1.setAttribute("style", "text-align:center");
+		p1.textContent = "Process ID_____Process Size____Block no.____Original Blocksize";
+		out1.appendChild(p1);
+		for (var i = 0; i < processes; i++) {
+			out1.appendChild(br);
+			if (allocation[i] != -1) {
+				var p2 = document.createElement("p");
+				p2.setAttribute("style", "text-align:center");
+				p2.textContent = (i + 1) + "___________________" + proc[i] + "___________________" + (allocation[i] + 1) + "______________________" + mem2[allocation[i]];
+			}
+			else {
+				var p2 = document.createElement("p");
+				p2.setAttribute("style", "text-align:center");
+				p2.textContent = (i + 1) + "______________________" + proc[i] + "___________" + "Not allocated" + "___________________" + "N/A";
+			}
+			out1.appendChild(p2);
+		}
+	}
+</script>
+{% endblock %}
+
+{% block body %}
+
+
+<div class="jumbotron jumbotron-fluid"
+	style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+	<div class=" container">
+		<h1 class="display-4 pt-5">Fixed Memory Allocation </h1>
+		<p class="lead">Fixed memory allocation algorithm.</p>
+	</div>
+</div>
+<form>
+	<div class="container">
+		<p><big>Select the type of MFT to run</big></p>
+		<span><input id="FFselect" type="radio" name="select" value="FF"></span>
+		<label for="FFselect">First Fit&emsp;&emsp;</label>
+		<span><input id="BFselect" type="radio" name="select" value="BF"></span>
+		<label for="BFselect">Best Fit&emsp;&emsp;</label>
+		<span><input id="WFselect" type="radio" name="select" value="WF"></span>
+		<label for="WFselect">Worst Fit</label>
+	</div>
+</form>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-5">
+			<div>Number of Memory blocks</div>
+			<input id="maxblock" type="Number"></input>
+		</div>
+		<div class="col-5">
+			<div>Number of Processes:</div>
+			<input id="totalprocesses" type="Number"></input>
+		</div>
+		<div class="col-2">
+			<button class="btn btn-primary" onclick="window.location.reload()">Clear Inputs</button>
+		</div>
+		<div class="col-5">
+			<br>
+			<button class="btn btn-primary" onclick="submit_data()">Submit Input</button></div>
+
+	</div>
+</div>
+
+
+<br>
+<br>
+<br>
+<div id="membloc" style="margin-left:10px;">
+</div>
+<br><br />
+<br><br />
+<div id="processmem" style="margin-left:10px;"></div>
+<br><br />
+<br><br />
+
+
+<div style="text-align:center; margin-bottom: 100px;">
+	<button id="fsubmit" class="btn btn-primary" onclick="data_compile()">Check allocation</button>
+</div>
+<div id="output">
+</div>
+<br>
+<br />
+<div id="output1">
+</div>
+
+<div style="margin-bottom: 100px;">
+</div>
+{% endblock %}

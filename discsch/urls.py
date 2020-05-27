@@ -8,6 +8,6 @@ app_name = 'discsch'
 urlpatterns = [
      url(r'^$', views.home, name='index'),
     url(r'^(?P<pk>[0-9]+)/$', views.detail, name='detail'),
-    url(r'^demo/$', views.demo, name='demo'),
+    # url(r'^demo/$', views.demo, name='demo'),
     url(r'^gateway/$', views.gateway, name='gateway'),
 ]

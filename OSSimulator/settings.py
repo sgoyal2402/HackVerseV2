@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'discsch',
     'bankers',
     'filealloc',
+    'memalloc',
 ]
 
 MIDDLEWARE = [
