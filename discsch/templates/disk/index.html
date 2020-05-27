@@ -1,0 +1,63 @@
+{% extends "ossim/base.html" %}
+
+{% block title %} <title> Disk Scheduling Algorithms </title> {% endblock %}
+
+
+{% block links %}
+{% load static %}
+<link href="{%static 'filesystem/styles.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        font-family: Arial;
+        margin: 0;
+    }
+    .content {
+        max-width: 500px;
+        margin: auto;
+    }
+    .colourstrip {
+        padding: 60px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+        font-size: 30px;
+    }
+</style>
+<body >
+<div class="colourstrip" ><h1 style="color: white;"><strong>DISK SCHEDULING</strong></h1></div>
+
+<div id="choice" style="align-content: center;">
+    <ul id="ulchoice">
+        <a href="/discsch/demo/"><li id="lichoice"><h2>DEMO</h2></li></a>
+        <a href="https://en.wikipedia.org/wiki/Category:Disk_scheduling_algorithms"><li id="wikichoice"><h2>WIKI</h2></li></a>
+    </ul>
+</div>
+</body>
+
+
+
+<!-- <div class="main-container">
+{% for alg in algos %}
+    <div class="alg-container">
+      <div class="alg-name">  {{alg.name}} </div>
+      <div class="alg-description">
+        {{alg.description}}
+      </div>
+    </div>
+    <br>
+{% endfor %}
+<a href="/disk/demo/" class="btn btn-primary">Demo</a><br>
+
+
+</div> -->
+{% endblock %}
+{% block style %}
+<style>
+
+</style>
+
+{% endblock %}

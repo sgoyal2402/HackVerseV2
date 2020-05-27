@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="jumbotron jumbotron-fluid"
+    style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+    <div class=" container">
+        <h1 class="display-4 pt-5" style="text-align: center;">Deadlock Detection</h1>
+    </div>
+</div>
+
+
+  <!-- About Section -->
+    <div class="container">
+        
+
+            <h2 class="w3-center" style="text-align: center;">About Deadlock Detection Algorithm</h2><br>
+            <p class="w3-large">If a system does not employ either a deadlock prevention or deadlock avoidance algorithm then a deadlock situation may occur. In this case-
+
+Apply an algorithm to examine state of system to determine whether deadlock has occurred or not.</p>
+            <p class="w3-large w3-text-grey w3-hide-medium">Let us assume that there are n processes and m resource types. Some data structures that are used to implement the deadlock detection algorithm are :<br>
+                                                            <strong>1.Available</strong><br>
+                                                            A vector of length m indicates the number of available resources of each type.<br>
+                                                            
+                                                            <strong>2.Allocation</strong><br>
+                                                            An n*m matrix defines the number of resources of each type currently allocated to a process. Column represents resource and resource represent process.<br>
+                                                            <strong>3.Request</strong><br>
+                                                            An n*m matrix indicates the current request of each process. If request[i][j] equals k then process Pi is requesting k more instances of resource type Rj</p><br>
+
+    </div>
+
+  <!-- Menu Section -->
+    <div class="container">
+        <div class="w3-col l6 w3-padding-large">
+            <h2 class="w3-center" style="text-align: center;">Algorithms</h2><br>
+            <h4 style="text-align: center;">Steps of Algorithm</h4><br>
+            <p class="w3-text-grey">1. Let Work and Finish be vectors of length m and n respectively. Initialize<br> 
+				    -------------------------------------<br>	
+				    <code>Work= Available<br>
+				          For i=0, 1, …., n-1<br>
+				            if Request[i] = 0, then Finish[i] = true;<br>
+					    else Finish[i]= false.</code> <br>
+                                    
+                                    
+                                    -------------------------------------<br><br>
+                               
+                                    2. Find an index i such that both<br>
+                                    -------------------------------------<br>
+                                    <code>Finish[i] ==false<br>
+                                    Request[i] <= Work<br></code>
+                                    -------------------------------------<br>
+                                    If there is no such i present, then proceed to step 4.<br><br>
+                                  
+                                    3. Perform the following: <br>
+                                    -------------------------------------<br>
+                                    <code>Work = Work + Allocation(i);<br>
+                                    Finish[i] = true;<br></code>
+                                    -------------------------------------<br>
+                                    Go to step 2.<br><br>
+                                    4. If Finish[i]== false for some i<=n or i=0 then<br>
+				      the system is in a deadlocked state.<br>
+				      Moreover, if Finish[i]==false the process Pi is deadlocked.</p><br>
+        </div>
+        
+    </div>
+
+
+<!-- End page content -->
+    </div>
+
+
+
+</body>
+
+
+{% endblock %}

@@ -1,82 +1,198 @@
-<!DOCTYPE html>
-{% load static %}
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>System Calls</title>
-    <script type = "text/javascript" src = "{% static 'js/syscalls.js' %}" >
+    
     </script>
   </head>
-  <body>
-    <h2>System Calls</h2>
-    <form id = "systemCallsForm" method = "post" name = "systemCallsForm">
+  <body> -->
+{% extends 'base.html' %}
+{% load static %}
 
-        <label>Enter filename: </label>
-        <input type="text" name="creatTF1" id="creatTF1">
-        <br><br>
-        <label>Enter mode: </label>
-        <input type="text" name="creatTF2" id="creatTF2">
-        <br><br>
-        <input type="button" name="creat" id="creat" value="creat()">
-        <hr><br>
+{% block js %}
 
-        <label>Enter file descriptor: </label>
-        <input type="text" name="closeTF" id="closeTF">
-        <br><br>
-        <input type="button" name="close" id="close" value="close()">
-        <hr><br>
+<script type="text/javascript" src="{% static 'js/syscalls.js' %}"></script>
 
-        <label>Enter filename: </label>
-        <input type="text" name="openTF" id="openTF">
-        <br><br>
-        <input type="button" name="open" id="open" value="open()">
-        <hr><br>
+{% endblock %}
 
-        <label>Enter file descriptor: </label>
-        <input type="text" name="writeTF1" id="writeTF1">
-        <br><br>
-        <label>Enter string to write: </label>
-        <input type="text" name="writeTF2" id="writeTF2">
-        <br><br>
-        <label>Enter no. of characters to write: </label>
-        <input type="text" name="writeTF3" id="writeTF3">
-        <br><br>
-        <input type="button" name="write" id="write" value="write()">
-        <hr><br>
 
-        <label>Enter file descriptor: </label>
-        <input type="text" name="lseekTF1" id="lseekTF1">
-        <br><br>
-        <label>Enter position to seek: </label>
-        <input type="text" name="lseekTF2" id="lseekTF2">
-        <br><br>
-        <input type="button" name="lseek" id="lseek" value="lseek()">
-        <hr><br>
+{% block style %}
 
-        <label>Enter file descriptor: </label>
-        <input type="text" name="readTF1" id="readTF1">
-        <br><br>
-        <label>Enter no. of characters to read: </label>
-        <input type="text" name="readTF2" id="readTF2">
-        <br><br>
-        <input type="button" name="read" id="read" value="read()">
-        <hr><br>
+<style>
+  .card {
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
 
-        <label>Enter file descriptor: </label>
-        <input type="text" name="dupTF" id="dupTF">
-        <br><br>
-        <input type="button" name="dup" id="dup" value="dup()">
-        <hr><br>
+  input {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
 
-        <label>Enter filename: </label>
-        <input type="text" name="chmodTF1" id="chmodTF1">
-        <br><br>
-        <label>Enter mode: </label>
-        <input type="text" name="chmodTF2" id="chmodTF2">
-        <br><br>
-        <input type="button" name="chmod" id="chmod" value="chmod()">
-        <hr><br>
+  input:hover {
+    transform: scale(1.05);
+  }
+</style>
 
-    </form>
-  </body>
-</html>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid"
+  style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+  <div class=" container">
+    <h1 class="display-4 pt-5">System Calls</h1>
+  </div>
+</div>
+
+<div class="container">
+  <form id="systemCallsForm" method="post" name="systemCallsForm">
+
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>creat()</h3>
+          </div>
+          <div class="card-body">
+            <label>Enter filename: </label><br>
+            <input type="text" name="creatTF1" id="creatTF1">
+            <br><br>
+            <label>Enter mode: </label>
+            <br>
+            <input type="text" name="creatTF2" id="creatTF2">
+            <br><br>
+            <input class="btn btn-primary" type="button" name="creat" id="creat" value="creat()">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>chmod()</h3>
+          </div>
+          <div class="card-body">
+            <label>Enter filename: </label>
+            <br>
+            <input type="text" name="chmodTF1" id="chmodTF1">
+            <br><br>
+            <label>Enter mode: </label>
+            <br>
+            <input type="text" name="chmodTF2" id="chmodTF2">
+            <br><br>
+            <input class="btn btn-primary" type="button" name="chmod" id="chmod" value="chmod()">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>open()</h3>
+          </div>
+          <div class="card-body">
+            <label>Enter filename: </label><br>
+            <input type="text" name="openTF" id="openTF">
+            <br><br>
+            <input class="btn btn-primary" type="button" name="open" id="open" value="open()">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>write()</h3>
+          </div>
+          <div class="card-body">
+            <label>Enter file descriptor: </label>
+            <input type="text" name="writeTF1" id="writeTF1">
+            <br><br>
+            <label>Enter string to write: </label>
+            <input type="text" name="writeTF2" id="writeTF2">
+            <br><br>
+            <label>Enter no. of characters to write: </label>
+            <input type="text" name="writeTF3" id="writeTF3">
+            <br><br>
+            <input class="btn btn-primary" type="button" name="write" id="write" value="write()">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>lseek()</h3>
+          </div>
+          <div class="card-body">
+            <label>Enter file descriptor: </label>
+            <input type="text" name="lseekTF1" id="lseekTF1">
+            <br><br>
+            <label>Enter position to seek: </label>
+            <input type="text" name="lseekTF2" id="lseekTF2">
+            <br><br>
+            <input class="btn btn-primary" type="button" name="lseek" id="lseek" value="lseek()">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>read()</h3>
+          </div>
+          <div class="card-body">
+            <label>Enter file descriptor: </label>
+            <input type="text" name="readTF1" id="readTF1">
+            <br><br>
+            <label>Enter no. of characters to read: </label>
+            <input type="text" name="readTF2" id="readTF2">
+            <br><br>
+            <input class="btn btn-primary" type="button" name="read" id="read" value="read()">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>dup()</h3>
+          </div>
+          <div class="card-body">
+            <label>Enter file descriptor: </label>
+            <input type="text" name="dupTF" id="dupTF">
+            <br><br>
+            <input class="btn btn-primary" type="button" name="dup" id="dup" value="dup()">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>close()</h3>
+          </div>
+          <div class="card-body">
+            <label>Enter file descriptor: </label>
+            <input type="text" name="closeTF" id="closeTF">
+            <br><br>
+            <input class="btn btn-primary" type="button" name="close" id="close" value="close()">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </form>
+</div>
+
+<div style="margin-bottom: 100px;">
+</div>
+{% endblock %}

@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'deadlock',
     'pagerep',
     'cpusch',
+    'wikipages',
     'systemcalls',
+    'discsch',
+    'bankers',
 ]
 
 MIDDLEWARE = [
