@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'systemcalls',
     'discsch',
     'bankers',
+    'filealloc',
 ]
 
 MIDDLEWARE = [
