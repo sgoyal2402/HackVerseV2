@@ -16,12 +16,15 @@
             <h2 class="w3-center" style="text-align: center;"><strong>About Process Scheduling</strong></h1><br>
             <p class="w3-large">The <b>process scheduling</b> is the activity of the process manager that handles the removal of the running process from the CPU and the selection of another process on the basis of a particular strategy.<br>
                                 Process scheduling is an essential part of a Multiprogramming operating systems. Such operating systems allow more than one process to be loaded into the executable memory at a time and the loaded process shares the CPU using time multiplexing.</p>
-            <p class="w3-large w3-text-grey w3-hide-medium">A Process Scheduler schedules different processes to be assigned to the CPU based on particular scheduling algorithms. There are 5 popular process scheduling algorithms which we are going to discuss are :<br><br>
+            <p class="w3-large w3-text-grey w3-hide-medium">A Process Scheduler schedules different processes to be assigned to the CPU based on particular scheduling algorithms. There are 8 popular process scheduling algorithms which we are going to discuss are :<br><br>
                                                             1.First-Come, First-Served (FCFS) Scheduling<br>
-                                                            2.Shortest-Job-Next (SJN) Scheduling<br>
+                                                            2.Shortest Job Next (SJN) Scheduling<br>
                                                             3.Priority Scheduling<br>
-                                                            4.Shortest Remaining Time<br>
-                                                            5.Round Robin(RR) Scheduling<br></p>
+                                                            4.Shortest Remaining Time First<br>
+                                                            5.Longest Job Next<br>
+                                                            6.Longest Remaining Time First<br>
+                                                            7.Round Robin(RR) Scheduling<br>
+                                                            8.Highest REsponse Ratio Next<br></p>
             <p class="w3-large">These algorithms are either non-preemptive or preemptive. Non-preemptive algorithms are designed so that once a process enters the running state, it cannot be preempted until it completes its allotted time,
                                 whereas the preemptive scheduling is based on priority where a scheduler may preempt a low priority running process anytime when a high priority process enters into a ready state.</p>
     </div>
@@ -48,12 +51,32 @@
                                     The increase in priority may or may not be equal to the waiting time of the process.</p><br>
 
             <h4>Shortest Remaining Time First (SRTF)</h4>
-            <p class="w3-text-grey">Shortest remaining time (SRT) is the preemptive version of the SJN algorithm. The processor is allocated to the job closest to completion but it can be preempted by a newer ready job with shorter time to completion.
+            <p class="w3-text-grey">Shortest remaining time (SRTF) is the preemptive version of the SJN algorithm. The processor is allocated to the job closest to completion but it can be preempted by a newer ready job with shorter time to completion.
                                     Once again it is impossible to implement in interactive systems where required CPU time is not known. It is often used in batch environments where short jobs need to give preference.</p><br>
 
+            <h4>Longest Job Next (LJN)</h4>
+            <p class="w3-text-grey">This algorithm is very similar to SJN, but gives priority to processes with longer burst times instead of shorter ones. It is a non-preemptive/preemptive scheduling algorithm. It is quite easy to understand and implement; implementation is based on FIFO queue. However, LJF is not considered to be an efficient way of process scheduling because there are many drawbacks of it like the Convoy effect is displayed by it, it has very large average turn-around time and average waiting time. This results in slow processing and decreases the effectiveness of the system.</p><br>
+             
+            <h4>Longest Remaining Time First (LRTF)</h4>
+            <p class="w3-text-grey">Longest remaining Time First (LRTF) is the preemptive version of the LJN algorithm. The processor is allocated to the longest job available in terms of burst time, but it can be preempted by a newer ready job with longer burst time. Similar to LJN, LRTF is not considered to be an efficient way of process scheduling because there are many drawbacks of it like the Convoy effect displayed by it, it also has very large average turn-around time and average waiting time, and hence, this results in slow processing and decreases the effectiveness of the system.</p><br>
+            
             <h4>Round Robin Scheduling (RR)</h4>
             <p class="w3-text-grey">Round Robin scheduling algorithm is one of the most popular scheduling algorithm which can actually be implemented in most of the operating systems. This is the preemptive version of first come first serve scheduling. The Algorithm focuses on Time Sharing. In this algorithm, every process gets executed in a cyclic way. A certain time slice is defined in the system which is called time quantum. Each process present in the ready queue is assigned the CPU for that time quantum, if the execution of the process is completed during that time then the process will terminate else the process will go back to the ready queue and waits for the next turn to complete the execution.</p><br>
 
+            <h4>Highest Response Ratio Next (HRRN)</h4>
+            <p class="w3-text-grey">Highest Response Ratio Next (HRRN) is one of the most optimal scheduling algorithms. This is a non-preemptive algorithm in which, the scheduling is done on the basis of an extra parameter called Response Ratio. A Response Ratio is calculated for each of the available jobs and the Job with the highest response ratio is given priority over the others.
+			Response Ratio is calculated by the given formula.
+
+    			Response Ratio = (W+S)/S   
+
+			Where,
+
+ 		    W → Waiting Time   
+    		S → Service Time or Burst Time  
+
+			We notice that the job with the shorter burst time will be given priority but it is also including an extra factor, waiting time. It is non preemptive hence context switching is minimal in this algorithm.
+</p><br>
+        <br><br>
         </div>
     </div>
     <hr>
