@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block style %}
+
+<style>
+    .card {
+        margin-top: 50px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    .card:hover {
+        background: rgb(1, 119, 216);
+    }
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid"
+    style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+    <div class=" container">
+        <h1 class="display-4 pt-5">Memory Allocation </h1>
+        <p class="lead">Memory allocation algorithms</p>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="col-sm col-md-6 m-auto">
+        <a href="/memalloc/mft">
+            <div class="card card-body" style="text-align: center;">
+                <h1>MFT</h1>
+            </div>
+        </a>
+    </div>
+    <div class="col-sm col-md-6 m-auto">
+        <a href="/memalloc/mvt">
+            <div class="card card-body" style="text-align: center;">
+                <h1>MVT</h1>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+<div style="margin-bottom: 100px;">
+</div>
+
+
+{% endblock %}

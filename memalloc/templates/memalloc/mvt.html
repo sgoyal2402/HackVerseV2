@@ -1,0 +1,109 @@
+<!-- <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block style %}
+
+<style>
+  .card {
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: aliceblue;
+  }
+
+  .card:hover {
+    background: rgb(1, 119, 216);
+  }
+</style>
+
+{% endblock %}
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
+{% block js %}
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+  integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+  integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+  integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+<!-- <title>MVT</title>
+
+</head>
+
+<body> -->
+
+{% block body %}
+
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="../os_sim.html">OS simulator</a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="./index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./mm_wiki.html">Wiki</a>
+      </li>
+    </ul>
+  </nav>
+  <br><br><br> -->
+
+<div class="jumbotron jumbotron-fluid"
+  style="background-image: url({% static 'img/jumbo.png' %}); background-size: cover;">
+  <div class=" container">
+    <h1 class="display-4 pt-5">Variable Memory Allocation </h1>
+    <p class="lead">Variable memory allocation algorithm.</p>
+  </div>
+</div>
+
+
+<div class="container btn-row">
+  <div class="row">
+    <div class="col-md-4" style="text-align: center;">
+      <a href="./mvt/ff/ff.html">
+        <div class="card card-body">
+          <h3>First Fit</h3>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4" style="text-align: center;">
+      <a href=" ./mvt/bf/bf.html">
+        <div class="card card-body">
+          <h3>Best Fit</h3>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4" style="text-align: center;">
+      <a href=" ./mvt/wf/wf.html">
+        <div class="card card-body">
+          <h3>Worst Fit</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="margin-bottom: 100px;">
+</div>
+
+<!-- </body>
+</html> -->
+
+{% endblock %}

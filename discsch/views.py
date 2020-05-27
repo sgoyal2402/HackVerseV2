@@ -12,10 +12,10 @@ from django.http import JsonResponse
 from . models import DiskSchedAlg
 from . utils import cscan,clook, scan,look,sstf,fcfs
 
-def home(request):
-    algos = DiskSchedAlg.objects.all()
-    context = {'algos': algos}
-    return render(request, 'disk/index.html',context = context)
+# def home(request):
+#     algos = DiskSchedAlg.objects.all()
+#     context = {'algos': algos}
+#     return render(request, 'disk/index.html',context = context)
 
 def detail(request,pk):
     alg = get_object_or_404(DiskSchedAlg, pk=pk)
@@ -23,7 +23,7 @@ def detail(request,pk):
                }
     return render(request,'disk/detail.html',context=context)
 
-def demo(request):
+def home(request):
     return render(request,'disk/disk.html')
 
 @csrf_exempt
