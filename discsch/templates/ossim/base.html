@@ -1,26 +1,277 @@
-{% load static %}
+<!doctype html> {% load static %}
+<html lang="en">
 
-<!DOCTYPE html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<html>
-  <head>
-    {% block title %}
-    {% endblock %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    {% block links %}
-    {% endblock %}
-  </head>
-  <body>
-
-    {% block content %}
-    {% endblock %}
+    <link rel='stylesheet' href="{% static 'css/main.css' %}">
 
 
-  </body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+
+    <title>Hello, world!</title>
+
+    {% block js %} {% endblock %}
+
+    {% block style %} {% endblock %}
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="/">OS Simulator</a>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-wifi icon"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-bluetooth icon"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-volume-up icon"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-battery-three-quarters icon"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-power-off icon"></i></a>
+            </li>
+        </ul>
+    </nav> -->
+
+    <nav class="navbar fixed-top">
+        <div class="col-10">
+            <a class="navbar-brand" href="/">OS Simulator</a>
+        </div>
+
+
+        <a href="#"><i class="fa fa-wifi icon"></i></a>
+
+
+        <a href="#"><i class="fa fa-bluetooth icon"></i></a>
+
+        <a href="#"><i class="fa fa-volume-up icon"></i></a>
+
+        <a href="#"><i class="fa fa-battery-three-quarters icon"></i></a>
+
+        <a href="#"><i class="fa fa-power-off icon"></i></a>
+
+
+    </nav>
+
+
+    <div id="flyoutMenu">
+        <div class="container">
+            <div class="row col-12 mt-3">
+                <h4 class="text-white">Documentation</h4>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <a href="/wikipages/syscall">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>System calls</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/wikipages/cpusch">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>CPU Scheduling</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/wikipages/discsch">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Disk Scheduling</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/wikipages/memalloc">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Memory Allocation</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/wikipages/filealloc">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>File Allocation</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/wikipages/pagerep">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Page Replacement</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/wikipages/banker">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Banker's Algorithm</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/wikipages/deadlock">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Deadlock Detection</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row col-12" style="margin-top: 80px;">
+                <h4 class="text-white">Simulations</h4>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <a href="/systemcalls/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-terminal mt-3"></i>
+                            <p>System calls</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/cpusch/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>CPU Scheduling</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/discsch/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Disk Scheduling</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/memalloc/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Memory Allocation</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/filealloc/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>File Allocation</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/pagerep/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Page Replacement</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/bankers/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Banker's Algorithm</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="/deadlock/">
+                        <div class="tab text-white" style="text-align: center;">
+                            <i class="fa fa-file-code-o mt-3"></i>
+                            <p>Deadlock Detection</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    {% block body %} {% endblock %}
+
+
+
+    <footer class="fixed-bottom">
+        <div class="row" style="font-size: 20px;">
+            <div class="col-3" style="text-align: center;">
+                <a class="nav-link" id="WindowButton" href="#">
+
+
+                    <i class="fa fa-windows mr-2" style="font-size: 40px;"></i>
+
+
+                    START
+
+
+                </a>
+            </div>
+
+            <div class="col-3">
+
+                <a class="nav-link" href="#"><i class="fa fa-folder mr-2" style="font-size: 40px;"></i> My Files</a>
+
+            </div>
+
+            <div class="col-3">
+
+                <a class="nav-link" href="/terminal"><i class="fa fa-terminal mr-2" style="font-size: 40px;"></i>
+                    Terminal</a>
+
+            </div>
+
+            <div class="col-3">
+
+                <a class="nav-link" href="/team/"><i class="fa fa-users mr-2" style="font-size: 40px;"></i> Team</a>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+</body>
+
 </html>
-
-{% block style %}
-{% endblock %}
-{% block script %}
-{% endblock %}
