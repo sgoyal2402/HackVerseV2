@@ -31,8 +31,14 @@
     margin-left: 20px;
 }
 
+.btn{
+    border-radius: 30px;
+    text-align: center;
+    padding: 15px 20px 15px 5px;
+}
+
 .content{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-right: 7%;
 }
 
