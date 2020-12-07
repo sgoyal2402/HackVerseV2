@@ -17,6 +17,11 @@
     margin: 0;
     border-radius: 0;
 }
+.section-breaker{
+    height: 10vh;
+    background: url('../img/section_breaker.png');
+    background-size: cover;
+}
 
 .logo{
     width: 320px;
