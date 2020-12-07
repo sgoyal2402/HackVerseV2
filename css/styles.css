@@ -81,7 +81,7 @@
 /* What is Section */
 
 .part-2{
-    background-image: linear-gradient(180deg, #117ABF 0%, #063757 100%);
+    background-image: linear-gradient(180deg, #117ABF 0%, #005085 100%);
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap-reverse;
