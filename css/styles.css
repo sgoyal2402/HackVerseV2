@@ -60,6 +60,7 @@
     background-image: linear-gradient(180deg, #117ABF 0%, #063757 100%);
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
 }
 
 .about{
