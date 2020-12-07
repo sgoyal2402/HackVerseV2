@@ -41,6 +41,8 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
@@ -48,26 +50,48 @@
     <!--Welcome Area-->
     <header>
       <div class="welcome jumbotron">
-        <div class="logo"></div>
+        <div class="logo" data-aos="fade-right" data-aos-duration="800"></div>
 
-        <div class="content text-right">
+        <div
+          class="content text-right"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
           <h1>HACKVERSE 2.0</h1>
           <h1>24-HOUR NATION WIDE</h1>
           <h1>HACKATHON</h1>
           <p>NATIONAL INSTITUTE OF TECHNOLOGY KARNATAKA, SURATHKAL</p>
           <h3 data-animation="fadeInUp" data-delay="500ms" style="color: gold">Jan 25th - 26th, 2021</h3>
           <button class="btn btn-lg btn-light">
-            <strong style="color: #117abf;align-items: center;">Go to Dashboard</strong>
+            <svg
+              class="logo"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#117abf"
+              viewBox="0 0 115.46 123.46"
+              style="height: 24px; width: 24px; margin-right: 8px"
+            >
+              <path
+                d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z"
+              />
+              <path
+                d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"
+              />
+            </svg>
+            <strong style="color: #117abf">Apply with Devfolio</strong>
           </button>
         </div>
       </div>
     </header>
     <!--What is HackVerse-->
-    <section class="part-2 d-flex">
-      <div class="col-10 col-sm-10 col-md-5 about">
-        <h2 style="font-size: 3rem">WHAT IS HACKVERSE 2.0</h2>
+    <section class="part-2 row">
+      <div
+        class="col-10 col-lg-5 about"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+        <h2>WHAT IS HACKVERSE 2.0</h2>
         <br />
-        <p class="lead" style="font-size: 1.25rem">
+        <p class="lead">
           HackVerse serves as a platform to encourage enthusiastic minds to
           brainstorm on solutions for challenging issues from all over India.
           The unified motive of gathering all like-minded hackers to our alma
@@ -78,14 +102,14 @@
           executives from the industry.
         </p>
       </div>
-      <div>
-        <img
-          class="img-fluid"
-          style="height: 500px; width: auto"
-          src="./img/logo.png"
-          alt="Hackverse2.0"
-        />
-      </div>
+
+      <img
+        class="logo-2"
+        src="./img/logo.png"
+        alt="Hackverse2.0"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      />
     </section>
     <!-- <section class="section-breaker">
       
@@ -171,6 +195,10 @@
       integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
