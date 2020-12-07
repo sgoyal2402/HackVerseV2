@@ -41,6 +41,8 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
@@ -48,9 +50,13 @@
     <!--Welcome Area-->
     <header>
       <div class="welcome jumbotron">
-        <div class="logo"></div>
+        <div class="logo" data-aos="fade-right" data-aos-duration="800"></div>
 
-        <div class="content text-right">
+        <div
+          class="content text-right"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
           <h1>HACKVERSE 2.0</h1>
           <h1>24-HOUR NATION WIDE</h1>
           <h1>HACKATHON</h1>
@@ -78,7 +84,11 @@
     </header>
     <!--What is HackVerse-->
     <section class="part-2 row">
-      <div class="col-10 col-lg-5 about">
+      <div
+        class="col-10 col-lg-5 about"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
         <h2>WHAT IS HACKVERSE 2.0</h2>
         <br />
         <p class="lead">
@@ -93,7 +103,13 @@
         </p>
       </div>
 
-      <img class="logo-2" src="./img/logo.png" alt="Hackverse2.0" />
+      <img
+        class="logo-2"
+        src="./img/logo.png"
+        alt="Hackverse2.0"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      />
     </section>
     <!--HackVerse 1.0 stats-->
     <!--FAQ-->
@@ -115,6 +131,10 @@
       integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
