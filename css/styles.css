@@ -147,7 +147,7 @@
 
 /* :: 22.0 Stats Area CSS */
 .part-3 {
-  background-image: linear-gradient(180deg, #233452 0%, #000000 100%);
+  background-image: linear-gradient(180deg, #1e2d47 0%, #000000 100%);
   padding-top: 70px;
   padding-bottom: 50px;
 }
@@ -271,7 +271,6 @@
   z-index: 1;
   width: 100%; }
   .our-sponsor-area .single-sponsor {
-    border: 1px solid white;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
@@ -580,7 +579,7 @@
         font-size: 30px; } }
 
 #faq{
-  background-image: linear-gradient(180deg, #005085 0%, #233452 100%);
+  background-image: linear-gradient(180deg, #233452 0%, #1e2d47 100%);
 }
 .section-header-faq{
   text-align: center;
@@ -630,4 +629,8 @@
   height: 2px;
   margin: 10px;
   background: #85F1C6;
+}
+
+#sponsors {
+  background-image: linear-gradient(180deg, #005085 0%, #233452 100%);
 }
