@@ -13,7 +13,7 @@
 
 .welcome {
   height: 100vh;
-  background: url('../img/welcome.webp') left no-repeat;
+  background: url('../img/landing_bg/Background.png') left no-repeat;
   background-size: cover;
   overflow: hidden;
   margin: 0;
@@ -51,11 +51,13 @@
 .content h1 {
   font-size: 48px;
   font-weight: 700;
+  color: #000;
 }
 
 .content p {
   font-size: 24px;
   font-weight: 700;
+  color: #000;
 }
 
 @media only screen and (max-width: 850px) {
