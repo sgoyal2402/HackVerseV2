@@ -992,5 +992,30 @@
       AOS.init();
     </script>
     <script src="js/script.js"></script>
+    <script>
+      var welcomeElement = document.getElementsByClassName("welcome")[0];
+      var imageURL = "";
+      var date = new Date();
+      var hourOfDay = date.getHours();
+      if(hourOfDay>=18||hourOfDay<=4){
+        imageURL = "img/landing_bg/Background4.png";
+      }
+      else if(imageURL>=5&&imageURL<=15){
+        imageURL = "img/landing_bg/Background.png";
+      }
+      else{
+        imageURL = "img/landing_bg/Background5.png";
+      }
+      var x = "url("+"\""+imageURL+"\""+") left no-repeat";
+      console.log(x);
+      welcomeElement.style.background = x;
+      welcomeElement.style.height = "100vh";
+      welcomeElement.style.backgroundSize = "cover";
+      welcomeElement.style.overflow = "hidden";
+      welcomeElement.style.margin = "0";
+      welcomeElement.style.borderRadius = "0";
+      console.log(welcomeElement);
+      console.log(welcomeElement.style);
+    </script>
   </body>
 </html>

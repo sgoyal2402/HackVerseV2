@@ -13,7 +13,6 @@
 
 .welcome {
   height: 100vh;
-  background: url("../img/welcome.webp") left no-repeat;
   background-size: cover;
   overflow: hidden;
   margin: 0;
