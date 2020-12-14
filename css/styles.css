@@ -697,10 +697,15 @@
   max-height: 150px;
 }
 
+#gatsbyjs,
+#elastic {
+  width: 100% !important;
+}
+
 .col-3 {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 1100px) {
