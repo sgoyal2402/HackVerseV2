@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #fff;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: normal;
 }
 
@@ -13,7 +13,7 @@
 
 .welcome {
   height: 100vh;
-  background: url('../img/welcome.webp') left no-repeat;
+  background: url("../img/welcome.webp") left no-repeat;
   background-size: cover;
   overflow: hidden;
   margin: 0;
@@ -22,7 +22,7 @@
 
 .section-breaker {
   height: 10vh;
-  background: url('../img/section_breaker.webp');
+  background: url("../img/section_breaker.webp");
   background-size: cover;
 }
 
@@ -89,7 +89,7 @@
 /* What is Section */
 
 .part-2 {
-  background-image: linear-gradient(180deg, #117ABF 0%, #005085 100%);
+  background-image: linear-gradient(180deg, #117abf 0%, #005085 100%);
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap-reverse;
@@ -106,7 +106,6 @@
 
 .about p {
   font-size: 1.25rem;
-
 }
 
 .logo-2 {
@@ -114,26 +113,21 @@
   width: 30%;
 }
 
-
 @media only screen and (max-width: 850px) {
-
   .about h2 {
     font-size: 2rem;
   }
 
   .about p {
     font-size: 1rem;
-
   }
 
   .logo-2 {
     width: 40%;
   }
-
 }
 
 @media only screen and (max-width: 520px) {
-
   .about h2 {
     font-size: 1.5rem;
   }
@@ -145,7 +139,6 @@
   .logo-2 {
     width: 50%;
   }
-
 }
 
 /* :: 22.0 Stats Area CSS */
@@ -177,7 +170,6 @@
 .mb-100 {
   margin-bottom: 50px;
 }
-
 
 .milestone-desc {
   margin-top: 5px;
@@ -358,7 +350,6 @@
 .our-sponsor-area .single-sponsor:focus a img {
   opacity: 1;
 }
-
 
 @media only screen and (max-width: 767px) {
   .footer-area .row .col-12 {
@@ -649,11 +640,11 @@
 }
 
 #faq #faq-list a.collapsed {
-  color: #FFF;
+  color: #fff;
 }
 
 #faq #faq2-list a.collapsed {
-  color: #FFF;
+  color: #fff;
 }
 
 #faq #faq-list li a {
@@ -679,7 +670,7 @@
 }
 
 #faq a {
-  color: #55C1AA;
+  color: #55c1aa;
   transition: 0.5s;
   text-decoration: none;
 }
@@ -689,13 +680,31 @@
   display: block;
   height: 2px;
   margin: 10px;
-  background: #85F1C6;
+  background: #85f1c6;
 }
 
 #faq a:not(.collapsed) .fa-plus-circle::before {
-  content: '\f056';
+  content: "\f056";
 }
 
 #sponsors {
-  background-image: linear-gradient(180deg, #005085 0%, #233452 100%);
+  background-image: linear-gradient(180deg, #0e93ec 0%, #024ac7 100%);
+}
+
+#sponsors .row img {
+  max-width: 200px;
+  width: auto;
+  max-height: 150px;
+}
+
+.col-3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 1100px) {
+  #sponsors .row img {
+    width: 95%;
+  }
 }
