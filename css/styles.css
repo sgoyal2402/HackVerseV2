@@ -84,7 +84,26 @@
     font-size: 16px;
   }
 }
-
+/*section-breaker CSS*/
+.section-divider > img {
+    width: 100%;
+}
+ .stat-color {
+    background-color: #01538a;
+}
+.sponser-color{
+    background-color:  #2cefde;
+}
+.faq-color{
+  background-color:  #03a798;
+}
+.footer-color{
+  background-color: #02867b;
+}
+.unselectable {
+   
+    user-select: none;
+}
 /* What is Section */
 
 .part-2 {
@@ -142,7 +161,7 @@
 
 /* :: 22.0 Stats Area CSS */
 .part-3 {
-  background-image: linear-gradient(180deg, #1e2d47 0%, #000000 100%);
+  background-image: linear-gradient(180deg, #8ddefb 0%,    #2cefde 100%);
   padding-top: 70px;
   padding-bottom: 50px;
 }
@@ -621,7 +640,7 @@
 }
 
 #faq {
-  background-image: linear-gradient(180deg, #233452 0%, #1e2d47 100%);
+  background-image: linear-gradient(180deg, #007fb1 0%, #02867b 100%);
 }
 
 .section-header-faq {
@@ -687,7 +706,7 @@
 }
 
 #sponsors {
-  background-image: linear-gradient(180deg, #0e93ec 0%, #024ac7 100%);
+  background-image: linear-gradient(180deg, #23bdf9 0%, #03a798 100%);
 }
 
 #sponsors .row img {
