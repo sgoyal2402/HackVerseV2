@@ -33,7 +33,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
 
-    <title>HackVerse2.0 | January 25-26, 2021</title>
+    <title>HackVerse2.0 | Febraury, 2021</title>
 
     <link
       rel="stylesheet"
@@ -62,35 +62,15 @@
       <div class="welcome jumbotron">
         <div class="logo" data-aos="fade-right" data-aos-duration="800"></div>
 
-        <div
-          class="content text-right"
-          data-aos="fade-left"
-          data-aos-duration="800"
-        >
+        <div class="content" data-aos="fade-left" data-aos-duration="800">
           <h1>HACKVERSE 2.0</h1>
           <h1>24-HOUR NATION WIDE</h1>
           <h1>HACKATHON</h1>
           <p>NATIONAL INSTITUTE OF TECHNOLOGY KARNATAKA, SURATHKAL</p>
-          <h3 data-animation="fadeInUp" data-delay="500ms" style="color: gold">
-            Jan 25th - 26th, 2021
-          </h3>
+          <h3 style="color: gold">Feb, 2021</h3>
           <br />
-          <button class="btn btn-light">
-            <svg
-              class="logo"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#117abf"
-              viewBox="0 0 115.46 123.46"
-              style="height: 24px; width: 24px; margin-right: 8px"
-            >
-              <path
-                d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z"
-              />
-              <path
-                d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"
-              />
-            </svg>
-            <strong style="color: #117abf">Apply with Devfolio</strong>
+          <button class="btn btn-primary">
+            <strong>Apply Now!</strong>
           </button>
         </div>
       </div>
@@ -127,11 +107,11 @@
     <!-- <section class="section-breaker">
       
     </section> -->
-    
-     <!--section breaker between welcome page and stat-->
-      <div class="section-divider stat-color unselectable">
-                <img src="img/section_breaker_blue/W1.png">
-            </div>
+
+    <!--section breaker between welcome page and stat-->
+    <div class="section-divider stat-color unselectable">
+      <img src="img/section_breaker_blue/W1.png" />
+    </div>
 
     <!-- HackVerse 1.0 stats -->
     <section class="part-3">
@@ -190,11 +170,11 @@
     </section>
 
     <!--FAQ-->
-    
-      <!--section breaker between stat and sponsers-->
-      <div class="section-divider sponser-color unselectable">
-                <img src="img/section_breaker_blue/W4.png">
-            </div>
+
+    <!--section breaker between stat and sponsers-->
+    <div class="section-divider sponser-color unselectable">
+      <img src="img/section_breaker_blue/W4.png" />
+    </div>
     <!--Previous sponsors-->
     <section id="sponsors" class="our-sponsor-client-area section-padding-100">
       <div class="container">
@@ -570,14 +550,13 @@
         </div>
       </div>
     </section>
-    
-     <!--sponser ended-->
-     <!--section breaker between sponser and faq-->
-      <div class="section-divider faq-color unselectable">
-                <img src="img/section_breaker_blue/W7.png">
-            </div>
-    
-    
+
+    <!--sponser ended-->
+    <!--section breaker between sponser and faq-->
+    <div class="section-divider faq-color unselectable">
+      <img src="img/section_breaker_blue/W7.png" />
+    </div>
+
     <section id="faq">
       <div class="container">
         <div class="section-header-faq">
@@ -790,11 +769,11 @@
         </div>
       </div>
     </section>
-    
+
     <!--section breaker between faq and footer-->
-      <div class="section-divider footer-color unselectable">
-                <img src="img/section_breaker_blue/W8.png">
-            </div>
+    <div class="section-divider footer-color unselectable">
+      <img src="img/section_breaker_blue/W8.png" />
+    </div>
 
     <!--Contact Us (Footer)-->
     <!-- Footer Area Start -->
@@ -1020,28 +999,26 @@
     <script>
       AOS.init();
     </script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     <script>
       var welcomeElement = document.getElementsByClassName("welcome")[0];
       var imageURL = "";
       var date = new Date();
       var hourOfDay = date.getHours();
-      if(hourOfDay>=20||hourOfDay<=4){
+      if (hourOfDay >= 20 || hourOfDay <= 4) {
         imageURL = "img/landing_bg/Night.jpg";
-      }
-      else if(hourOfDay>=5&&hourOfDay<=7){
+      } else if (hourOfDay >= 4 && hourOfDay <= 6) {
+        imageURL = "img/landing_bg/Sunset_Sunrise.jpg";
+      } else if (hourOfDay >= 6 && hourOfDay <= 11) {
+        imageURL = "img/landing_bg/Morning_Evening.jpg";
+      } else if (hourOfDay >= 11 && hourOfDay <= 17) {
+        imageURL = "img/landing_bg/Noon.jpg";
+      } else if (hourOfDay >= 17 && hourOfDay <= 19) {
+        imageURL = "img/landing_bg/Sunset_Sunrise.jpg";
+      } else if (hourOfDay >= 19 && hourOfDay <= 20) {
         imageURL = "img/landing_bg/Morning_Evening.jpg";
       }
-      else if(hourOfDay>=8&&hourOfDay<=10){
-        imageURL = "img/landing_bg/Noon.jpg";
-      }
-      else if(hourOfDay>=11&&hourOfDay<=16){
-        imageURL = "img/landing_bg/Noon.jpg";
-      }
-      else{
-        imageURL = "img/landing_bg/Sunset_Sunrise.jpg";
-      }
-      var x = "url("+"\""+imageURL+"\""+") left no-repeat";
+      var x = "url(" + '"' + imageURL + '"' + ") left no-repeat";
       console.log(x);
       welcomeElement.style.background = x;
       welcomeElement.style.height = "100vh";

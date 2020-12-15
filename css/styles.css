@@ -28,7 +28,6 @@ body {
 .logo {
   width: 320px;
   height: 60px;
-  background-color: #fff;
   background-image: url(../img/logo_long.webp);
   background-size: contain;
   background-repeat: no-repeat;
@@ -39,12 +38,13 @@ body {
 .btn {
   border-radius: 30px;
   text-align: center;
-  padding: 15px 20px 15px 5px;
+  padding: 15px 20px;
 }
 
 .content {
   margin-top: 30px;
   margin-right: 7%;
+  text-align: right;
 }
 
 .content h1 {
@@ -75,23 +75,36 @@ body {
 
 @media only screen and (max-width: 520px) {
   .content {
-    margin-right: 20px;
+    margin-right: 0;
+    margin-top: 40px;
+    text-align: left;
   }
 
   .content h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .content p {
-    font-size: 16px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .content h3 {
+    font-size: 20px;
+  }
+  .content .btn {
+    margin: 10% 30%;
   }
 }
+
 /*section-breaker CSS*/
 .section-divider > img {
   width: 100%;
 }
+
 .stat-color {
-  background-color: #01538a;
+  background-color: #91f6ee;
 }
 .sponser-color {
   background-color: #2cefde;
@@ -108,11 +121,13 @@ body {
 /* What is Section */
 
 .part-2 {
-  background-image: linear-gradient(180deg, #117abf 0%, #005085 100%);
+  background-image: linear-gradient(180deg, #d2f4f1 0%, #91f6ee 100%);
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap-reverse;
-  margin: -1px 0;
+  color: #000;
+  margin: 0;
+  padding: 70px 0;
 }
 
 .about {
@@ -293,82 +308,6 @@ body {
   position: relative;
   z-index: 1;
   background-color: #151853;
-}
-
-.our-sponsor-area {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
-.our-sponsor-area .single-sponsor {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
-  width: 25%;
-  height: 240px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-left: -1px;
-  margin-top: -1px;
-  margin-right: 2.5%;
-  margin-left: 2.5%;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .our-sponsor-area .single-sponsor {
-    height: 200px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .our-sponsor-area .single-sponsor {
-    height: 150px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .our-sponsor-area .single-sponsor {
-    height: 80px;
-  }
-}
-
-.our-sponsor-area .single-sponsor a img {
-  -webkit-transition-duration: 300ms;
-  -o-transition-duration: 300ms;
-  transition-duration: 300ms;
-  width: 85%;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .our-sponsor-area .single-sponsor a img {
-    max-height: 90px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .our-sponsor-area .single-sponsor a img {
-    max-height: 50px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .our-sponsor-area .single-sponsor a img {
-    max-height: 30px;
-  }
-}
-
-.our-sponsor-area .single-sponsor:hover a img,
-.our-sponsor-area .single-sponsor:focus a img {
-  opacity: 1;
 }
 
 @media only screen and (max-width: 767px) {
@@ -659,6 +598,10 @@ body {
   margin: 5px;
 }
 
+#faq p {
+  color: #fff;
+}
+
 #faq #faq-list a.collapsed {
   color: #fff;
 }
@@ -732,4 +675,8 @@ body {
   #sponsors .row img {
     width: 95%;
   }
+}
+
+#sponsors a:hover {
+  transform: scale(1.07);
 }
