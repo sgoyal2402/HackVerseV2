@@ -1026,14 +1026,20 @@
       var imageURL = "";
       var date = new Date();
       var hourOfDay = date.getHours();
-      if(hourOfDay>=18||hourOfDay<=4){
-        imageURL = "img/landing_bg/Background4.png";
+      if(hourOfDay>=20||hourOfDay<=4){
+        imageURL = "img/landing_bg/Night.jpg";
       }
-      else if(imageURL>=5&&imageURL<=15){
-        imageURL = "img/landing_bg/Background.png";
+      else if(hourOfDay>=5&&hourOfDay<=7){
+        imageURL = "img/landing_bg/Morning_Evening.jpg";
+      }
+      else if(hourOfDay>=8&&hourOfDay<=10){
+        imageURL = "img/landing_bg/Noon.jpg";
+      }
+      else if(hourOfDay>=11&&hourOfDay<=16){
+        imageURL = "img/landing_bg/Noon.jpg";
       }
       else{
-        imageURL = "img/landing_bg/Background5.png";
+        imageURL = "img/landing_bg/Sunset_Sunrise.jpg";
       }
       var x = "url("+"\""+imageURL+"\""+") left no-repeat";
       console.log(x);
