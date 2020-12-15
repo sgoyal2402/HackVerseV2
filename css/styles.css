@@ -21,7 +21,6 @@ body {
 
 .section-breaker {
   height: 10vh;
-  background: url("../img/section_breaker.webp");
   background-size: cover;
 }
 
@@ -572,15 +571,24 @@ body {
   .section-heading-2 h4 {
     font-size: 26px;
   }
+
+  .sponsor-message h5{
+    font-size:17px;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .section-heading-2 h4 {
     font-size: 30px;
   }
+
+  .sponsor-message h5{
+    font-size:12px;
+  }
 }
 
 #faq {
+  padding-top:40px;
   background-image: linear-gradient(180deg, #007fb1 0%, #02867b 100%);
 }
 
