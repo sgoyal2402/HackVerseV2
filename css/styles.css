@@ -572,8 +572,8 @@ body {
     font-size: 26px;
   }
 
-  .sponsor-message h5{
-    font-size:17px;
+  .sponsor-message h5 {
+    font-size: 17px;
   }
 }
 
@@ -582,13 +582,13 @@ body {
     font-size: 30px;
   }
 
-  .sponsor-message h5{
-    font-size:12px;
+  .sponsor-message h5 {
+    font-size: 12px;
   }
 }
 
 #faq {
-  padding-top:40px;
+  padding-top: 40px;
   background-image: linear-gradient(180deg, #007fb1 0%, #02867b 100%);
 }
 
@@ -625,7 +625,6 @@ body {
   font-size: 16px;
   line-height: 24px;
   /* font-weight: 600; */
-  padding-left: 5px;
   padding-right: 30px;
 }
 
@@ -636,7 +635,6 @@ body {
   font-size: 16px;
   line-height: 24px;
   /* font-weight: 600; */
-  padding-left: 5px;
   padding-right: 30px;
 }
 
@@ -650,7 +648,7 @@ body {
   content: "";
   display: block;
   height: 2px;
-  margin: 10px;
+  margin: 10px 0;
   background: #85f1c6;
 }
 
