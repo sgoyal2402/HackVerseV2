@@ -338,15 +338,20 @@ body {
 
 .main-footer-area .single-footer-widget .footer-logo {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .main-footer-area .single-footer-widget .social-info a {
   text-align: center;
-  margin-right: 16px;
-  margin-top: 8px;
+  margin-right: 12px;
+  margin-top: 12px;
+  line-height: 32px;
   opacity: 0.8;
   color: rgb(238, 181, 181);
+}
+
+.social-info:last-child {
+  margin-right: 0;
 }
 
 .social-info i:hover {
@@ -514,11 +519,17 @@ body {
   .copywrite-content .footer-menu .nav li a {
     font-size: 12px;
   }
+  .single-footer-widget {
+    margin-top: 20px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .copywrite-content .footer-menu .nav li a {
     font-size: 12px;
+  }
+  .single-footer-widget {
+    margin-top: 20px;
   }
 }
 
