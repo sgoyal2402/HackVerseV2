@@ -470,6 +470,10 @@ body {
   .copywrite-content .copywrite-text p {
     font-size: 12px;
   }
+
+  .copywrite-content .copywrite-text span {
+    display: block;
+  }
 }
 
 .copywrite-content .copywrite-text p a {
