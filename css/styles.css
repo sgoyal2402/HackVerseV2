@@ -67,7 +67,7 @@ body {
     font-size: 40px;
   }
 
-  .apply-btn{
+  .apply-btn {
     font-size: 12px;
   }
 
@@ -87,7 +87,7 @@ body {
     font-size: 24px;
   }
 
-  .apply-btn{
+  .apply-btn {
     font-size: 10px;
   }
 
@@ -255,7 +255,7 @@ body {
     margin-right: -15px;
   }
 
-  .apply-btn{
+  .apply-btn {
     font-size: 11px;
   }
 }
@@ -695,12 +695,12 @@ body {
   justify-content: center;
   margin-bottom: 40px;
 }
-.col-md-4{
+.col-md-4 {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
-.col-6{
+.col-6 {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -711,10 +711,9 @@ body {
     width: 95%;
   }
 
-  .apply-btn{
+  .apply-btn {
     font-size: 13px;
   }
-  
 }
 
 #sponsors a:hover {
@@ -748,6 +747,7 @@ body {
 .social-icons button {
   display: flex;
   margin-bottom: 16px;
+  margin-left: auto;
 }
 
 .social-icons a {

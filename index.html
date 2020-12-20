@@ -76,7 +76,7 @@
           <h1>24-HOUR NATION WIDE</h1>
           <h1>HACKATHON</h1>
           <p>NATIONAL INSTITUTE OF TECHNOLOGY KARNATAKA, SURATHKAL</p>
-          <h3 style="color: rgb(17, 17, 16);">Feb, 2021</h3>
+          <h3 style="color: rgb(17, 17, 16)">Feb, 2021</h3>
           <br />
           <button class="btn btn-primary">
             <strong class="apply-btn">Applications Open Soon!</strong>
@@ -194,14 +194,24 @@
         </div>
 
         <!-- text-shadow: 0.6px 0.6px black -->
-        <div class="sponsor-message" style="padding-bottom:40px">
-          <h5 style="display:flex; justify-content:center;">
-            Interested in sponsoring HackVerse 2.0?</h5>
-          <h5 style="display:flex; justify-content:center;">
+        <div class="sponsor-message" style="padding-bottom: 40px">
+          <h5 style="display: flex; justify-content: center">
+            Interested in sponsoring HackVerse 2.0?
+          </h5>
+          <h5 style="display: flex; justify-content: center">
             Shoot us an email &nbsp;
-            <a style="color:rgb(107, 5, 5); font-weight: normal; text-indent: 0.2em;"
-                href="mailto:hackverse@nitk.edu.in" target="_blank">hackverse@nitk.edu.in</a></h5>
-      </div>
+            <a
+              style="
+                color: rgb(107, 5, 5);
+                font-weight: normal;
+                text-indent: 0.2em;
+              "
+              href="mailto:hackverse@nitk.edu.in"
+              target="_blank"
+              >hackverse@nitk.edu.in</a
+            >
+          </h5>
+        </div>
 
         <div class="row align-items-center">
           <div id="wells-fargo" class="col-6 col-md-4 col-lg-3">
@@ -1043,6 +1053,7 @@
             class="mdc-fab__icon material-icons"
             >facebook</a
           >
+          <span class="mdc-fab__label hidden">Facebook</span>
         </button>
         <button
           style="
@@ -1062,6 +1073,7 @@
             href="https://www.instagram.com/hackversenitk/"
             class="mdc-fab__icon fab fa-instagram"
           ></a>
+          <span class="mdc-fab__label hidden">Instagram</span>
         </button>
         <button
           style="background-color: hsl(203, 89%, 53%)"
@@ -1075,6 +1087,7 @@
             href="https://twitter.com/hackversenitk/"
             class="mdc-fab__icon fab fa-twitter"
           ></a>
+          <span class="mdc-fab__label hidden">Twitter</span>
         </button>
         <button
           class="mdc-fab mdc-fab--mini"
@@ -1089,6 +1102,7 @@
             class="mdc-fab__icon material-icons"
             >format_bold
           </a>
+          <span class="mdc-fab__label hidden">Blog</span>
         </button>
         <button class="mdc-fab mdc-fab--mini" aria-label="mail">
           <div class="mdc-fab__ripple"></div>
@@ -1099,6 +1113,7 @@
             class="mdc-fab__icon material-icons"
             >email
           </a>
+          <span class="mdc-fab__label hidden">Mail Us</span>
         </button>
       </div>
     </div>
@@ -1166,6 +1181,14 @@
       function show() {
         sico.classList.toggle("hidden");
       }
+      $(".social-icons button").mouseenter(function () {
+        $(this).addClass("mdc-fab--extended").removeClass("mdc-fab--mini");
+        $(this).find("span").removeClass("hidden");
+      });
+      $(".social-icons button").mouseleave(function () {
+        $(this).addClass("mdc-fab--mini").removeClass("mdc-fab--extended");
+        $(this).find("span").addClass("hidden");
+      });
     </script>
   </body>
 </html>
