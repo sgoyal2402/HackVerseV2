@@ -1032,7 +1032,7 @@
     <!--Contact Us (Footer)-->
     <div class="fabs">
       <div id="fab" class="mdc-touch-target-wrapper">
-        <button class="mdc-fab mdc-fab--touch">
+        <button id="fab-open" class="mdc-fab mdc-fab--touch">
           <div class="mdc-fab__ripple"></div>
           <span id="icon" class="material-icons mdc-fab__icon">forum</span>
           <div class="mdc-fab__touch"></div>
@@ -1053,7 +1053,13 @@
             class="mdc-fab__icon material-icons"
             >facebook</a
           >
-          <span class="mdc-fab__label hidden">Facebook</span>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/hackverse/"
+            class="mdc-fab__label hidden"
+            >Facebook</a
+          >
         </button>
         <button
           style="
@@ -1073,7 +1079,13 @@
             href="https://www.instagram.com/hackversenitk/"
             class="mdc-fab__icon fab fa-instagram"
           ></a>
-          <span class="mdc-fab__label hidden">Instagram</span>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/hackversenitk/"
+            class="mdc-fab__label hidden"
+            >Instagram</a
+          >
         </button>
         <button
           style="background-color: hsl(203, 89%, 53%)"
@@ -1087,7 +1099,13 @@
             href="https://twitter.com/hackversenitk/"
             class="mdc-fab__icon fab fa-twitter"
           ></a>
-          <span class="mdc-fab__label hidden">Twitter</span>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/hackversenitk/"
+            class="mdc-fab__label hidden"
+            >Twitter</a
+          >
         </button>
         <button
           class="mdc-fab mdc-fab--mini"
@@ -1099,10 +1117,16 @@
             target="_blank"
             rel="noopener noreferrer"
             href="https://hackverse.nitk.ac.in/blog/"
-            class="mdc-fab__icon material-icons"
-            >format_bold
+            class="mdc-fab__icon fas fa-blog"
+          >
           </a>
-          <span class="mdc-fab__label hidden">Blog</span>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://hackverse.nitk.ac.in/blog/"
+            class="mdc-fab__label hidden"
+            >Blog</a
+          >
         </button>
         <button class="mdc-fab mdc-fab--mini" aria-label="mail">
           <div class="mdc-fab__ripple"></div>
@@ -1113,7 +1137,13 @@
             class="mdc-fab__icon material-icons"
             >email
           </a>
-          <span class="mdc-fab__label hidden">Mail Us</span>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:hackverse@nitk.edu.in"
+            class="mdc-fab__label hidden"
+            >Mail Us</a
+          >
         </button>
       </div>
     </div>
@@ -1181,14 +1211,17 @@
       function show() {
         sico.classList.toggle("hidden");
       }
-      $(".social-icons button").mouseenter(function () {
-        $(this).addClass("mdc-fab--extended").removeClass("mdc-fab--mini");
-        $(this).find("span").removeClass("hidden");
+      $(function () {
+        $("#fab-open").click();
       });
-      $(".social-icons button").mouseleave(function () {
-        $(this).addClass("mdc-fab--mini").removeClass("mdc-fab--extended");
-        $(this).find("span").addClass("hidden");
-      });
+      // $(".social-icons button").mouseenter(function () {
+      //   $(this).addClass("mdc-fab--extended").removeClass("mdc-fab--mini");
+      //   $(this).find(".mdc-fab__label").removeClass("hidden");
+      // });
+      // $(".social-icons button").mouseleave(function () {
+      //   $(this).addClass("mdc-fab--mini").removeClass("mdc-fab--extended");
+      //   $(this).find(".mdc-fab__label").addClass("hidden");
+      // });
     </script>
   </body>
 </html>
