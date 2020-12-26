@@ -25,8 +25,8 @@ body {
 }
 
 .logo {
-  width: 320px;
-  height: 80px;
+  width: 400px;
+  height: 100px;
   background-image: url(../img/logo_long.webp);
   background-size: 95%;
   background-repeat: no-repeat;
@@ -94,6 +94,14 @@ body {
 }
 
 @media only screen and (max-width: 520px) {
+  .logo{
+    width: 360px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+  }
+  
   .content {
     margin-right: 0;
     margin-top: 40px;
@@ -153,20 +161,19 @@ body {
 /* What is Section */
 
 .part-2 {
-  background-image: linear-gradient(180deg, #d2f4f1 0%, #91f6ee 100%);
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap-reverse;
+  background: linear-gradient(180deg, #c9f3ff 0%, #91f6ee 100%);
+  padding: 70px 30px 70px 30px ;
   color: #000;
-  margin: 0;
-  padding: 70px 0;
 }
 
 .about {
   line-height: 1.5;
+  padding: 50px 10px 40px 10px;
+  text-align: justify;
 }
 
 .about h2 {
+  text-align: center;
   font-size: 2.5rem;
 }
 
@@ -175,11 +182,22 @@ body {
 }
 
 .logo-2 {
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
   height: auto;
-  width: 30%;
+  width: 100%;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (min-width: 521px) and (max-width: 850px) {
+  .part-2{
+    padding-top:30px;
+  }
+
+  .about{
+    padding: 30px 60px 30px 60px;
+  }
+  
   .about h2 {
     font-size: 2rem;
   }
@@ -194,6 +212,14 @@ body {
 }
 
 @media only screen and (max-width: 520px) {
+  .part-2{
+    padding-top:30px;
+  }
+
+  .about{
+    padding: 30px 30px 30px 30px;
+  }
+  
   .about h2 {
     font-size: 1.5rem;
   }
@@ -205,6 +231,23 @@ body {
   .logo-2 {
     width: 50%;
   }
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 43%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* :: 22.0 Stats Area CSS */
