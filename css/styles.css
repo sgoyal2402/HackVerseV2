@@ -94,14 +94,14 @@ body {
 }
 
 @media only screen and (max-width: 520px) {
-  .logo{
+  .logo {
     width: 360px;
     height: 90px;
     margin-left: auto;
     margin-right: auto;
-    display:block;
+    display: block;
   }
-  
+
   .content {
     margin-right: 0;
     margin-top: 40px;
@@ -162,7 +162,7 @@ body {
 
 .part-2 {
   background: linear-gradient(180deg, #c9f3ff 0%, #91f6ee 100%);
-  padding: 70px 30px 70px 30px ;
+  padding: 70px 30px 70px 30px;
   color: #000;
 }
 
@@ -184,20 +184,20 @@ body {
 .logo-2 {
   margin-left: auto;
   margin-right: auto;
-  display:block;
+  display: block;
   height: auto;
   width: 100%;
 }
 
 @media only screen and (min-width: 521px) and (max-width: 850px) {
-  .part-2{
-    padding-top:30px;
+  .part-2 {
+    padding-top: 30px;
   }
 
-  .about{
+  .about {
     padding: 30px 60px 30px 60px;
   }
-  
+
   .about h2 {
     font-size: 2rem;
   }
@@ -212,14 +212,14 @@ body {
 }
 
 @media only screen and (max-width: 520px) {
-  .part-2{
-    padding-top:30px;
+  .part-2 {
+    padding-top: 30px;
   }
 
-  .about{
+  .about {
     padding: 30px 30px 30px 30px;
   }
-  
+
   .about h2 {
     font-size: 1.5rem;
   }
@@ -685,12 +685,11 @@ body {
 
 #faq-list li {
   color: transparent;
-  margin: 5px;
+  margin: 5px auto;
 }
 
-#faq2-list li {
-  color: transparent;
-  margin: 5px;
+#faq ul {
+  padding: 0 20px;
 }
 
 #faq p {
@@ -711,18 +710,7 @@ body {
   position: relative;
   font-size: 16px;
   line-height: 24px;
-  /* font-weight: 600; */
-  padding-right: 30px;
-}
-
-#faq #faq2-list li a {
-  padding: 18px 0;
-  display: block;
-  position: relative;
-  font-size: 16px;
-  line-height: 24px;
-  /* font-weight: 600; */
-  padding-right: 30px;
+  /* padding-right: 30px; */
 }
 
 #faq a {
