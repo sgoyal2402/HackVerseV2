@@ -752,16 +752,19 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 .col-md-4 {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px;
+  margin-top: 30px; */
 }
 .col-6 {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px;
+  margin-top: 20px; */
 }
 
 @media only screen and (max-width: 1100px) {
