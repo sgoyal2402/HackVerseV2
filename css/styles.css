@@ -879,3 +879,22 @@ body {
 a:hover {
   text-decoration: none;
 }
+
+#sea-creatures{
+  width: 15%;
+}
+
+.footer-color #sea-creatures{
+  width: 30%;
+}
+
+@media only screen and (max-width: 576px){
+  #sea-creatures{
+    width: 25%;
+  }
+
+  .footer-color #sea-creatures{
+    width: 50%;
+  }
+  
+}
