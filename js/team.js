@@ -370,7 +370,7 @@ student_info[2] = [{
     }
 ]
 
-function insert_in_div(insert_div, persons) {
+function insert_in_div(insert_div, persons) { 
     persons.forEach((person) => {
         if (person.designation === undefined) person.designation = ''
         div_text = `
@@ -392,7 +392,7 @@ function insert_in_div(insert_div, persons) {
                 </div>
             </div>
             </div>
-            `
+            `   
         insert_div.innerHTML += div_text
     })
 }
@@ -421,7 +421,6 @@ var student_div = document.getElementById('students').getElementsByClassName('ro
 student_info[0].sort(compare)
 student_info[1].sort(compare)
 student_info[2].sort(compare)
-
 insert_in_div(student_div, student_info[0])
 insert_in_div(student_div, student_info[1])
 insert_in_div(student_div, student_info[2])
