@@ -714,7 +714,7 @@ body {
 
 #faq {
   padding-top: 40px;
-  background-image: linear-gradient(180deg, #007fb1 0%, #02867b 100%);
+  background-image: linear-gradient(180deg, #23BEF9 0%, #02867b 100%);
 }
 
 .section-header-faq {
@@ -872,3 +872,14 @@ a:hover {
   
 }
 
+
+#prizes{
+  background-image: linear-gradient(180deg, #45C8F9 0%, #2CEFDE 100%);
+  padding: 70px 30px 70px 30px;
+}
+
+#tracks{
+  background-image: linear-gradient(180deg, #057EB0 0%, #2CEEDD 100%);
+  padding: 70px 30px 70px 30px;
+
+}
