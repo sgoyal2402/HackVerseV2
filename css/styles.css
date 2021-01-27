@@ -112,13 +112,12 @@ body {
   color: #000;
 } */
 
-.pyp{
+.pyp {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Barlow Semi Condensed;
 }
-
 
 .content p {
   font-size: 24px;
@@ -752,7 +751,7 @@ body {
 }
 
 #faq a {
-  color: #55c1aa;
+  color: rgb(20, 10, 54);
   transition: 0.5s;
   text-decoration: none;
 }
