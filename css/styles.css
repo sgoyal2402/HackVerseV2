@@ -975,4 +975,64 @@ a:hover {
     width: 50%;
   }  
 }
+.single-speaker-area {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: none;
+  margin-bottom: 40px;
+  border-radius: 10px; 
+  }
+  .single-speaker-area .speaker-single-thumb {
+    position: relative;
+    z-index: 1;
+    border: none;
+    border-radius: 10%; }
+    .single-speaker-area .speaker-single-thumb img {
+      -webkit-transition-duration: 1500ms;
+      -o-transition-duration: 1500ms;
+      transition-duration: 1500ms;
+      width: 100%;
+      border-radius: 50%;
+      margin-bottom: 80px;
 
+   }
+  .single-speaker-area .social-info {
+    position: absolute;
+    top: -180px;
+    right: 0;
+    z-index: 22;
+    background-color: #233452;
+    padding: 15px;
+    border-radius: 0 10px 0 10px;
+    text-align: center;
+    -webkit-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-duration: 800ms; }
+    .single-speaker-area .social-info a {
+      display: block;
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 5px; }
+      .single-speaker-area .social-info a:last-child {
+        margin-bottom: 0; }
+  .single-speaker-area .speaker-info {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    z-index: 22;
+     }
+    .single-speaker-area .speaker-info h5 {
+      font-size: 15px;
+      font-weight: 500;
+      color: #ffffff;
+      letter-spacing: 1px;
+      margin-bottom: 0px;
+     }
+    .single-speaker-area .speaker-info p {
+      color: #df42b1;
+      margin-bottom: 0;
+      letter-spacing: 1px;
+      line-height: 1; }
+  .single-speaker-area:hover .social-info, .single-speaker-area:focus .social-info {
+    top: 0; }
