@@ -748,7 +748,34 @@ body {
   padding-top: 40px;
   background-image: linear-gradient(180deg, #007fb1 0%, #02867b 100%);
 }
+#mytopnav {
+  background-image:linear-gradient(to left,teal, #069);
+  overflow: hidden;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
 
+.our-speaker-area {
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+        to left,
+        #00cc99 0%, 
+        #006699 50%, 
+        #00cc99 100%
+
+  );  
+  animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 .section-header-faq {
   text-align: center;
 }
@@ -918,6 +945,7 @@ a:hover {
 .topnav .icon {
   display: none;
 }
+
 .team_page_logo{
   height: 50.0;
   width: 50.0;
@@ -931,7 +959,7 @@ a:hover {
   width: 30%;
 }
 .page-title {
-  color: darkblue;
+  color: black;
   font-size: 45px;
   font-weight: 700; }
   @media only screen and (max-width: 767px) {
@@ -945,9 +973,6 @@ a:hover {
 
   .footer-color #sea-creatures{
     width: 50%;
-  }
-
-  
-  
+  }  
 }
 

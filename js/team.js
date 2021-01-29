@@ -375,10 +375,10 @@ function insert_in_div(insert_div, persons) {
         if (person.designation === undefined) person.designation = ''
         div_text = `
             <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
+            <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" style="z-index:auto;" data-wow-delay="300ms">
                 <!-- Thumb -->
                 <div class="speaker-single-thumb">
-                    <img src="img/team_page/` + person.image_path + `" alt="" style="height:325px">
+                    <img src="img/team_page/` + person.image_path + `" class="img-fluid" style="height:280px;border-radius:8%; width:210px;  ">
                 </div>
                 <!-- Social Info -->
                 <div class="social-info">
@@ -386,7 +386,7 @@ function insert_in_div(insert_div, persons) {
                     <a href="` + person.linkedin + `"><i class="zmdi zmdi-linkedin"></i></a>
                 </div>
                 <!-- Info -->
-                <div class="speaker-info">
+                <div class="speaker-info" style="  text-align: center;      ">
                     <h5>` + person.name + `</h5>
                     <p style="color:gold">` + person.designation + `<p>
                 </div>
@@ -424,3 +424,20 @@ student_info[2].sort(compare)
 insert_in_div(student_div, student_info[0])
 insert_in_div(student_div, student_info[1])
 insert_in_div(student_div, student_info[2])
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("myTopnav");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
