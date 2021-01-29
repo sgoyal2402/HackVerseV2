@@ -63,6 +63,7 @@
     />
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/events.css" />
   </head>
 
   <body>
@@ -111,7 +112,8 @@
         </div>
       </div>
     </header>
-
+    
+    <!--------------------------------------------------------------------------------------------------------------------------->
     <!--What is HackVerse-->
     <section class="part-2">
       <div class="container align-items-center">
@@ -127,7 +129,7 @@
             />
           </div>
           <div class="col-12 col-lg-6 order-lg-first about">
-            <h2>WHAT IS HACKVERSE 2.0</h2>
+            <h2 style="font-family: 'Lobster', cursive;">WHAT IS HACKVERSE 2.0</h2>
             <br />
             <p class="lead">
               HackVerse serves as a platform to encourage enthusiastic minds to
@@ -153,10 +155,60 @@
             ></iframe>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-12 col-md-12">
+              <h4 class="text-center" style="margin: 70px 0 0px 0; color: black; font-size: 2em">
+                HackVerse 1.0 Stats
+              </h4>
+          </div>
+        </div>
+        <div class="row stats">
+          <div class="col-6 col-lg-3">
+            <div class="text-center mb-100">
+              <i class="fas fa-users fa-4x" aria-hidden="true"></i>
+              <div class="milestone-number">
+                <span class="number-holder">2461</span>
+              </div>
+              <div class="milestone-desc">Total Registrations</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="text-center mb-100">
+              <i class="fas fa-user-secret fa-4x" aria-hidden="true"></i>
+              <div class="milestone-number">
+                <span class="number-holder">180</span>
+                <span class="number-suffix">+</span>
+              </div>
+              <div class="milestone-desc">Hackers Hosted</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="text-center mb-100">
+              <i class="fas fa-university fa-4x" aria-hidden="true"></i>
+              <div class="milestone-number">
+                <span class="number-holder">80</span>
+                <span class="number-suffix">+</span>
+              </div>
+              <div class="milestone-desc">Engineering Institutes</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-100">
+            <div class="text-center mb-100">
+              <i class="fas fa-globe fa-4x" aria-hidden="true"></i>
+              <div class="milestone-number">
+                <span class="number-holder">30</span>
+                <span class="number-suffix">+</span>
+              </div>
+              <div class="milestone-desc">Companies</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!--Section Breaker Welcome/Stats-->
+    <!--Section Breaker Welcome/Events-->
     <div class="section-divider stat-color unselectable">
       <img
         src="./img/Sea creatures/S2.png"
@@ -188,61 +240,102 @@
       />
     </div>
 
-    <!-- HackVerse 1.0 stats -->
+    <!--------------------------------------------------------------------------------------------------------------------------->
+    <!-- Events Section-->
     <section class="part-3">
-      <div class="container">
+      <div class="events-container">
+
         <div class="row">
           <div class="col-12 col-md-12">
             <div class="section-heading-2">
-              <h4 class="text-center" style="margin-bottom: 70px; color: black">
-                HackVerse 1.0 Stats
+              <h4 class="text-center" style="margin-bottom: 70px; color: black; font-family: 'Lobster', cursive;">
+                Events and Updates
               </h4>
             </div>
           </div>
         </div>
-        <div class="row stats">
-          <div class="col-12 col-lg-3">
-            <div class="text-center mb-100">
-              <i class="fas fa-users fa-4x" aria-hidden="true"></i>
-              <div class="milestone-number">
-                <span class="number-holder">2461</span>
-              </div>
-              <div class="milestone-desc">Total Registrations</div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3">
-            <div class="text-center mb-100">
-              <i class="fas fa-user-secret fa-4x" aria-hidden="true"></i>
-              <div class="milestone-number">
-                <span class="number-holder">180</span>
-                <span class="number-suffix">+</span>
-              </div>
-              <div class="milestone-desc">Hackers Hosted</div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3">
-            <div class="text-center mb-100">
-              <i class="fas fa-university fa-4x" aria-hidden="true"></i>
-              <div class="milestone-number">
-                <span class="number-holder">80</span>
-                <span class="number-suffix">+</span>
-              </div>
-              <div class="milestone-desc">Engineering Institutes</div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3 mb-100">
-            <div class="text-center mb-100">
-              <i class="fas fa-globe fa-4x" aria-hidden="true"></i>
-              <div class="milestone-number">
-                <span class="number-holder">30</span>
-                <span class="number-suffix">+</span>
-              </div>
-              <div class="milestone-desc">Companies</div>
-            </div>
-          </div>
+        <div class="carousel">
+            <input type="radio" name="slides" checked="checked" id="slide-1">
+            <input type="radio" name="slides" id="slide-2">
+            <input type="radio" name="slides" id="slide-3"><!--
+            <input type="radio" name="slides" id="slide-4">
+            <input type="radio" name="slides" id="slide-5">
+            <input type="radio" name="slides" id="slide-6">-->
+            <ul class="carousel__slides">
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="img/events/yocket-webinar.webp" onerror="this.onerror=null;this.src='img/events/yocket-webinar.jpg';" alt="">
+                        </div>
+                        <figcaption>
+                            <strong>HackVerse 2.0 in association with Yocket is here to help you to build an amazing profile for top universities.<br><br>
+                                Attend the Webinar for free guidance from Expert Counselors on securing admissions to top universities abroad.<br><br>
+                                Date: 30th January, 2021<br>
+                                Time: 4:30 PM<br>
+                                <a  href="https://event.webinarjam.com/register/366/844q6tvg">Register Now!</a></strong><br>
+                                                     
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="img/events/mlh-web-scraping.webp" onerror="this.onerror=null;this.src='img/events/mlh-web-scraping.jpg';" alt="">
+                        </div>
+                        <figcaption>
+                            <strong>MLH Localhost session on Web Scraping in Python hosted by S.R.Sahith<br><br>
+                              The session covered Web Scraping using BeautifulSoup and 
+                              Regular Expression Python libraries to create a bot of any Twitter celebrity!<br><br>
+                            <a href="https://youtu.be/98k5QSqDhXQ">Watch on Youtube</a></strong>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="img/events/hacktober-workshop.webp" onerror="this.onerror=null;this.src='img/events/hacktober-workshop.jpg';" alt="">
+                        </div>
+                        <figcaption>
+                            <strong>Online Meetup at NITK Surathkal organized as part of Hacktoberfest<br><br>
+                              Maintainers were invited to guide would-be contributors towards issues that will help move the project forward, 
+                              and contributors get the opportunity to give back to the projects .<br><br>
+                            <a href="https://youtube.com/playlist?list=PL9G8ordCN9gt1zZhGA6HcoYjoiwj_ac0z">Watch on Youtube</a></strong>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>    
+
+            <ul class="carousel__thumbnails">
+                <li>
+                    <label class="carousel-label" for="slide-1">
+                      <img src="img/events/yocket-webinar.webp" onerror="this.onerror=null;this.src='img/events/yocket-webinar.jpg';" alt="">
+                    </label>
+                </li>
+                <li>
+                    <label class="carousel-label" for="slide-2">
+                        <img src="img/events/mlh-web-scraping.webp" onerror="this.onerror=null;this.src='img/events/mlh-web-scraping.jpg';" alt="">
+                      </label>
+                </li>
+                <li>
+                    <label class="carousel-label" for="slide-3">  
+                      <img src="img/events/hacktober-workshop.webp" onerror="this.onerror=null;this.src='img/events/hacktober-workshop.jpg';" alt="">
+                    </label>
+                </li>
+                <!-- <li>
+                    <label class="carousel-label" for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
+                </li>
+                <li>
+                    <label class="carousel-label" for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
+                </li>
+                <li>
+                    <label class="carousel-label" for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label> 
+                </li>-->
+            </ul>
         </div>
+
       </div>
     </section>
+
     <!--Section Breaker-->
     <div class="section-divider unselectable" style="background-color: #2df0df">
       <img
@@ -251,8 +344,9 @@
       />
     </div>
 
+    <!--------------------------------------------------------------------------------------------------------------------------->
+    <!-- Prizes -->
     <section id="prizes">
-      <!-- Prizes -->
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-12">
