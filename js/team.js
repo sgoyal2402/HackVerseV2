@@ -426,7 +426,7 @@ insert_in_div(student_div, student_info[1])
 insert_in_div(student_div, student_info[2])
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {myFunction1()};
 
 // Get the navbar
 var navbar = document.getElementById("myTopnav");
@@ -434,7 +434,7 @@ var navbar = document.getElementById("myTopnav");
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 
-function myFunction() {
+function myFunction1() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
   } else {
