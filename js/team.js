@@ -113,260 +113,502 @@ let fac_info = [{
     }
 ]
 
-let student_info = []
-student_info[0] = [{
-        "timestamp": "2019-12-31T10:01:25.107Z",
-        "email": "akash9721l@gmail.com",
-        "name": "Akash L",
-        "image_path": "students/500_542px - Akash L.jpg",
-        "linkedin": "https://www.linkedin.com/in/akash-l-285787126/",
-        "uploadImage": "https://drive.google.com/open?id=1fkyzQNC0w36yg1ZjfM4_y-bez6c1N6Vy"
-    },
-    {
-        "timestamp": "2019-12-31T11:47:28.648Z",
-        "email": "vachhanihpavan@gmail.com",
-        "name": "Pavan Vachhani",
-        "image_path": "students/DSC_00462 - Pavan Vachhani.jpg",
-        "linkedin": "https://www.linkedin.com/in/vachhanihpavan",
-        "uploadImage": "https://drive.google.com/open?id=1xoJVeylmGXiD3QWepJygdZfr83kygYd4"
-    },
-    {
-        "timestamp": "2019-12-31T14:42:01.307Z",
-        "email": "adarshmalapaka98@gmail.com",
-        "name": "Adarsh Malapaka",
-        "linkedin": "https://www.linkedin.com/in/adarsh-malapaka-653455152",
-        "image_path": "students/7ACF7F66-054D-42A2-9A79-2319FD278299 - IE NITK.jpeg",
-        "uploadImage": "https://drive.google.com/open?id=1v_OQwnyXICsgPL1Mm3bjT4RhXg-C3VIJ"
-    },
-    {
-        "timestamp": "2019-12-31T16:25:14.991Z",
-        "email": "saisushil10@gmail.com",
-        "name": "Sai Sushil",
-        "image_path": "students/Screenshot_20191021_153856 - Sai Sushil.jpg",
-        "linkedin": "https://www.linkedin.com/in/sai-sushil-10",
-        "uploadImage": "https://drive.google.com/open?id=1mzk0uB8P8Ml9QVBZPw-EyY8Bk9tk20QZ"
-    },
-    {
-        "timestamp": "2019-12-31T16:55:21.274Z",
-        "email": "shreyas.shankar920@gmail.com",
-        "name": "Shreyas Shankar",
-        "image_path": "students/shreyasshankar - Shreyas Shankar.jpg",
-        "linkedin": "https://www.linkedin.com/in/shreyas-shankar-474731140/",
-        "uploadImage": "https://drive.google.com/open?id=1Or0Jr_rbHYfa_yiohij2YOQUWujWq2TW"
-    },
-    {
-        "timestamp": "2019-12-31T18:08:47.055Z",
-        "email": "shravanshenoy1998@hotmail.com",
-        "name": "Shravan S",
-        "image_path": "students/shravan1 - Shravan Shenoy.png",
-        "linkedin": "https://in.linkedin.com/in/shravan-shenoy-84295713a",
-        "uploadImage": "https://drive.google.com/open?id=1qX04DIvuUztPHPKtK9r5ckIuwRyURv04"
-    },
-    {
-        "email": "shreyasseshadri@gmail.com",
-        "name": "Shreyas Seshadri",
-        "image_path": "students/shreyas-seshadri.jpg",
-        "linkedin": "https://www.linkedin.com/in/shreyas-seshadri-8b278a130/"
-    },
-    {
-        "timestamp": "2020-01-01T02:43:39.732Z",
-        "email": "namrataladda@gmail.com",
-        "name": "Namrata Ladda",
-        "image_path": "students/IMG_20191016_190625 - Namrata Ladda.jpg",
-        "linkedin": "https://www.linkedin.com/in/namrata-ladda-255593153",
-        "uploadImage": "https://drive.google.com/open?id=1IoC5x6fixzXBziL2Mo03bWTBW_nVNOkB"
-    },
-    {
-        "timestamp": "2020-01-01T02:43:39.732Z",
-        "email": "keerthana.keetu.p@gmail.com",
-        "name": "Keerthana Polkampally",
-        "image_path": "students/keerthana.jpg",
-        "linkedin": "https://www.linkedin.com/in/polkampally-keerthana-66973112b/",
-        "uploadImage": "https://drive.google.com/open?id=1IoC5x6fixzXBziL2Mo03bWTBW_nVNOkB"
-    },
-    {
-        "timestamp": "2020-01-01T02:43:39.732Z",
-        "email": "mehnaz138@gmail.com",
-        "name": "Mehnaz Yunus",
-        "image_path": "students/IMG_20191124_145951_4-Mehnaz-Yunus.jpg",
-        "linkedin": "https://www.linkedin.com/in/mehnaz-yunus/",
-        "uploadImage": "https://drive.google.com/open?id=1IoC5x6fixzXBziL2Mo03bWTBW_nVNOkB"
-    },
-    {
-        "timestamp": "1/4/2020 23:51:03",
-        "email": "shahmishal1998@gmail.com",
-        "name": "Mishal Shah",
-        "linkedin": "https://www.linkedin.com/in/mishal23",
-        "uploadImage": "https://drive.google.com/open?id=1BAMrc98s0hsMROiFoGTJRosv8iXcTVaW",
-        "image_path": "students/Mishal - HackVerse NITK.jpg"
-    },
-    {
-        "timestamp": "1/4/2020 23:51:03",
-        "email": "sohampatil798@gmail.com",
-        "name": "Soham Patil",
-        "linkedin": "https://www.linkedin.com/in/soham-shashikant-patil-a63b64133/",
-        "uploadImage": "https://drive.google.com/open?id=1BAMrc98s0hsMROiFoGTJRosv8iXcTVaW",
-        "image_path": "students/soham.jpeg"
-    },
-    {
-        'timestamp': '2020/01/23 12:02:46 AM GMT+5:30',
-        'email': 'varshamavath98@gmail.com',
-        'name': 'Varsha Mavath',
-        'linkedin': 'https://www.linkedin.com/in/varsha-mavath',
-        'image_path': 'students/Varsha Mavath.jpg',
-        'uploadImage': 'https://drive.google.com/u/2/open?usp=forms_web&id=1Mtp0NzHdnKAOugXfGVOtkzRPxFww2aVC'
-    },
-    {
-        "email": "bhatswathi1234@gmail.com",
-        "name": "Swathi Bhat",
-        "linkedin": "https://linkedin.com/in/swathibhat99/",
-        "image_path": "students/IMG-20200101-WA0038 - Swathi Bhat.jpg"
-    }
-]
 
-student_info[1] = [{
-        "email": "govindsunilkumar.171ec217@nitk.edu.in",
-        "name": "Govind Sunilkumar",
-        "linkedin": "https://www.linkedin.com/in/govind-sunilkumar-71431b186/",
-        "image_path": "students/WhatsApp Image 2020-01-05 at 22.19.10 - Govind Sunilkumar.jpeg"
+let student_info=[
+    {
+      "Timestamp": "1/28/2021 19:40:04",
+      "name": "Tharun K",
+      "image_path": 'students/Tharun Kumar.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1tsLwIsXu16sxqWQSMUWZwiml2z0dCXxn",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1a4yyWRmEyVgvtQbrQrBsm8SazOjKqmPS",
+      "email": "tharun634@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/tharun634/"
     },
     {
-        "timestamp": "2019-12-31T14:04:05.182Z",
-        "email": "adityasg3@gmail.com",
-        "name": "Aditya Gourishetty",
-        "linkedin": "https://www.linkedin.com/in/aditya-gourishetty/",
-        "image_path": "students/Aditya_G - Aditya Gourishetty.png",
-        "uploadImage": "https://drive.google.com/open?id=1QMNvJCSx1P56TdAtR_fBPWty4wS8bExU"
+      "Timestamp": "1/28/2021 20:04:17",
+      "name": "Suryansh Goyal",
+      "image_path": 'students/Suryansh Goyal.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1B1U42G1O2_LgRDoH-eTxazSfWTgx_Cx4",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1DED2w_7exrzFgAZ2GcBYSRq-_ybeigE_",
+      "email": "suryanshgoyal.191ec254@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/suryansh-goyal-2674371ba/"
     },
     {
-        "timestamp": "2019-12-31T14:18:30.756Z",
-        "email": "shreyansh25.shrivastava@gmail.com",
-        "name": "Shreyansh Shrivastava",
-        "linkedin": "https://www.linkedin.com/in/shreyansh-shrivastava/",
-        "image_path": "students/rsz_dp - HackVerse NITK.png",
-        "uploadImage": "https://drive.google.com/open?id=1bLCtkfm4WVSVBP9D6t0A7XkrGvpH8Zeq"
+      "Timestamp": "1/28/2021 20:26:33",
+      "name": "Karthik Manjunath",
+      "image_path": 'students/KARTHIK MANJUNATH.jpg',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1qT30GFOft9w0t06D_-Y54T3R0zkFBXTK",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1-RTcs978Gg9DNzytVrGdGuFm-idivChl",
+      "email": "karthikmanjunath05@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/karthik-manjunath-551168174"
     },
     {
-        "timestamp": "2019-12-31T16:02:29.892Z",
-        "email": "sabareshreyash@gmail.com",
-        "name": "Shreyash Sabare",
-        "image_path": "students/Screenshot_20191228-204657 - Shreyash Sabare.jpg",
-        "linkedin": "https://www.linkedin.com/in/shreyash-sabare-91a960166",
-        "uploadImage": "https://drive.google.com/open?id=1oUfk4TwB3d4XQA-A5NRE1F8i01MTl5f9"
+      "Timestamp": "1/28/2021 20:49:32",
+      "name": "Niraj Nandish",
+      "image_path": 'students/Niraj Nandish.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1r6ZX65_pq4hX9M3r46MRDczBXrlO0ywM",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1INsP0CTeOPeps-nkGURXvLHJs6LPVZRj",
+      "email": "nirajnandish@icloud.com",
+      "linkedin": "http://linkedin.com/in/niraj-n-656761191"
     },
     {
-        "timestamp": "2019-12-31T16:11:59.764Z",
-        "email": "anishpatil.171it109@nitk.edu.in",
-        "name": "Anish Patil",
-        "linkedin": "https://www.linkedin.com/in/patil-anish",
-        "image_path": "students/20191231_214049 - Anish Patil.jpg",
-        "uploadImage": "https://drive.google.com/open?id=1EnA_EozVNPYVvIHArLkDWUxo6ZiUcmC2"
+      "Timestamp": "1/28/2021 20:58:09",
+      "name": "Sudeepthi Nalla",
+      "image_path": 'students/NALLA SUDEEPTHI.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1B2LMGtDKwXW05qg4hfyTgduvvZoT77GA",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1nZVsEIMghh8PNeL4eOTHCdK93xrSteWB",
+      "email": "sudeepthinallreddy@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/sudeepthi-nalla-4b3a83192/"
     },
     {
-        "timestamp": "2019-12-31T16:15:41.855Z",
-        "email": "k_rahul_reddy@outlook.com",
-        "name": "K Rahul Reddy",
-        "linkedin": "https://www.linkedin.com/in/rahul-reddy-181522161",
-        "image_path": "students/K Rahul Reddy.jpeg",
-        "uploadImage": "https://drive.google.com/open?id=1wFilE7WgM8sipW6z37tx01Fz4BaY9CYf"
+      "Timestamp": "1/28/2021 21:00:46",
+      "name": "Kriti Shukla",
+      "image_path": 'students/KRITI SHUKLA..webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1NDgVza4lwsxhM5CuvwF125Kauld9UT6j",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1IxNYQ7x67BN2ePDLRaFIgbBonZMz_O7R",
+      "email": "kas140472@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/kriti-shukla-258396182/"
     },
     {
-        "timestamp": "2020-01-01T07:06:43.291Z",
-        "email": "shubham050300@gmail.com",
-        "name": "Shubham Agrawal",
-        "linkedin": "https://www.linkedin.com/in/shubham050300/",
-        "image_path": "students/PicsArt_01-01-12.35.49 - shubham agrawal.jpg",
-        "uploadImage": "https://drive.google.com/open?id=1t2WitRXRoXwSEV-Ntzcxfh3F-MNnC-Ng"
+      "Timestamp": "1/28/2021 21:42:24",
+      "name": "Omanshu Mahawar",
+      "image_path": 'students/Omanshu Mahawar.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1AxrfzsmtcC-7AsyF36RcPldRZe6fOKKK",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=161JUss1lLAfz3i65RiLwXTuOHzggFoRy",
+      "email": "omanshumahawar1234@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/omanshumahawar/"
     },
     {
-        "timestamp": "2020-01-01T14:06:37.750Z",
-        "email": "vybhavpai1999.vp@gmail.com",
-        "name": "Vybhav Pai",
-        "linkedin": "https://www.linkedin.com/in/vybhav-pai-a20331178",
-        "image_path": "students/hackverse - Vybhav Pai.jpg",
-        "uploadImage": "https://drive.google.com/open?id=1ptbJurzJ-l8DSQf4zVBiYLof-w3tVuCz"
+      "Timestamp": "1/28/2021 21:53:39",
+      "name": "Ikjot Singh",
+      "image_path": 'students/Ikjot Dhody..webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1z-DiQ7s73nSKUDmPoTpSpBWEN5ee4GY4",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1ZessPZoKjgpIcjTgNFrxzMxxAYygbXpq",
+      "email": "ikjotsd@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/ikjot-singh-dhody-aa64911a4/"
     },
     {
-        "timestamp": "2020-01-03T17:49:51.311Z",
-        "email": "madhumithanara.171it125@nitk.edu.in",
-        "name": "Madhumitha Nara",
-        "image_path": "students/IMG_20180529_142057_542x500 - Madhumitha Nara.jpg",
-        "linkedin": "https://www.linkedin.com/in/madhumitha-nara/",
-        "uploadImage": "https://drive.google.com/open?id=130fM2DWBeQ-0f_g-VSkZ9oVqM99ojUPX"
+      "Timestamp": "1/29/2021 8:30:48",
+      "name": "Priyanka B. G.",
+      "image_path": 'students/Priyanka B G.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1hrV-7Q491J4vvXhgFmWA_afCHAHv13Zt",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1O-DkwkfCRnBc85wT6PQjDvTujwfdy1fa",
+      "email": "priyankabg.181it135@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/priyanka-b-g/"
     },
     {
-        'timestamp': '2020/01/22 2:28:34 PM GMT+5:30',
-        'email': 'ratan.171ee234@nitk.edu.in',
-        'name': 'Ratan Mamdekar',
-        'linkedin': 'https://www.linkedin.com/in/ratan-mamdekar-218b6b49/',
-        'image_path': 'students/Ratan Mamdekar1.jpg',
-        'uploadImage': 'https://drive.google.com/u/2/open?usp=forms_web&id=1qIbrU1OWDDOqDzT8_Enq0r0GRut4A_WF'
+      "Timestamp": "1/29/2021 9:01:21",
+      "name": "Gaurav Chaurasia",
+      "image_path": 'students/GAURAV CHAURASIA..webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1CYtZo-uBpf8p0YNadUG2B86I8zxp0weu",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1L2FGLbzx0tRgJVqsVX52TpZeMhWCkmag",
+      "email": "gaurav.181cv155@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/gaurav-chaurasia/"
     },
     {
-        'timestamp': '2020/01/22 3:06:26 PM GMT+5:30',
-        'email': 'nishantkumar.171ee230@nitk.edu.in',
-        'name': 'Nishant Kumar',
-        'linkedin': '#',
-        'image_path': 'students/Nishant Kumar.jpg',
-        'uploadImage': 'https://drive.google.com/u/2/open?usp=forms_web&id=1UhHy-rDGPvmCWrGf717TGPCQUVWKPpc_'
+      "Timestamp": "1/29/2021 12:49:50",
+      "name": "Ritik Pansuriya",
+      "image_path": 'students/Ritik Pansuriya..webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1oz4CcUWrqDchtRcRNBub7zdoAufITtAp",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1PJoX3V114AnL3C5zERtryn6lGYIPmwy0",
+      "email": "ritik.rjt@gmail.com",
+      "linkedin": "https://in.linkedin.com/in/ritik-pansuriya"
     },
     {
-        'email': 'chaitany.pandiya@gmail.com',
-        'name': 'Chaitany Pandiya',
-        'linkedin': 'https://www.linkedin.com/in/chaitany-pandiya-6b2788147/',
-        'image_path': 'students/Chaitany.jpg',
-    },
-
-]
-
-
-student_info[2] = [{
-        "timestamp": "2019-12-31T13:52:30.131Z",
-        "email": "feyazabubaker@gmail.com",
-        "name": "Feyaz Baker",
-        "linkedin": "https://www.linkedin.com/in/feyaz-baker-520086175/",
-        "image_path": "students/69637394_2507244952838478_8668472265190408192_n - Feyaz Baker.jpg",
-        "uploadImage": "https://drive.google.com/open?id=1VPyV8skRmvi7WJBttZOOHdIdcKUK3Y52"
+      "Timestamp": "1/29/2021 14:03:17",
+      "name": "Arshad Shikalgar",
+      "image_path": 'students/Arshad Shikalgar.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=189T82EOefTsEw6pQ798nrxKS2W2hebPI",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1qIEME4iEbQ3U_GpQiG-5PWuC1RTM67G9",
+      "email": "arshadshikalgar.191ec245@nitk.edu.in",
+      "linkedin": "www.linkedin.com/in/arshad-shikalgar-bb20801aa"
     },
     {
-        "timestamp": "2020-01-01T17:10:19.988Z",
-        "email": "sudeepthinallareddy@gmail.com",
-        "name": "Nalla Sudeepthi",
-        "image_path": "students/IMG-20200101-WA0005 - Sudeepthi Nallareddy.jpg",
-        "linkedin": "https://www.linkedin.com/in/sudeepthi-nallareddy-4b3a83192",
-        "uploadImage": "https://drive.google.com/open?id=1DLWDee5UwUsPoClcJwV9jzQRMjpLgOrS"
+      "Timestamp": "1/29/2021 14:24:47",
+      "name": "Siddharth Singh",
+      "image_path": 'students/Siddharth Singh.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1aHul2BdiVkQqtOFh8JiXfn6k5mEYygI0",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1RbvQejsrbzJ_fcLN390ewvZTdVQLD40v",
+      "email": "reach.siddharth.singh99@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/siddharth-singh-973304179/"
     },
     {
-        "timestamp": "2019-12-31T18:14:34.198Z",
-        "email": "shumbul.181co152@nitk.edu.in",
-        "name": "Shumbul Arifa",
-        "image_path": "students/ShumbulArifa.jpg",
-        "linkedin": "https://www.linkedin.com/in/shumbul-arifa-420511143/",
-        "uploadImage": "https://drive.google.com/open?id=18iYvly_i2AS1H-mwVMRcuqtRN44DCLdi"
+      "Timestamp": "1/29/2021 15:11:54",
+      "name": "Abhinav Dugar",
+      "image_path": 'students/Abhinav Dugar.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1h-5AuSsSSQtgX-aHMh_X4Afk03_k9W9o",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1dydS_i5i8ILO6R4abUftr3MLQ1XDbufm",
+      "email": "dugarabhinav2001@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/abhinav-dugar-59084a1aa/"
     },
     {
-        'timestamp': '2020/01/22 1:35:17 AM GMT+5:30',
-        'email': 'prakritigoyal19@gmail.com',
-        'name': 'Prakriti Goyal',
-        'linkedin': 'https://www.linkedin.com/in/prakriti-goyal-595340192/',
-        'image_path': 'students/Prakriti Goyal1.jpg',
-        'uploadImage': 'https://drive.google.com/u/2/open?usp=forms_web&id=1UX7cvzG7i8ZaEp8K7DNVc3ct1SUvEvRS'
+      "Timestamp": "1/29/2021 15:46:41",
+      "name": "Shubham Agrawal",
+      "image_path": 'students/shubham agrawal.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1G2jKjsf6DLOmMAI2oiiVt2lhYnOJZffS",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1AjmVezbtMFJ6GDLnsHz0NMGUzmCFibtA",
+      "email": "shubham050300@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/shubham050300/"
     },
     {
-        'timestamp': '2020/01/22 2:52:32 AM GMT+5:30',
-        'email': 'omanshumahawar.181co237@nitk.edu.in',
-        'name': 'Omanshu Mahawar ',
-        'linkedin': 'http://linkedin.com/in/omanshu-mahawar-7b6325192',
-        'image_path': 'students/Omanshu Mahawar.jpeg',
-        'uploadImage': 'https://drive.google.com/u/2/open?usp=forms_web&id=1-9ClDctox_E1KS_DDqPjac1FgL908qA9'
+      "Timestamp": "1/29/2021 17:24:02",
+      "name": "Sushruth V",
+      "image_path": 'students/Sushruth V.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1V9XaFZgXrNPBVrbxFjvU2ChjlP99OpjF",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1T5B6A9u7vhtuSd2m9iy0OD46Y8Jpv1UW",
+      "email": "vsushruth21@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/sushruth-v-7a3399183/"
     },
     {
-        'timestamp': '2020/01/22 1:06:53 PM GMT+5:30',
-        'email': 'jahnavikancharla99@gmail.com',
-        'name': 'Jahnavi Kancharla ',
-        'linkedin': 'http://linkedin.com/in/jahnavi-kancharla-b68379191',
-        'image_path': 'students/Kancharla Jahnavi.jpeg',
-        'uploadImage': 'https://drive.google.com/u/2/open?usp=forms_web&id=1tNhIUyiKYDvWQVsaHkgnzDXucbKnshUt'
+      "Timestamp": "1/29/2021 17:33:04",
+      "name": "Rugved",
+      "image_path": 'students/RUGVED PRASHANT PANDE..png',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1bakdKbg-MIM12QbeksjFKtrNVvH8IFTp",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1AbayVIWe8LDH4C0_t9VTxsQwFVrxvOuR",
+      "email": "Rugvedpande943@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/rugved-pande-9013511aa"
+    },
+    {
+      "Timestamp": "1/29/2021 17:35:09",
+      "name": "Aritra Sinha",
+      "image_path": 'students/Aritra Sinha.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1aAo5bueOHtP4y--fndVishlHUtUQrB3B",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1LKWyFrEOJSY-UvKn5nBDtwBz-elEMPwT",
+      "email": "aritrasinha.191ec108@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/aritra-sinha-0251101a3"
+    },
+    {
+      "Timestamp": "1/29/2021 17:45:37",
+      "name": "Manas Trivedi",
+      "image_path": 'students/Manas Trivedi.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=16bhPzA6Nb1e61pp27pZUIixO9QTUlQ7v",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=164CbQCSPKPEa6tEWNvfn_kwdA5XlS0oe",
+      "email": "manasdtrivedi@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/manas-trivedi/"
+    },
+    {
+      "Timestamp": "1/29/2021 17:47:44",
+      "name": "KEERTHANA H B",
+      "image_path": 'students/KEERTHANA H B.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1Cd32BW25aVChvr41cxq3neFqpqg1P7RD",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1VhS4E4XcIyFpRztxATN_SqWJfdOJ6hQS",
+      "email": "keerthana.181cv116@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/keerthana-h-b-111a5a195"
+    },
+    {
+      "Timestamp": "1/29/2021 18:06:35",
+      "name": "Rohan Suratkal",
+      "image_path": 'students/Rohan Suratkal..webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1GG2AGA5Kmvv36lkHg13F_UF5xMoihxzf",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1mb7o1aLD49wyQqrR3K4LwptKe-nDpenK",
+      "email": "rohansuratkal.191ch042@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/rohan-suratkal-99296212b/"
+    },
+    {
+      "Timestamp": "1/29/2021 18:54:48",
+      "name": "Aastha Chowdhary",
+      "image_path": 'students/Aastha Chowdhary.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1uKRTurpJ2g7rYEqApKsuKF9sRKHAzH6a",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1KZlkfUfnnz4uF12MVDXaOYphlPhwXz2s",
+      "email": "aasthac67@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/aastha-chowdhary-912895180/"
+    },
+    {
+      "Timestamp": "1/29/2021 19:05:58",
+      "name": "Aditya Gourishetty",
+      "image_path": 'students/Aditya Gourishetty.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1BkHRYjhpKGltYfWPESnPTYxVeAmWeif9",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=17uhUEyRhbvbMGqAGAX4xiJIavnpwluWs",
+      "email": "adityagourishetty@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/aditya-gourishetty/"
+    },
+    {
+      "Timestamp": "1/29/2021 19:09:35",
+      "name": "Alan Tony",
+      "image_path": 'students/Alan Tony.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1KDSRt7xrm5HJ3E15HOOZJPSdc3C3Qfe5",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1ljYZT0RlpdBbD34P7deU4idF7Venrz2R",
+      "email": "alantonye.191cs207@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/alan-tony-38880a1ba"
+    },
+    {
+      "Timestamp": "1/29/2021 19:22:17",
+      "name": "Rakshith.H.R",
+      "image_path": 'students/Rakshith H R.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=188YuDaVKbWCVKe8Zv6OYksO5jGbvQTFe",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1jSEpZS1-zh0hwt_8uBeFWUXxcSSEwKVt",
+      "email": "rakshithh176@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/rakshith-h-r-5270161b7/"
+    },
+    {
+      "Timestamp": "1/29/2021 19:40:57",
+      "name": "Yash Sharma",
+      "image_path": 'students/Yash Sharma.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1xwZVyvyHiELyLacJ9bdlC9B8Pxb2T25L",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1JjMY9qrkV7U3roSMevVBU344J1n1QENW",
+      "email": "Isshu9945@gmail.com",
+      "linkedin": "Yash Sharma"
+    },
+    {
+      "Timestamp": "1/29/2021 20:16:34",
+      "name": "Yash Kundale",
+      "image_path": 'students/Yash Kundale..webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1QInGB_l4aXhcClb9xx69H1AORhlLbVpp",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1SH608qKM1vWhGokZnf6fOMCSe9tfw9V_",
+      "email": "yashk.191me296@nitk.edu.in",
+      "linkedin": "kyashnitk23"
+    },
+    {
+      "Timestamp": "1/29/2021 20:40:02",
+      "name": "K Rahul Reddy",
+      "image_path": 'students/K Rahul Reddy.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1V1c7SUoqV0L-yvmT6iz_f_N5fxycnaWu",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1QoVITIbWyZdPj5vSq4OACFIm0kZ6QsNo",
+      "email": "k_rahul_reddy@outlook.com",
+      "linkedin": "https://www.linkedin.com/in/k-rahul-reddy/"
+    },
+    {
+      "Timestamp": "1/29/2021 20:41:50",
+      "name": "Vybhav Pai",
+      "image_path": 'students/Vybhav Pai.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1uHR0UlfD-1McxgISQY5Lw_grCdy_aAxn",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=13hDwSRMF3dyXNfYu-L_Y_6lQq6PUx2hV",
+      "email": "vybhavpai1999.vp@gmail.com",
+      "linkedin": "http://www.linkedin.com/in/vybhav-pai"
+    },
+    {
+      "Timestamp": "1/29/2021 21:07:39",
+      "name": "Ramyashree G K",
+      "image_path": 'students/RAMYA SHREE G K.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1rOv4dAHRedY9ZaPGcIUMqmnvG4v6nyOa",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1KPThKF-YSR-QAO1lsBHvkPptjc78t3yH",
+      "email": "gkramyashree.181cv112@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/ramyashree-g-k-0002b616b"
+    },
+    {
+      "Timestamp": "1/29/2021 23:52:24",
+      "name": "Naman raka",
+      "image_path": 'students/Naman Raka.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1xEV-FQz0iLVJAa0OYeqUdVB6MG1BRuUm",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=10gfP2QctXllTLru-A9y82ZaxdnnZyEYj",
+      "email": "namanraka.191ch028@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/naman-raka-9789b5190"
+    },
+    {
+      "Timestamp": "1/30/2021 0:02:41",
+      "name": "Shreya Lingareddy",
+      "image_path": 'students/Shreya Lingareddy.jpg',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1g3tAYysdJE1hE9azJJb39RI-BcoC3QqO",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1F2vCXkAPhs30LnBINC6-NHtX7xmkxssu",
+      "email": "shreyareddy32@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/shreya-lingareddy-20a0391b6"
+    },
+    {
+      "Timestamp": "1/30/2021 0:17:54",
+      "name": "Rithik Jain",
+      "image_path": 'students/RITHIK JAIN..webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1moglXay5Xx5XxydY-7xRnpN9ENaOzVCF",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1Fh-U665wJ95QNro-ZhF1xy7Xqa3LTmee",
+      "email": "rithikjain1811@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/rithik-jain-162324192"
+    },
+    {
+      "Timestamp": "1/30/2021 0:25:34",
+      "name": "Prakriti Goyal",
+      "image_path": 'students/Prakriti Goyal..webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1WVEveMgVDJcdB6B1OukTDCoRX_bcn42Q",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1kN_D8yzQAeaK3dh19Rk5nX6K1UQTl5Mw",
+      "email": "prakritigoyal19@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/prakriti-goyal/"
+    },
+    {
+      "Timestamp": "1/30/2021 0:31:10",
+      "name": "Adarsh Ashok Pai",
+      "image_path": 'students/ADARSH ASHOK PAI..jpg',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1fVg87mOIPxXMqdof-WlBbs0Jn80ai6iO",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1RbEHYqOGa7mNSYHUGGxRMXW-Fhi7ThEA",
+      "email": "adarshpai305@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/adarsh-ashok-pai-65111a1b9"
+    },
+    {
+      "Timestamp": "1/30/2021 0:42:22",
+      "name": "Achintya Kumar",
+      "image_path": 'students/Achintya Kumar.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1e4m8yL7VfJd3UbYkT_rO7ktfdK7bidq_",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1DH3cv6IE8FRwmwtFqNYVuiZnsEsfV0zt",
+      "email": "ackintya@gmail.com",
+      "linkedin": "https://github.com/ackintya"
+    },
+    {
+      "Timestamp": "1/30/2021 10:37:50",
+      "name": "Krishna Prasad Kuddannaya",
+      "image_path": 'students/KRISHNA PRASAD KUDDANNAYA.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1V8jldjBaJVkjBvdruU_IxManihgSb3c2",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=18mbGANL4eBQhZc99Zas0Du3RDmpBVCUX",
+      "email": "krishnapk.191cv223@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/krishna-prasad-kuddannaya-7b507a1a0"
+    },
+    {
+      "Timestamp": "1/30/2021 10:46:54",
+      "name": "Saransh bhaduka",
+      "image_path": 'students/saransh bhaduka.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1nhTpBJroNCiM3QZXBqJIUhlUM1P-TQaN",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1P5NZensFaCJ80TCQ0iF56RLoAIFEXshV",
+      "email": "saranshbhaduka111@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/saransh-bhaduka-841a1619b/"
+    },
+    {
+      "Timestamp": "1/30/2021 11:05:50",
+      "name": "Yogesh",
+      "image_path": 'students/YOGESH.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1LAKX-60FpCUy3dSXPeBcmpe_DagnisGQ",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1nvvm2cx7mf-mXp9FuJNi3TFJmEewKCJg",
+      "email": "yovikas1730@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/yogesh2001/"
+    },
+    {
+      "Timestamp": "1/30/2021 11:39:40",
+      "name": "Chaitany Pandiya",
+      "image_path": 'students/Chaitany Pandiya.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1WU5mBneSh-sjYQ0bzGXtU6TPll-9Nc9P",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1LZOz-_WB9hy9wfg_-wFFTBh0Z3mAx13A",
+      "email": "chaitany.pandiya@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/chaitany-pandiya-6b2788147"
+    },
+    {
+      "Timestamp": "1/30/2021 11:52:32",
+      "name": "Saurabh Mokashi",
+      "image_path": 'students/Saurabh Dhananjay Mokashi..webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1v5kNsz0vJ8KTl015YbnAe7YNXzq_rga-",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1zny-9pVANzjTPXPW5m379XJVOymlPT8X",
+      "email": "sherumokashi@gmail.com",
+      "linkedin": "Saurabh Mokashi"
+    },
+    {
+      "Timestamp": "1/30/2021 12:03:55",
+      "name": "Manav Shetty",
+      "image_path": 'students/Manav Shetty.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1bCR-CHRbUhMMsN4niEsJbpGgNON4viRa",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1hDWtDKMk8jpu2I6yuPQAltdXbBnZ5Gsk",
+      "email": "manavshetty.191mt023@nitk.edu.in",
+      "linkedin": "www.linkedin.com/in/manavshetty"
+    },
+    {
+      "Timestamp": "1/30/2021 12:09:04",
+      "name": "Sagar",
+      "image_path": 'students/Sagar Choudhury.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1mt56pYRxdeRT16dPs9mRuqA4BsnRsTl2",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1wf8O71Lk76yiCHNUMS01u1fiGPz3r7Cm",
+      "email": "sagarchoudhury.nitk@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/sagar-choudhury-121b61170"
+    },
+    {
+      "Timestamp": "1/30/2021 12:13:05",
+      "name": "Govind Sunilkumar",
+      "image_path": 'students/Govind Sunilkumar.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=13-8NyUxqjlwfUzVU0Ipv9AdpnWgiscmd",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1qBmWSFxgxXe-wveaGe0HOdhgx85USDat",
+      "email": "iamgovind09@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/govind-sunilkumar-71431b186"
+    },
+    {
+      "Timestamp": "1/30/2021 12:30:20",
+      "name": "Sannuta",
+      "image_path": 'students/Sannuta.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1iM6sn_rYiO4IljXjhv-6NCCnwL-zf9k0",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1QWW-btQJ4ldTYxs_aCpMi2qVf4senRA7",
+      "email": "sannuta.191ee149@nitk.edu.in",
+      "linkedin": "www.linkedin.com/in/sannuta-r-mijar-4ab3211b3"
+    },
+    {
+      "Timestamp": "1/30/2021 12:30:39",
+      "name": "Ratan Mamdekar",
+      "image_path": 'students/Ratan Mamdekar.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1fCmeNOVFIsE79Bn3wZv2sjELNE2FdcXT",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1y9jzGAfzD7ZGSjz_5AIc__w5uLaGDrYJ",
+      "email": "ratanmamdekar@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/ratan-mamdekar-218b6b49/"
+    },
+    {
+      "Timestamp": "1/30/2021 12:45:15",
+      "name": "Madhumitha Nara",
+      "image_path": 'students/Madhumitha Nara.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1BKcT_YXbDpvmn6_V9VLTD7UaSj7qGaQd",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1U2ttyE7ydtj6_YhY4B-5BBbgpE9dTG8e",
+      "email": "naramadhumitha@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/madhumitha-nara/"
+    },
+    {
+      "Timestamp": "1/30/2021 13:10:50",
+      "name": "Sasidhar Swarangi",
+      "image_path": 'students/Sai Sasidhar Swarangi.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1xI8zIoGCw4z74MIW2OzguL3znmnaavyO",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=17TUupFlqLm0l0Wq_NuwRpSwdiYaFNLNN",
+      "email": "sasidhar.swarangi@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/sasidhar-swarangi/"
+    },
+    {
+      "Timestamp": "1/30/2021 13:36:51",
+      "name": "Pranav Rihal",
+      "image_path": 'students/Pranav Rihal.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=10zqJ8K_19fyEJtyg_brW9DKGNGXIkNv5",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1rVkoAilSV9_u_BOEgriJAnUTHaxDG1mX",
+      "email": "pranavr753@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/pranav-rihal-b081ba194/"
+    },
+    {
+      "Timestamp": "1/30/2021 14:25:32",
+      "name": "Neha Mane",
+      "image_path": 'students/neha mane.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1qf1gnWzhjK8HCM0pSqT-iwisP86RqM-V",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1TcExoIHQ_2Yh1tEb9WunzKyrwenduGDv",
+      "email": "nehapmane@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/neha-mane-a41793183/"
+    },
+    {
+      "Timestamp": "1/30/2021 14:39:45",
+      "name": "Jahnavi Kancharla",
+      "image_path": 'students/Kancharla Jahnavi.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1o2TZ8MPLfI9IazNnmxSBkBhcRUs9fH45",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1mhuUwVPLK8W_OMdBR0c1XUH0YSW0CQD8",
+      "email": "jahnavikancharla99@gmail.com",
+      "linkedin": "http://linkedin.com/in/jahnavikancharla"
+    },
+    {
+      "Timestamp": "1/30/2021 15:04:03",
+      "name": "NISHTHA KUMARI",
+      "image_path": 'students/NISHTHA KUMARI.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1ejlEyIvmUuHRcc_wvKkLgnUP1ZRFQ8H4",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1ie14V0YlYtlCqcdtlDg8Xar72oRRDxvY",
+      "email": "nishthakumari.181co236@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/nishtha-kumari-a93643188/"
+    },
+    {
+      "Timestamp": "1/30/2021 16:25:33",
+      "name": "Sakshi Babar",
+      "image_path": 'students/sakshi babar.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=11fobez4U-FSlPzNphgFoycHjinDgfvdY",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1XqVKzvF4RL48MTR6smTtkh5cBiZFOXSf",
+      "email": "sakshibabar111@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/sakshi-babar-0547431b6"
+    },
+    {
+      "Timestamp": "1/30/2021 18:55:57",
+      "name": "Mihir Mali",
+      "image_path": 'students/Mihir S Mali.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1PzH9xlNZ2N4ZEy86T7XATdGtOlRz6Y8h",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1T2RjUS_EIq91ZpmSgEWfiAT2imvyfitp",
+      "email": "mihir.191me148@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/mihir-mali-5247281b3/"
+    },
+    {
+      "Timestamp": "1/31/2021 0:49:00",
+      "name": "Anupama Kolsur",
+      "image_path": 'students/Anupama Kolsur.webp',
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1p2UYIUILEnELpA6_cqGBjMhvbW2Cad0q",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1kRXFN12JdMs4AhMgT-I4-wZtimvq_tXV",
+      "email": "anupamakolsur.191ec107@nitk.edu.in",
+      "linkedin": "https://www.linkedin.com/in/anupamakolsur/"
     }
 ]
 
@@ -431,12 +673,12 @@ insert_in_div(fac_div, fac_info,'facad')
 
 var student_div = document.getElementById('students').getElementsByClassName('row')[0]
 
-student_info[0].sort(compare)
-student_info[1].sort(compare)
-student_info[2].sort(compare)
-insert_in_div(student_div, student_info[0],'s')
-insert_in_div(student_div, student_info[1],'s')
-insert_in_div(student_div, student_info[2],'s')
+student_info.sort(compare)
+insert_in_div(student_div, student_info,'s')
+//student_info[1].sort(compare)
+//student_info[2].sort(compare)
+// insert_in_div(student_div, student_info[1],'s')
+// insert_in_div(student_div, student_info[2],'s')
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction1()};
