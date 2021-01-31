@@ -370,11 +370,24 @@ student_info[2] = [{
     }
 ]
 
-function insert_in_div(insert_div, persons) { 
+function insert_in_div(insert_div, persons,type) { 
     persons.forEach((person) => {
+        let col = ""
+        if(type == 'p'){
+            col = "#00008b";
+        }
+        else if(type == 'adv'){
+            col = "#00008b";
+        }
+        else if('facad'){
+            col = "#00008b";
+        }
+        else{
+            col = "#add8e6";
+        }
         if (person.designation === undefined) person.designation = ''
         div_text = `
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 ">
             <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" style="z-index:auto;" data-wow-delay="300ms">
                 <!-- Thumb -->
                 <div class="speaker-single-thumb">
@@ -387,8 +400,8 @@ function insert_in_div(insert_div, persons) {
                 </div>
                 <!-- Info -->
                 <div class="speaker-info" style="  text-align: center;      ">
-                    <h5>` + person.name + `</h5>
-                    <p style="color:gold">` + person.designation + `<p>
+                    <p style="color:`+col+`;font-size:25px;">` + person.name + `</h5>
+                    <p style="">` + person.designation + `<p>
                 </div>
             </div>
             </div>
@@ -408,22 +421,22 @@ function compare(a, b) {
 }
 
 var p_div = document.getElementById('p').getElementsByClassName('row')[0]
-insert_in_div(p_div, p_info)
+insert_in_div(p_div, p_info,'p')
 
 var adv_div = document.getElementById('adv').getElementsByClassName('row')[0]
-insert_in_div(adv_div, adv_info)
+insert_in_div(adv_div, adv_info,'adv')
 
 var fac_div = document.getElementById('facad').getElementsByClassName('row')[0]
-insert_in_div(fac_div, fac_info)
+insert_in_div(fac_div, fac_info,'facad')
 
 var student_div = document.getElementById('students').getElementsByClassName('row')[0]
 
 student_info[0].sort(compare)
 student_info[1].sort(compare)
 student_info[2].sort(compare)
-insert_in_div(student_div, student_info[0])
-insert_in_div(student_div, student_info[1])
-insert_in_div(student_div, student_info[2])
+insert_in_div(student_div, student_info[0],'s')
+insert_in_div(student_div, student_info[1],'s')
+insert_in_div(student_div, student_info[2],'s')
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction1()};
