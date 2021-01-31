@@ -641,9 +641,9 @@ function insert_in_div(insert_div, persons,type) {
                     <a href="` + person.linkedin + `"><i class="zmdi zmdi-linkedin"></i></a>
                 </div>
                 <!-- Info -->
-                <div class="speaker-info" style="  text-align: center;      ">
-                    <p style="color:`+col+`;font-size:25px;">` + person.name + `</h5>
-                    <p style="">` + person.designation + `<p>
+                <div class="speaker-info">
+                    <h5>` + person.name + `</h5>
+                    <p>` + person.designation + `<p>
                 </div>
             </div>
             </div>
