@@ -760,15 +760,28 @@ body {
 
 .our-speaker-area {
   align-items: center;
+  justify-content: center; 
+  
+}
+.container_patrons{
+  align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-        to left,
-        #00cc99 0%, 
-        #006699 50%, 
-        #00cc99 100%
-
-  );  
-  animation: AnimateBG 20s ease infinite;
+  background-color: #91F6EE;
+}
+.container_adv{
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#8CDDFB, #82F1DE);
+}
+.container_fac{
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#5BBFF9,#5AA998);
+}
+.container_student{
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#387FB0,#47877B);
 }
 
 @keyframes AnimateBG { 
@@ -1036,3 +1049,7 @@ a:hover {
       line-height: 1; }
   .single-speaker-area:hover .social-info, .single-speaker-area:focus .social-info {
     top: 0; }
+
+  .patron_div{
+    background-color: #87DAF6;
+  }  

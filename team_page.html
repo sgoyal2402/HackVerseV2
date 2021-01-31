@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -30,213 +32,326 @@
     <title>HackVerse | January 25-26, 2020</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="../img/LOGO.png">
+    <link rel="icon" href="../img/LOGO.png" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="topnav" id="myTopnav" style="z-index: 50" style="opacity: 0;">
+      <img
+        src="img/logo.webp"
+        height="50.0"
+        width="50.0"
+        style="left: 95%; position: absolute"
+      />
+      <a href="#p" class="active">Patrons</a>
+      <a href="#adv">Advisory Committee</a>
+      <a href="#facad">Faculty Advisors</a>
+      <a href="#students">Student Team</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
   
-</head>
-
-<body style = "background: linear-gradient(#C8F2FE 0%, #5BBDF1 50%, #2B658B 100%);">
-  <div class="topnav" id="myTopnav" style="z-index: 50;">
-        <img src="img/logo.webp" height="50.0" width="50.0" style="left: 95%;position: absolute;">
-        <a href="#p" class="active">Patrons</a>
-        <a href="#adv">Advisory Committee</a>
-        <a href="#facad">Faculty Advisors</a>
-        <a href="#students">Student Team</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
     <section class="our-speaker-area section-padding-100">
-        <div id="p" class="container">
-            <h1 class="page-title" style="text-align: center;padding: 10%;">Patrons</h1>
-            <div class="row">
-            </div>
-        </div>
-
-        <div id="adv" class="container">
-            <h1 class="page-title" style="text-align: center;padding: 10%;">Advisory Committee</h1>
-            <div class="row">
-            </div>
-        </div>
-
-        <div id="facad" class="container">
-            <h1 class="page-title" style="text-align: center;padding: 10%;">Faculty Advisors</h1>
-            <div class="row">
-            </div>
-        </div>
-
-        <div id="students" class="container">
-                <h1 class="page-title" style="text-align: center;padding: 10%;">Student Team</h1>
-                <div class="row">
-                </div>
-            </div>
+      <div id="p" class="container_patrons">
+        <h1 class="page-title" style="text-align: center; padding: 10%">
+          Patrons
+        </h1>
+        <div class="row"></div>
+      </div>
+      <div class="section-divider stat-color unselectable">
+        <img
+          src="./img/Sea creatures/S2.png"
+          style="
+            height: auto;
+            position: absolute;
+            z-index: 4;
+            transform: translateY(-12%);
+            left: 1%;
+          "
+          alt="Sea creature"
+          id="sea-creatures"
+        />
+        <img
+          src="./img/Sea creatures/S3.png"
+          style="
+            height: auto;
+            position: absolute;
+            z-index: 4;
+            right: 1%;
+            transform: translateY(-12%);
+          "
+          alt="Sea creature"
+          id="sea-creatures"
+        />
+        <img
+          src="img/section_breaker_blue/W1.webp"
+          onerror="this.onerror=null;this.src='img/section_breaker_blue/W1.png';"
+        />
+      </div>
+      <div id="adv" class="container_adv">
+        <h1 class="page-title" style="text-align: center; padding: 10%">
+          Advisory Committee
+        </h1>
+        <div class="row"></div>
+      </div>
+      <!--Section Breaker Stat/Sponsors-->
+      <div class="section-divider sponser-color unselectable">
+        <img
+          src="./img/Sea creatures/S1.png"
+          style="
+            height: auto;
+            position: absolute;
+            z-index: 4;
+            left: 1%;
+            transform: translateY(12%);
+          "
+          alt="Sea creature"
+          id="sea-creatures"
+        />
+        <img
+          src="./img/Sea creatures/S4.png"
+          style="
+            height: auto;
+            position: absolute;
+            z-index: 4;
+            right: 1%;
+            transform: translateY(25%);
+          "
+          alt="Sea creature"
+          id="sea-creatures"
+        />
+        <img
+          src="img/section_breaker_blue/W4.webp"
+          onerror="this.onerror=null;this.src='img/section_breaker_blue/W4.png';"
+        />
+      </div>
+      <div id="facad" class="container_fac">
+        <h1 class="page-title" style="text-align: center; padding: 10%">
+          Faculty Advisors
+        </h1>
+        <div class="row"></div>
+      </div>
+      <div class="section-divider faq-color unselectable">
+        <img
+          src="./img/Sea creatures/S5.png"
+          style="
+            height: auto;
+            position: absolute;
+            z-index: 4;
+            left: 1%;
+            transform: translateY(-35%);
+          "
+          alt="Sea creature"
+          id="sea-creatures"
+        />
+        <img
+          src="./img/Sea creatures/S6.png"
+          style="
+            height: auto;
+            position: absolute;
+            z-index: 4;
+            right: 1%;
+            transform: translateY(-45%);
+          "
+          alt="Sea creature"
+          id="sea-creatures"
+        />
+        <img
+          src="img/section_breaker_blue/W7.webp"
+          onerror="this.onerror=null;this.src='img/section_breaker_blue/W7.png';"
+        />
+      </div>
+      <div id="students" class="container_student">
+        <h1 class="page-title" style="text-align: center; padding: 10%">
+          Student Team
+        </h1>
+        <div class="row"></div>
+      </div>
     </section>
+    <div class="section-divider footer-color unselectable">
+      <img
+        src="./img/Sea creatures/S7.png"
+        style="
+          height: auto;
+          position: absolute;
+          z-index: 4;
+          left: 1%;
+          transform: translateY(-15%);
+        "
+        alt="Sea creature"
+        id="sea-creatures"
+      />
 
+      <img
+        src="img/section_breaker_blue/W8.webp"
+        onerror="this.onerror=null;this.src='img/section_breaker_blue/W8.png';"
+      />
+    </div>
     <!-- Our Speakings Area End -->
-
 
     <!-- Footer Area Start -->
     <footer id="footer" class="footer-area">
-        <div class="main-footer-area">
-          <div class="container">
-            <div class="row">
-              <!-- Single Footer Widget Area -->
-              <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-footer-widget">
-                  <!-- Footer Logo -->
-                  <a href="#" class="footer-logo">
-                    <img
-                      style="
-                        height: auto;
-                        width: auto;
-                        max-height: 300px;
-                        max-width: 300px;
-                      "
-                      src="img/logo_long.webp"
-                      onerror="this.onerror=null;this.src='img/logo_long.png';"
-                      alt="HackVerse"
-                  /></a>
-                  <p style="color: #fff; margin-top: -20px">
-                    Hack it till you crack it!
+      <div class="main-footer-area">
+        <div class="container">
+          <div class="row">
+            <!-- Single Footer Widget Area -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <!-- Footer Logo -->
+                <a href="#" class="footer-logo">
+                  <img
+                    style="
+                      height: auto;
+                      width: auto;
+                      max-height: 300px;
+                      max-width: 300px;
+                    "
+                    src="img/logo_long.webp"
+                    onerror="this.onerror=null;this.src='img/logo_long.png';"
+                    alt="HackVerse"
+                /></a>
+                <p style="color: #fff; margin-top: -20px">
+                  Hack it till you crack it!
+                </p>
+
+                <!-- Social Info -->
+                <div class="social-info">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.facebook.com/hackverse/"
+                    ><i class="fab fa-facebook-square fa-2x"></i
+                  ></a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/hackversenitk/"
+                    ><i class="fab fa-instagram fa-2x"></i
+                  ></a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://twitter.com/hackversenitk/"
+                    ><i class="fab fa-twitter fa-2x"></i
+                  ></a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/company/hackverse/"
+                    ><i class="fab fa-linkedin fa-2x"></i
+                  ></a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://t.me/hackverse"
+                    ><i class="fa fa-telegram fa-2x" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.youtube.com/channel/UC_hR3RkqNKQMDG1R2hpbSoA"
+                    ><i class="fa fa-youtube fa-2x" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Footer Widget Area -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <!-- Widget Title -->
+                <h5 class="widget-title">Contact</h5>
+
+                <!-- Contact Area -->
+                <div class="footer-contact-info">
+                  <p>
+                    <i
+                      style="color: rgb(252, 147, 147)"
+                      class="zmdi zmdi-pin"
+                    ></i>
+                    <a
+                      style="color: #fff"
+                      href="https://goo.gl/maps/86DJCMqtYdhVFNgA8"
+                      target="_blank"
+                    >
+                      National Institute of Technology Karnataka, Surathkal
+                    </a>
                   </p>
-  
-                  <!-- Social Info -->
-                  <div class="social-info">
+                  <p>
+                    <i
+                      style="color: rgb(252, 155, 155)"
+                      class="zmdi zmdi-email"
+                    ></i>
                     <a
+                      style="color: white"
+                      href="mailto:hackverse@nitk.edu.in"
                       target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.facebook.com/hackverse/"
-                      ><i class="fab fa-facebook-square fa-2x"></i
-                    ></a>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.instagram.com/hackversenitk/"
-                      ><i class="fab fa-instagram fa-2x"></i
-                    ></a>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://twitter.com/hackversenitk/"
-                      ><i class="fab fa-twitter fa-2x"></i
-                    ></a>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.linkedin.com/company/hackverse/"
-                      ><i class="fab fa-linkedin fa-2x"></i
-                    ></a>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://t.me/hackverse"
-                      ><i class="fa fa-telegram fa-2x" aria-hidden="true"></i
-                    ></a>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.youtube.com/channel/UC_hR3RkqNKQMDG1R2hpbSoA"
-                      ><i class="fa fa-youtube fa-2x" aria-hidden="true"></i
-                    ></a>
-                  </div>
+                    >
+                      hackverse@nitk.edu.in
+                    </a>
+                  </p>
                 </div>
               </div>
-  
-              <!-- Single Footer Widget Area -->
-              <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-footer-widget">
-                  <!-- Widget Title -->
-                  <h5 class="widget-title">Contact</h5>
-  
-                  <!-- Contact Area -->
-                  <div class="footer-contact-info">
-                    <p>
-                      <i
-                        style="color: rgb(252, 147, 147)"
-                        class="zmdi zmdi-pin"
-                      ></i>
-                      <a
-                        style="color: #fff"
-                        href="https://goo.gl/maps/86DJCMqtYdhVFNgA8"
-                        target="_blank"
-                      >
-                        National Institute of Technology Karnataka, Surathkal
-                      </a>
-                    </p>
-                    <p>
-                      <i
-                        style="color: rgb(252, 155, 155)"
-                        class="zmdi zmdi-email"
-                      ></i>
-                      <a
-                        style="color: white"
-                        href="mailto:hackverse@nitk.edu.in"
-                        target="_blank"
-                      >
-                        hackverse@nitk.edu.in
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Single Footer Widget Area -->
-              <div class="col-12 col-lg-4">
-                <div class="single-footer-widget">
-                  <h5 class="widget-title">Campus</h5>
-  
-                  <div class="footer-gallery" style="pointer-events: none">
-                    <div class="row">
-                      <div class="col-4">
-                        <a href="/img/nitk/01.webp" class="single-gallery-item"
-                          ><img
-                            src="img/nitk/01.webp"
-                            onerror="this.onerror=null;this.src='img/nitk/01.jpg';"
-                            alt="NITK, Surathkal"
-                        /></a>
-                      </div>
-                      <div class="col-4">
-                        <a href="/img/nitk/02.webp" class="single-gallery-item"
-                          ><img
-                            src="img/nitk/02.webp"
-                            onerror="this.onerror=null;this.src='img/nitk/02.jpg';"
-                            alt="NITK, Surathkal"
-                        /></a>
-                      </div>
-                      <div class="col-4">
-                        <a href="/img/nitk/03.webp" class="single-gallery-item"
-                          ><img
-                            src="img/nitk/03.webp"
-                            onerror="this.onerror=null;this.src='img/nitk/03.jpg';"
-                            alt="NITK, Surathkal"
-                        /></a>
-                      </div>
-                      <div class="col-4">
-                        <a href="/img/nitk/04.webp" class="single-gallery-item"
-                          ><img
-                            src="img/nitk/04.webp"
-                            onerror="this.onerror=null;this.src='img/nitk/04.jpg';"
-                            alt="NITK, Surathkal"
-                        /></a>
-                      </div>
-                      <div class="col-4">
-                        <a href="/img/nitk/05.webp" class="single-gallery-item"
-                          ><img
-                            src="img/nitk/05.webp"
-                            onerror="this.onerror=null;this.src='img/nitk/05.jpg';"
-                            alt="NITK, Surathkal"
-                        /></a>
-                      </div>
-                      <div class="col-4">
-                        <a href="/img/nitk/06.webp" class="single-gallery-item">
-                          <img
-                            src="img/nitk/06.webp"
-                            onerror="this.onerror=null;this.src='img/nitk/06.jpg';"
-                            alt="NITK, Surathkal"
-                        /></a>
-                      </div>
+            </div>
+
+            <!-- Single Footer Widget Area -->
+            <div class="col-12 col-lg-4">
+              <div class="single-footer-widget">
+                <h5 class="widget-title">Campus</h5>
+
+                <div class="footer-gallery" style="pointer-events: none">
+                  <div class="row">
+                    <div class="col-4">
+                      <a href="/img/nitk/01.webp" class="single-gallery-item"
+                        ><img
+                          src="img/nitk/01.webp"
+                          onerror="this.onerror=null;this.src='img/nitk/01.jpg';"
+                          alt="NITK, Surathkal"
+                      /></a>
+                    </div>
+                    <div class="col-4">
+                      <a href="/img/nitk/02.webp" class="single-gallery-item"
+                        ><img
+                          src="img/nitk/02.webp"
+                          onerror="this.onerror=null;this.src='img/nitk/02.jpg';"
+                          alt="NITK, Surathkal"
+                      /></a>
+                    </div>
+                    <div class="col-4">
+                      <a href="/img/nitk/03.webp" class="single-gallery-item"
+                        ><img
+                          src="img/nitk/03.webp"
+                          onerror="this.onerror=null;this.src='img/nitk/03.jpg';"
+                          alt="NITK, Surathkal"
+                      /></a>
+                    </div>
+                    <div class="col-4">
+                      <a href="/img/nitk/04.webp" class="single-gallery-item"
+                        ><img
+                          src="img/nitk/04.webp"
+                          onerror="this.onerror=null;this.src='img/nitk/04.jpg';"
+                          alt="NITK, Surathkal"
+                      /></a>
+                    </div>
+                    <div class="col-4">
+                      <a href="/img/nitk/05.webp" class="single-gallery-item"
+                        ><img
+                          src="img/nitk/05.webp"
+                          onerror="this.onerror=null;this.src='img/nitk/05.jpg';"
+                          alt="NITK, Surathkal"
+                      /></a>
+                    </div>
+                    <div class="col-4">
+                      <a href="/img/nitk/06.webp" class="single-gallery-item">
+                        <img
+                          src="img/nitk/06.webp"
+                          onerror="this.onerror=null;this.src='img/nitk/06.jpg';"
+                          alt="NITK, Surathkal"
+                      /></a>
                     </div>
                   </div>
                 </div>
@@ -244,33 +359,36 @@
             </div>
           </div>
         </div>
-  
-        <!-- Copywrite Area -->
-        <div class="container">
-          <div class="copywrite-content">
-            <div class="row">
-              <!-- Copywrite Text -->
-              <div class="col-12 text-center">
-                <div class="copywrite-text">
-                  <p style="color: white">
-                    Copyright &copy; 2021 All rights reserved |
-                    <span
-                      >Made with
-                      <i
-                        class="fas fa-heart"
-                        style="color: red"
-                        aria-hidden="true"
-                      ></i>
-                      by
-                      <a href="http://hackverse.nitk.ac.in/HackVerse-20/team" target="_blank"
-                        >HackVerse Team</a
-                      >
-                    </span>
-                  </p>
-                </div>
+      </div>
+
+      <!-- Copywrite Area -->
+      <div class="container">
+        <div class="copywrite-content">
+          <div class="row">
+            <!-- Copywrite Text -->
+            <div class="col-12 text-center">
+              <div class="copywrite-text">
+                <p style="color: white">
+                  Copyright &copy; 2021 All rights reserved |
+                  <span
+                    >Made with
+                    <i
+                      class="fas fa-heart"
+                      style="color: red"
+                      aria-hidden="true"
+                    ></i>
+                    by
+                    <a
+                      href="http://hackverse.nitk.ac.in/HackVerse-20/team"
+                      target="_blank"
+                      >HackVerse Team</a
+                    >
+                  </span>
+                </p>
               </div>
-              <!-- Footer Menu -->
-              <!-- <div class="col-12 col-md-6">
+            </div>
+            <!-- Footer Menu -->
+            <!-- <div class="col-12 col-md-6">
                 <div class="footer-menu">
                   <ul class="nav">
                     <li>
@@ -295,43 +413,47 @@
                   </ul>
                 </div>
               </div> -->
-            </div>
           </div>
         </div>
-      </footer>
-  
+      </div>
+    </footer>
+
     <!-- Footer Area End -->
 
     <!-- **** All JS Files ***** -->
     <!-- jQuery 2.2.4 -->
 
     <script>
-        var mobile_logo = document.getElementById('logo-mob');        
-        var desktop_logo = document.getElementById('logo-pc');
+      var mobile_logo = document.getElementById("logo-mob");
+      var desktop_logo = document.getElementById("logo-pc");
 
-        mobile_logo.onclick = function(){
-            window.location.href = "https://nitk.ac.in"
-        }
-        desktop_logo.onclick = function(){
-            window.location.href = "https://nitk.ac.in"
-        }
+      mobile_logo.onclick = function () {
+        window.location.href = "https://nitk.ac.in";
+      };
+      desktop_logo.onclick = function () {
+        window.location.href = "https://nitk.ac.in";
+      };
 
-        mobile_logo.style.display = "none";
+      mobile_logo.style.display = "none";
 
-        var p_div = document.getElementById('p');
-        var adv_div = document.getElementById('adv');
-        var facad_div = document.getElementById('facad');
-        var students_div = document.getElementById('students');
+      var p_div = document.getElementById("p");
+      var adv_div = document.getElementById("adv");
+      var facad_div = document.getElementById("facad");
+      var students_div = document.getElementById("students");
 
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            mobile_logo.style.display = "block";
-            desktop_logo.style.display = "none";
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        mobile_logo.style.display = "block";
+        desktop_logo.style.display = "none";
 
-            p_div.style.width = "70%"
-            adv_div.style.width = "70%"
-            facad_div.style.width = "70%"
-            students_div.style.width = "70%"
-        }
+        p_div.style.width = "70%";
+        adv_div.style.width = "70%";
+        facad_div.style.width = "70%";
+        students_div.style.width = "70%";
+      }
     </script>
     <script src="js/team.js"></script>
     <script src="../js/jquery.min.js"></script>
@@ -343,7 +465,5 @@
     <script src="../js/confer.bundle.js"></script>
     <!-- Active -->
     <script src="../js/default-assets/active.js"></script>
-
-</body>
-
+  </body>
 </html>
