@@ -5,7 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   color: #fff;
-  font-family: "Roboto";
+  font-family: 'Lobster', cursive;
   font-weight: normal;
 }
 
@@ -748,10 +748,7 @@ body {
   padding-top: 40px;
   background-image: linear-gradient(180deg, #007fb1 0%, #02867b 100%);
 }
-#mytopnav {
-  background-image:linear-gradient(to left,teal, #069);
-  overflow: hidden;
-}
+
 .sticky {
   position: sticky;
   top: 0;
@@ -771,13 +768,13 @@ body {
 .container_adv{
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(#8CDDFB, #07ffd6e7);
+  background-image: linear-gradient(#8CDDFB, rgba(10, 235, 216, 0.863));
 }
 .container_fac{
   align-items: center;
   justify-content: center;
   padding-bottom: 10%;
-  background-image: linear-gradient(#4ebbfa ,#0ba597);
+  background-image: linear-gradient(#23bef9 ,#0ba597);
 }
 .container_student{
   align-items: center;
@@ -928,7 +925,7 @@ a:hover {
   text-decoration: none;
 }
 .topnav {
-  background-color: #333;
+  background-color:black;
   overflow: hidden;
 }
 
@@ -951,7 +948,7 @@ a:hover {
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #c2bf32;
   color: white;
 }
 
@@ -1009,9 +1006,11 @@ a:hover {
       -o-transition-duration: 1500ms;
       transition-duration: 1500ms;
       width: 100%;
+      -webkit-box-shadow: 0 8px 26px -6px black;
+      -moz-box-shadow: 0 8px 26px -6px black;
+      box-shadow: 0 8px 26px -6px black;   
       border-radius: 50%;
       margin-bottom: 80px;
-
    }
   .single-speaker-area .social-info {
     position: absolute;

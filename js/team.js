@@ -434,8 +434,8 @@ let student_info=[
       "Timestamp": "1/30/2021 0:42:22",
       "name": "Achintya Kumar",
       "image_path": 'students/Achintya Kumar.webp',
-      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1e4m8yL7VfJd3UbYkT_rO7ktfdK7bidq_",
-      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1DH3cv6IE8FRwmwtFqNYVuiZnsEsfV0zt",
+      "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1F-E7Iu4vQY7qKKL4uYG63dB8OLl-5dyY",
+      "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=15pSsDo4DG0HQvQ2VZBv0WxkFoJiq3AG-",
       "email": "ackintya@gmail.com",
       "linkedin": "https://github.com/ackintya"
     },
@@ -679,20 +679,26 @@ insert_in_div(student_div, student_info,'s')
 //student_info[2].sort(compare)
 // insert_in_div(student_div, student_info[1],'s')
 // insert_in_div(student_div, student_info[2],'s')
-
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction1()};
+function removee() {var i=0;
+  for(i=1;i<=4;i++)
+  document.getElementById(i).classList.remove("active");
+  }
 
 // Get the navbar
-var navbar = document.getElementById("myTopnav");
+window.onscroll = function() {
+  removee();
+  console.log(window.pageYOffset);
+  if ( window.pageYOffset > 1000 && window.pageYOffset < 2200  ) {
+      document.getElementById("2").classList.add("active");
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+  } else if( window.pageYOffset > 2200&& window.pageYOffset < 4100 ) {
+    document.getElementById("3").classList.add("active");
+      }
+    else if( window.pageYOffset > 4100 ) {
+      document.getElementById("4").classList.add("active");
+       }
+    else {
+      document.getElementById("1").classList.add("active");
+      }
 
-function myFunction1() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
 }
