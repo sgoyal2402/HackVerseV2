@@ -64,6 +64,7 @@
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/prizes.css" />
   </head>
 
   <body>
@@ -347,6 +348,7 @@
     <!-- Prizes -->
     <section id="prizes">
       <div class="container">
+        
         <div class="row">
           <div class="col-12 col-md-12">
             <div class="section-heading-2">
@@ -356,43 +358,379 @@
             </div>
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-          "
-        >
-          <div class="pyp">
-            <h4 class="mb-4" style="color: #000">Previous Edition Prizes</h4>
-            <img
-              class="prize"
-              style="width: 50%"
-              src="./img/Prizes.png"
-              alt="pic"
-            />
-          </div>
+        
+        
+        <div class="prize-body">
+          <div class="row">
+            
+            <div class="col-12 col-md-3 col-lg-4">
+              <div class="prize-wrapper">
+                <div class="prize-card prize-card-size">
+                    <input type="checkbox" id="card1" class="more" aria-hidden="true">
+                    <div class="prize-content">
+                        <div class="front"> 
+                            <div class="inner">
+                              <h6 class="ticket-plan" style="background-color: gold !important">1st Prize</h6>
+                              <div class="ticket-icon">
+                                  <img src="img/Gold.png" alt="1st Prize">
+                              </div>
+                              <div>
+                                  <h2 class="ticket-price">Coming Soon!</h2>
+                              </div>
 
-          <div class="pyp">
-            <h4 class="mb-4 mt-5" style="color: #000">This Edition's Prizes</h4>
-            <div
-              class="card text-center text-white bg-primary"
-              style="
-                width: 18rem;
-                height: 7rem;
-                background-color: rgba(0, 0, 0, 0);
-              "
-            >
-              <div class="card-body" style="font-family: Barlow Semi Condensed">
-                <h5 class="card-body">COMING SOON!</h5>
+                                <!--label for="card1" class="prize-button" aria-hidden="true">
+                                    Details
+                                </label-->
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                
+                                <div class="description">
+                                    <ul style="list-style-type:square;">
+                                        <li>Clerky Life Time Membership</li>
+                                        <li>Schwag Bag</li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="location">1st Prize</div>
+                                <div class="price">₹00,000</div>
+                                <label for="card1" class="prize-button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-12 col-md-3 col-lg-4">
+              <div class="prize-wrapper">
+                <div class="prize-card prize-card-size">
+                  <input type="checkbox" id="card2" class="more" aria-hidden="true">
+                  <div class="prize-content">
+                        <div class="front"> 
+                          <div class="inner">
+                              <h6 class="ticket-plan" style="background-color: #C0C0C0 !important">2nd Prize</h6>
+                              <div class="ticket-icon">
+                                  <img src="img/Silver.png"  alt="2nd Prize">
+                              </div>
+                              <div>
+                                  <h2 class="ticket-price">Coming Soon!</h2>
+                              </div>
+      
+                              <!-- <label for="card2" class="prize-button" aria-hidden="true">
+                                  Details
+                              </label> -->
+                          </div>
+                        </div>
+                        <div class="back">
+                          <div class="inner">
+                              
+                              <div class="description">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                  
+                              </div>
+                              <div class="location">Warsaw, Poland</div>
+                              <div class="price">38€ / day</div>
+                              <label for="card2" class="prize-button return" aria-hidden="true">
+                                  <i class="fas fa-arrow-left"></i>
+                              </label>
+                          </div>
+                        </div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <div class="col-12 col-md-3 col-lg-4">
+              <div class="prize-wrapper">
+                <div class="prize-card prize-card-size">
+                    <input type="checkbox" id="card3" class="more" aria-hidden="true">
+                    <div class="prize-content">
+                        <div class="front"> 
+                            <div class="inner">
+                                <h6 class="ticket-plan" style="background-color: #CD7F32 !important">3rd Prize</h6>
+                                <div class="ticket-icon">
+                                    <img src="img/Bronze.png" alt="#rd Prize">
+                                </div>
+                                <div>
+                                    <h2 class="ticket-price">Coming Soon!</h2>
+                                </div>
+        
+                                <!-- <label for="card3" class="prize-button" aria-hidden="true">
+                                    Details
+                                </label> -->
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                
+                                <div class="description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    
+                                </div>
+                                <div class="location">Warsaw, Poland</div>
+                                <div class="price">38€ / day</div>
+                                <label for="card3" class="prize-button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+
+        <!--API Prizes-->
+        <div class="row">
+          <div class="col-12 ">
+              <div class="section-heading-2" style="margin-top: 70px; margin-bottom:0px !important; font-size:2.3em;">
+                <h4 class="text-center" >
+                  Special Prizes
+                </h4>
+              </div>
+          </div>
+        </div>
+
+        <div class="prize-body">
+            <div class="row">
+<!--               
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="prize-wrapper">
+                  <div class="prize-card api-card-size">
+                      <input type="checkbox" id="card4" class="more" aria-hidden="true">
+                      <div class="prize-content">
+                          <div class="front"> 
+                              <div class="inner">
+                                <h6 class="api-plan" style="background-color: black !important">Clerky</h6>
+                                <div class="api-icon">
+                                  <img src="img/sponsors-img/clerky.webp" onerror="this.onerror=null;this.src='img/sponsors-img/clerky.png';" alt="Clerky">
+                                </div>
+                                <div>
+                                    <h2 class="api-price" style="color:black !important;">Life Time Membership</h2>
+                                </div>
+  
+                                  <label for="card4" class="prize-button" aria-hidden="true">
+                                      Details
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  
+                                  <div class="description" style="font-size:.8em !important;">
+                                      Form your startup with our Formation products and get unlimited use of our standard 
+                                      Fundraising, Hiring, Commercial, and Maintenance products for the lifetime of your startup.<br>
+                                      <br>Includes:
+                                      
+                                      <br>1. Expedited filing fees for incorporation
+                                      <br>2. First-year registered agent fee
+                                      <br>3. Annual report and franchise tax reminders
+                                      
+                                  </div>
+                                  <div class="location">Clerky</div>
+                                  <div class="price">API Prize</div>
+                                  <label for="card4" class="prize-button return" aria-hidden="true">
+                                      <i class="fas fa-arrow-left"></i>
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div> -->
+  
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="prize-wrapper">
+                  <div class="prize-card api-card-size">
+                    <input type="checkbox" id="card5" class="more" aria-hidden="true">
+                    <div class="prize-content">
+                          <div class="front" style="background: linear-gradient(180deg, #8e81b7 , white) !important;"> 
+                            <div class="inner">
+                                <h6 class="api-plan" >Matic</h6>
+                                <div class="api-icon">
+                                  <img style="width:200px; height:auto; margin-bottom:30px; margin-top:50px" 
+                                  src="img/sponsors-img/matic.webp" onerror="this.onerror=null;this.src='img/sponsors-img/matic.png';" alt="Clerky">
+                                </div>
+                                <!--div >
+                                    <h2 class="api-price" style="color:black !important;">HACK USING ETHEREUM</h2>
+                                </div-->
+                                <div>
+                                    <h2 class="ticket-price" style="color:black !important"><span>₹</span>15,000</h2>
+                                </div>
+        
+                                <label for="card5" class="prize-button" aria-hidden="true" 
+                                style="color:black !important; border-color: black;">
+                                    Details
+                                </label>
+                            </div>
+                          </div>
+                          <div class="back">
+                            <div class="inner">
+                                
+                                <div class="description">
+                                    <ul style="list-style-type:square;">
+                                        <li>₹15,000 for the best hack built on Ethereum and Matic OR<br>10,000 for the best hack built on Ethereum<br></li>
+                                        <li>Eligibility to apply for internship/full-time roles and seed funding of up to 5,000 USD for winners!</li>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="location">Matic</div>
+                                <div class="price"><span>₹</span>15,000</h2></div>
+                                <label for="card5" class="prize-button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="prize-wrapper">
+                  <div class="prize-card api-card-size">
+                      <input type="checkbox" id="card6" class="more" aria-hidden="true">
+                      <div class="prize-content">
+                          <div class="front" style="background: linear-gradient(180deg, #8e81b7 , white) !important;"> 
+                              <div class="inner">
+                                  <h6 class="api-plan">Portis</h6>
+                                  <div class="api-icon">
+                                      <img style="width:200px; height:auto; margin-bottom:25px; margin-top:35px" 
+                                      src="img/sponsors-img/Portis_Logo-Black.png" alt="Portis">
+                                  </div>
+                                  <div>
+                                      <h2 class="ticket-price" style="color:black !important"><span>₹</span>15,000</h2>
+                                  </div>
+          
+                                  <label for="card6" class="prize-button" aria-hidden="true"
+                                  style="color:black !important; border-color: black;">
+                                      Details
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  
+                                  <div class="description">
+                                      <p>₹15,000 for best Dapp built on Portis</p>
+                                      
+                                  </div>
+                                  <div class="location">Portis</div>
+                                  <div class="price"><span>₹</span>15,000</div>
+                                  <label for="card6" class="prize-button return" aria-hidden="true">
+                                      <i class="fas fa-arrow-left"></i>
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-12 col-md-4 col-lg-3">
+                  <div class="prize-wrapper">
+                    <div class="prize-card api-card-size">
+                      <input type="checkbox" id="card7" class="more" aria-hidden="true">
+                      <div class="prize-content">
+                            <div class="front" style="background: linear-gradient(180deg, #8e81b7 , white) !important;"> 
+                              <div class="inner">
+                                  <h6 class="api-plan">Tezos</h6>
+                                  <div class="api-icon">
+                                    <img style="width:200px; height:auto; margin-bottom:25px; margin-top:35px" 
+                                    src="img/sponsors-img/Tezos_Logo-White.png" alt="Tezos">
+                                  </div>
+                                  <div>
+                                      <h2 class="ticket-price" style="color:black !important">
+                                        <span>₹</span>20,000
+                                      </h2>
+                                  </div>
+          
+                                  <label for="card7" class="prize-button" aria-hidden="true"
+                                  style="color:black !important; border-color: black;">
+                                      Details
+                                  </label>
+                              </div>
+                            </div>
+                            <div class="back">
+                              <div class="inner">
+                                  
+                                  <div class="description">
+                                      <p>₹20,000 for best Dapp built on Tezos<br>
+                                        <br>Continuity Grant opportunity for exceptional builders</p>
+                                      
+                                  </div>
+                                  <div class="location">Tezos</div>
+                                  <div class="price"><span>₹</span>20,000</div>
+                                  <label for="card7" class="prize-button return" aria-hidden="true">
+                                      <i class="fas fa-arrow-left"></i>
+                                  </label>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="prize-wrapper">
+                  <div class="prize-card api-card-size">
+                      <input type="checkbox" id="card4" class="more" aria-hidden="true">
+                      <div class="prize-content">
+                          <div class="front" style="background: linear-gradient(180deg, #8e81b7 , white) !important;"> 
+                              <div class="inner">
+                                <h6 class="api-plan">echoAR</h6>
+                                <div class="api-icon">
+                                  <img style="width:200px; height:auto; margin-bottom:17px; margin-top:35px" 
+                                  src="img/sponsors-img/echoAR2020.webp" alt="echoAR">
+                                </div>
+                                <div>
+                                    <h2 class="ticket-price" style="color:black !important">
+                                        <span>$</span>50*
+                                      </h2>
+                                </div>
+  
+                                  <label for="card4" class="prize-button" aria-hidden="true"
+                                  style="color:black !important; border-color: black;">
+                                      Details
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  
+                                  <div class="description">
+                                      <p>Amazon Gift Card worth $50</p>
+                                      
+                                  </div>
+                                  <div class="location">echoAR</div>
+                                  <div class="price">$50</div>
+                                  <label for="card4" class="prize-button return" aria-hidden="true">
+                                      <i class="fas fa-arrow-left"></i>
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        <!---->
+
       </div>
     </section>
-
+  
+    
     <!--Section Breaker Stat/Sponsors-->
     <div class="section-divider sponser-color unselectable">
       <img
