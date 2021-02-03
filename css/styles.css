@@ -200,6 +200,9 @@ body {
 .unselectable {
   user-select: none;
 }
+.tracks{
+  background-color: #2cefde; 
+}
 /* What is Section */
 
 .part-2 {
@@ -880,3 +883,118 @@ a:hover {
   background-image: linear-gradient(180deg, #057eb0 0%, #2ceedd 100%);
   padding: 70px 30px 70px 30px;
 }
+
+/*Track section css*/
+.tracking {
+    width: 340px;
+    height: auto;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: all .6s;
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    border-radius: 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+/* :: About Single Page CSS */
+.single-we-offer-content {
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0px 8px 27px 0px rgba(90, 111, 120, 0.15);
+  box-shadow: 0px 8px 27px 0px rgba(90, 111, 120, 0.15);
+  border-radius: 10px;
+  padding: 30px 25px;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .single-we-offer-content .offer-icon {
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    height: 115px;
+    width: 115px;
+    background: #42dfa3;
+    background-image: -moz-linear-gradient(120deg, #42dfa3 0%, #505add 100%);
+    background-image: -webkit-linear-gradient(120deg, #42dfa3 0%, #505add 100%);
+    background-image: -ms-linear-gradient(120deg, #42dfa3 0%, #505add 100%);
+    border-radius: 50%;
+    line-height: 115px; }
+    .single-we-offer-content .offer-icon::after {
+      -webkit-transition-duration: 1000ms;
+      -o-transition-duration: 1000ms;
+      transition-duration: 1000ms;
+      border-radius: 50%;
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 0%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      background: #42dfa3;
+      background-image: -moz-linear-gradient(120deg, #42dfa3 0%, #505add 100%);
+      background-image: -webkit-linear-gradient(120deg, #42dfa3 0%, #505add 100%);
+      background-image: -ms-linear-gradient(120deg, #42dfa3 0%, #505add 100%);
+        z-index: -10; }
+  .single-we-offer-content h5 {
+    -webkit-transition-duration: 1000ms;
+    -o-transition-duration: 1000ms;
+    transition-duration: 1000ms;
+    font-size: 22px;
+    color: #111343;
+    margin-top: 25px;
+    position: relative;
+    z-index: 2; }
+  .single-we-offer-content p {
+    -webkit-transition-duration: 1000ms;
+    -o-transition-duration: 1000ms;
+    transition-duration: 1000ms;
+    color: #5d5e8d;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2; }
+  .single-we-offer-content:hover {transform: scale(1.08);}
+  .single-we-offer-content:hover h5,
+  .single-we-offer-content:hover p, .single-we-offer-content:focus h5,
+  .single-we-offer-content:focus p {
+    color: #ffffff; }
+  .single-we-offer-content:hover .offer-icon::after, .single-we-offer-content:focus .offer-icon::after {
+    width: 800%;
+    height: 800%; }
+
+.our-gallery-area {
+  position: relative;
+  z-index: 1; }
+  .our-gallery-area .row {
+    margin-left: -7.5px;
+    margin-right: -7.5px; }
+    .our-gallery-area .row .col-12 {
+      padding-left: 7.5px;
+      padding-right: 7.5px; }
+  .our-gallery-area .single-gallery-thumb {
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1; }
+    .our-gallery-area .single-gallery-thumb::before {
+      background: #c63fa4;
+      background-image: -webkit-linear-gradient(120deg, #505add 0%, #df42b1 100%);
+      background-image: -ms-linear-gradient(120deg, #505add 0%, #df42b1 100%);
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+      -webkit-transition-duration: 300ms;
+      -o-transition-duration: 300ms;
+      transition-duration: 300ms; }
+    .our-gallery-area .single-gallery-thumb:hover::before {
+      opacity: 0.8; }
