@@ -924,7 +924,7 @@ a:hover {
 }
 
 .tick-flip-panel {
-  color: #fff !important; 
+  color: #1E6773 !important; 
 }
 
 .tick-flip-panel-text-wrapper {
@@ -939,11 +939,63 @@ a:hover {
   border-radius: 1em !important; 
 }
 
+.tick-flip:nth-child(odd) {
+  animation: float-odd 6s ease-in-out infinite;
+}
+
+.tick-flip:nth-child(even) {
+  animation: float-even 6s ease-in-out infinite;
+}
+
 .tick-flip-card {
   width: 1.15em;
   height: 1.15em;
 }
 
+.tick-flip-card-shadow {
+  height: unset;
+}
+
 .tick-flip-spacer {
   height: 1.15em;
+}
+
+.tick-flip-panel-back, .tick-flip-panel-front {
+  height: 50.75%;
+}
+
+.tick-flip-panel-front {
+  background: linear-gradient(to bottom, #e4f5fc 0%,#bfe8f9 100%);
+}
+
+.tick-flip-panel-back {
+  background: linear-gradient(to bottom, #bfe8f9 0%,#2ab0ed 100%);
+}
+
+.tick-flip-panel-back::after {
+  background-image: none;
+}
+
+@keyframes float-even {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes float-odd {
+	0% {
+		transform: translatey(-20px);
+	}
+	50% {
+		transform: translatey(0px);
+	}
+	100% {
+		transform: translatey(-20px);
+	}
 }
