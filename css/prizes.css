@@ -2,6 +2,15 @@
 /*-------------------------------------------------   PRIZES   -----------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 
+.prize-step{
+	padding-top : 25px !important;
+}
+
+@media only screen and (max-width: 780px) {
+	.prize-step{
+		padding-top : 0px !important; 
+	}
+}
 
 .prize-wrapper {
 	display: flex;
@@ -12,6 +21,7 @@
   .prize-card {
 	margin: 1em;
 	perspective: 1500px;
+	border-radius: 150px;
 	}
 
 	.prize-card-size{
@@ -56,7 +66,7 @@
   .front {
 	background-size: cover;
 	background-position: center center;
-	background: linear-gradient(0deg, #5588cc , white);
+	background: linear-gradient(180deg, rgb(0, 173, 253), rgb(206, 231, 252));
   }
   .front:after {
 	content: '';
@@ -247,11 +257,13 @@
 		text-shadow: .7px .7px black;
   }
 
+/* 	
+	style="font-size: 1.4em !important;" */
   .ticket-price {
 		
 		text-shadow: .7px .7px black;
     font-size: 30px;
-    color: #111343;
+    color: black !important;
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 1; 
