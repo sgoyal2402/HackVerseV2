@@ -197,6 +197,10 @@ body {
 .footer-color {
   background-color: #02867b;
 }
+.tracks-color
+{
+   background-color: #2cecdc;
+}
 .unselectable {
   user-select: none;
 }
@@ -716,7 +720,7 @@ body {
 
 #faq {
   padding-top: 40px;
-  background-image: linear-gradient(180deg, #23bef9 0%, #02867b 100%);
+  background-image: linear-gradient(180deg, #047cb4 0%, #02867b 100%);
 }
 
 .section-header-faq {
@@ -877,7 +881,7 @@ a:hover {
 }
 
 #tracks {
-  background-image: linear-gradient(180deg, #057eb0 0%, #2ceedd 100%);
+  background-image: linear-gradient(180deg, #24bcfc 0%, #2ceedd 100%);
   padding: 70px 30px 70px 30px;
 }
 
