@@ -19,10 +19,12 @@
 	}
 	
   .prize-card {
-	margin: 1em;
-	perspective: 1500px;
-	border-radius: 150px;
+		-webkit-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
 	}
+
+	.prize-card:hover {transform: scale(1.08) !important;}
 
 	.prize-card-size{
 		width: 350px;
