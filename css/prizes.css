@@ -36,6 +36,8 @@
 		height: 320px;
 	}
 
+	
+
   .prize-card .prize-content{
 	position: relative;
 	width: 100%;
@@ -244,6 +246,21 @@
 		font-size:1.4em; 
 		text-shadow: 1px 1px black;
 	}
+
+	.mlh-plan{
+		padding: 10px 25px;
+		height:45px;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 20px;
+		line-height: 1;
+		font-size:1.2em; 
+		text-align: center;
+		text-shadow: 1px 1px black;
+	}
 	
 	.api-plan {
 		padding: 10px 25px;
@@ -262,9 +279,20 @@
 /* 	
 	style="font-size: 1.4em !important;" */
   .ticket-price {
-		
 		text-shadow: .7px .7px black;
     font-size: 30px;
+    color: black !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1; 
+    padding-top:12px;
+		padding-bottom:12px;
+	}
+
+	.mlh-price {
+		text-shadow: .7px .7px black;
+		font-size: 1.2em;
+		text-align: center;
     color: black !important;
     font-weight: 700;
     letter-spacing: 1px;
@@ -282,7 +310,33 @@
 		
 	}
 
-	
+	@media only screen and (max-width: 993px){
+		.prize-card-size{
+			width: 330px;
+			height: 340px;
+			padding-top:20px;
+		}
+
+		.mlh-price{
+			font-size: 1em;
+		}
+	}
+
+	@media only screen and (max-width: 400px){
+		.mlh-plan{
+			font-size: 1em;
+		}
+	}
+	@media only screen and (min-width: 993px) and (max-width: 1200px) {
+		.api-card-size {
+			width: 230px;
+			height: 320px;
+		}
+
+		.mlh-plan{
+			font-size: 1.1em;
+		}
+	}
 	
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------*/
