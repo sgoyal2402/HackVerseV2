@@ -459,7 +459,7 @@ body {
 
 .main-footer-area .single-footer-widget .widget-title {
   font-size: 20px;
-  color: #ffffff;
+  color: #28fac5;
   margin-bottom: 20px;
 }
 
@@ -875,6 +875,16 @@ a:hover {
 
 .footer-color #sea-creatures {
   width: 30%;
+}
+
+.comm-part{
+  text-align:center;
+}
+.comm-part a{
+  color:white;
+}
+.comm-part a:hover{
+  color: violet;
 }
 
 @media only screen and (max-width: 576px) {
