@@ -6,7 +6,7 @@
 	padding-top : 25px !important;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 993px) {
 	.prize-step{
 		padding-top : 0px !important; 
 	}
