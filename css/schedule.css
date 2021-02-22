@@ -1,0 +1,244 @@
+
+.schedule-header{
+    font-size: 3em;
+}
+
+[class*="entypo-"] {
+  width: 1em;
+  height: 1em;
+}
+
+#timeline-content {
+    width:100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.timeline a,
+.timeline span,
+.timeline h1,
+.timeline h2,
+.timeline h3,
+.timeline span {
+  text-decoration: none;
+  color: blue;
+}
+
+.timeline a:hover {
+  color: #777;
+}
+
+
+#timeline-content h4{
+    font-weight: 900;
+}
+
+
+.timeline h1 {
+  letter-spacing: 1.5px;
+  color: rgb(23, 22, 27);
+  font-weight: 100;
+  font-size: 1.5em;
+  margin: 0;
+  border-bottom: 1px solid #777;
+  padding-bottom: 0.2em;
+  font-weight: bold;
+}
+
+.timeline h2 {
+  letter-spacing: 1.5px;
+  color: black;
+  font-weight: 100;
+  font-size: 1.3em;
+  padding-top:10px;
+}
+
+.timeline {
+  border-left: 0.25em solid #4298c3;
+  background: rgba(255, 255, 255, 0.0);
+  /* margin: 2em auto; */
+  line-height: 1.4em;
+  /* padding: 1em;
+  padding-left: 3em; */
+  list-style: none;
+  text-align: left;
+  margin-left: 5em;
+  margin-right: 3em;
+  border-radius: 0.5em;
+}
+
+.timeline .event {
+  width: 100%;
+  vertical-align: middle;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+}
+
+.timeline .event:before {
+  top: 0.7em;
+  left: -15em;
+  color: black;
+  content: attr(data-date);
+  text-align: right;
+  font-weight: 900;
+  font-size: 1em;
+  min-width: 9em;
+}
+
+.timeline .event:after {
+  box-shadow: 0 0 0 0.2em #4298c3;
+  top: 1em;
+  left: -3em;
+  background: #01ffc0;
+  border-radius: 50%;
+  height: 0.75em;
+  width: 0.75em;
+  content: "";
+}
+
+.timeline .event .member-location,
+.timeline .event .member-parameters {
+  display: none;
+}
+
+.timeline .event:last-of-type .member-location,
+.timeline .event:last-of-type .member-parameters {
+  display: block;
+}
+
+.member-infos {
+  padding: 10px;
+  text-align: left;
+  position: relative;
+}
+
+
+.member-location a:before {
+  margin-right: 5px;
+}
+
+.member-location {
+  text-indent: 2px;
+}
+
+.timeline .follow,
+.timeline .options {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #D3D3D3;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 0 0 #C0C0C0;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.timeline .follow:hover,
+.timeline .options:hover {
+  box-shadow: 0 1px 0 0 #C0C0C0;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  margin-bottom: -1px;
+}
+
+.member-socials {
+  display: inline-block;
+  font-weight: bold;
+  vertical-align: bottom;
+  line-height: 8px;
+}
+
+.member-socials li {
+  display: inline-block;
+}
+
+.shots-number,
+.followers {
+  font-weight: normal;
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.member-contact {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.member-contact li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.member-shots-number {
+  padding-right: 6px;
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+
+
+/* 27/02/2021
+
+1000: Opening ceremony
+
+1200: Coding begins
+
+1700: MLH mini event (30-45 minutes) 
+
+28/02/2021
+
+1200: Coding ends, Judging begins
+
+1800: Live judging and Closing ceremony
+
+2100: Results announcement */
+
+@media only screen and (max-width: 993px) {
+    .schedule-header{font-size: 2.5em;}
+    .timeline h1{font-size: 1.1em;}
+    .timeline h2 {font-size: 1em;}
+    .timeline{padding-inline-start: 20px !important;}
+    .timeline .event:after {left: -1.7em !important;}
+    .timeline .event:before{
+        left:-12em !important;
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .schedule-header{font-size: 2.2em;}
+    #timeline-content{margin-top: 30px;}
+    #timeline-content h4{font-size: 1.3em;}
+    .timeline h1{font-size: 0.95em;}
+    .timeline h2 {font-size: 0.85em;}
+    .timeline{padding-inline-start: 10px !important;}
+    .timeline .event:after {left: -1.1em !important;}
+    .timeline .event:before{
+        left:-12em !important;
+        font-size: 0.95em;
+    }
+}
+
+@media only screen and (max-width: 521px) {
+    .schedule-header{font-size: 1.8em;}
+    #timeline-content{margin-top: 20px;}
+    #timeline-content h4{font-size: 1.1em;}
+    .timeline h1{font-size: 0.8em;}
+    .timeline h2 {font-size: 0.7em;}
+    .timeline{padding-inline-start: 5px !important;}
+    .timeline .event:after {left: -0.8em !important;}
+    .timeline .event:before{
+        left:-11em !important;
+        font-size: 0.8em;
+    }
+}

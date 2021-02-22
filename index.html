@@ -10,6 +10,11 @@
     />
 
     <meta
+      name="google-site-verification"
+      content="Exxlz7urXb5XhU5rgnhuvVPa6tegzMO-w1L4seva_x8"
+    />
+
+    <meta
       name="description"
       content="HackVerse - 2nd Edition of the 24 Hour Nation-Wide Hackathon at NITK, Surathkal"
     />
@@ -62,8 +67,14 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link
+      href="https://unpkg.com/@pqina/flip/dist/flip.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/prizes.css" />
+    <link rel="stylesheet" href="css/schedule.css" />
   </head>
 
   <body>
@@ -75,16 +86,22 @@
         <div class="content" data-aos="fade-left" data-aos-duration="800">
           <img class="banner" src="./img/Banner.png" alt="EVENT BY NITK" />
           <h1 class="subtitle mt-3">24-HOUR NATION WIDE HACKATHON</h1>
-          <h1 class="title">
-            HACK<span style="color: #233452">VERSE</span>
-            <span style="color: #db2121">2.0</span>
-          </h1>
+          <a href="https://youtu.be/AooUtb5dGUI" target="_blank">
+            <h1 class="title">
+              HACK<span style="color: #233452">VERSE</span>
+              <span style="color: #db2121">2.0</span>
+            </h1>
+          </a>
           <div class="extras">
             <div class="date">
-              <span class="material-icons" style="margin-right: 7px"
+              <span
+                class="material-icons mobile-view-icon"
+                style="margin-right: 5px"
                 >calendar_today</span
               >
-              <span> 27-28th Feb, 2021</span>
+              <span class="mobile-view-date" style="text-align: left">
+                27-28th Feb, 2021</span
+              >
             </div>
             <div>
               <a
@@ -94,15 +111,22 @@
                 class="revisit"
               >
                 <span
-                  class="material-icons"
-                  style="color: black; margin-right: 7px"
+                  class="material-icons mobile-view-icon"
+                  style="margin-right: 5px"
                   >history</span
                 >
-                Revisit HackVerse '20</a
-              >
+                <span class="mobile-view-date" style="text-align: left"
+                  >Revisit HackVerse '20</span
+                >
+              </a>
             </div>
           </div>
-          <br />
+          <div class="extras">
+            <div class="alert alert-danger date" style="color: red">
+              <i class="fas fa-exclamation-circle mr-2" aria-hidden="true"></i>
+              Registrations Close on 24th Feb!
+            </div>
+          </div>
           <div
             class="apply-button"
             data-hackathon-slug="hackverse2021"
@@ -112,7 +136,7 @@
         </div>
       </div>
     </header>
-    
+
     <!--------------------------------------------------------------------------------------------------------------------------->
     <!--What is HackVerse-->
     <section class="part-2">
@@ -129,7 +153,9 @@
             />
           </div>
           <div class="col-12 col-lg-6 order-lg-first about">
-            <h2 style="font-family: 'Lobster', cursive;">What Is HackVerse 2.0</h2>
+            <h2 style="font-family: 'Lobster', cursive">
+              What Is HackVerse 2.0
+            </h2>
             <br />
             <p class="lead">
               HackVerse serves as a platform to encourage enthusiastic minds to
@@ -144,7 +170,90 @@
           </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="text-center" style="padding-bottom: 50px">
+          <div class="tick" data-did-init="handleTickInit">
+            <div
+              data-repeat="true"
+              data-layout="horizontal fit"
+              data-transform="preset(d, h, m, s) -> delay"
+            >
+              <div class="tick-group">
+                <div
+                  data-key="value"
+                  data-repeat="true"
+                  data-transform="pad(00) -> split -> delay"
+                >
+                  <span data-view="flip"></span>
+                </div>
+                <span
+                  data-key="label"
+                  data-view="text"
+                  class="tick-label"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading-2" style="margin-bottom: 0px !important; margin-top: 40px;">
+              <h3 class="text-center schedule-header" style=  "color: black;">
+                Schedule
+              </h3>
+            </div>
+          </div>
+          <div class="col-12">
+            <div id="timeline-content">
+              <div><h4 style="text-align:left">27 Feb 2021</h4></div>
+                
+              <ul class="timeline">
+                <li class="event" data-date="10:00AM" style="color:black">
+                  <div class="member-infos" >
+                    <h1 class="member-title active-now" >Opening Ceremony</h1>
+                    <!-- <h2 class="member-location "><a href="">Join us on Discord</a></h2> -->
+                  </div>
+                </li>
+                <li id='fader' class="event" data-date="12:00pm">
+                  <div class="member-infos">
+                    <h1 class="member-title" >Coding Begins</h1>
+                  </div>
+                </li>
+                <li class="event" data-date="5:00pm">
+                  <div class="member-infos">
+                    <h1 class="member-title">MLH Mini Event</h1>
+                  </div>
+                </li>
+              </ul>
+    
+              <div><h4 style="text-align:left; padding-top:20px">28 Feb 2021</h4></div>
+              
+              <ul class="timeline">
+                <li class="event" data-date="12:00PM" style="color:black">
+                  <div class="member-infos" >
+                    <h1 class="member-title" >Coding Ends, Judging Begins</h1>
+                  </div>
+                </li>
+                <li id='fader' class="event" data-date="6:00pm">
+                  <div class="member-infos">
+                    <h1 class="member-title" >Live Judging and Closing Ceremony</h1>
+                  </div>
+                </li>
+                <li class="event" data-date="9:00pm">
+                  <div class="member-infos">
+                    <h1 class="member-title">Results Announcement</h1>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        
+
+
+        
+        <!-- <div class="row justify-content-center">
           <div class="col-9 iframe-container">
             <iframe
               class="responsive-iframe"
@@ -204,8 +313,7 @@
               <div class="milestone-desc">Companies</div>
             </div>
           </div>
-        </div>
-
+        </div> -->
       </div>
     </section>
 
@@ -245,98 +353,223 @@
     <!-- Events Section-->
     <section class="part-3">
       <div class="events-container">
-
         <div class="row">
           <div class="col-12 col-md-12">
             <div class="section-heading-2">
-              <h4 class="text-center" style="margin-bottom: 70px; color: black; font-family: 'Lobster', cursive;">
+              <h4
+                class="text-center"
+                style="
+                  margin-bottom: 70px;
+                  color: black;
+                  font-family: 'Lobster', cursive;
+                "
+              >
                 Events and Updates
               </h4>
             </div>
           </div>
         </div>
         <div class="carousel">
-            <input type="radio" name="slides" checked="checked" id="slide-1">
-            <input type="radio" name="slides" id="slide-2">
-            <input type="radio" name="slides" id="slide-3"><!--
-            <input type="radio" name="slides" id="slide-4">
-            <input type="radio" name="slides" id="slide-5">
+          <input type="radio" name="slides" checked="checked" id="slide-1" />
+          <input type="radio" name="slides" id="slide-2" />
+          <input type="radio" name="slides" id="slide-3" />
+          <input type="radio" name="slides" id="slide-4" />
+          <input type="radio" name="slides" id="slide-5" /><!--
             <input type="radio" name="slides" id="slide-6">-->
-            <ul class="carousel__slides">
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/events/yocket-webinar.webp" onerror="this.onerror=null;this.src='img/events/yocket-webinar.jpg';" alt="">
-                        </div>
-                        <figcaption>
-                            <strong>HackVerse 2.0 in association with Yocket is here to help you to build an amazing profile for top universities.<br><br>
-                                Attend the Webinar for free guidance from Expert Counselors on securing admissions to top universities abroad.<br><br>
-                                Date: 30th January, 2021<br>
-                                Time: 4:30 PM<br>
-                                <a  href="https://event.webinarjam.com/register/366/844q6tvg">Register Now!</a></strong><br>
-                                                     
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/events/mlh-web-scraping.webp" onerror="this.onerror=null;this.src='img/events/mlh-web-scraping.jpg';" alt="">
-                        </div>
-                        <figcaption>
-                            <strong>MLH Localhost session on Web Scraping in Python hosted by S.R.Sahith<br><br>
-                              The session covered Web Scraping using BeautifulSoup and 
-                              Regular Expression Python libraries to create a bot of any Twitter celebrity!<br><br>
-                            <a href="https://youtu.be/98k5QSqDhXQ">Watch on Youtube</a></strong>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/events/hacktober-workshop.webp" onerror="this.onerror=null;this.src='img/events/hacktober-workshop.jpg';" alt="">
-                        </div>
-                        <figcaption>
-                            <strong>Online Meetup at NITK Surathkal organized as part of Hacktoberfest<br><br>
-                              Maintainers were invited to guide would-be contributors towards issues that will help move the project forward, 
-                              and contributors get the opportunity to give back to the projects .<br><br>
-                            <a href="https://youtube.com/playlist?list=PL9G8ordCN9gt1zZhGA6HcoYjoiwj_ac0z">Watch on Youtube</a></strong>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>    
 
-            <ul class="carousel__thumbnails">
-                <li>
-                    <label class="carousel-label" for="slide-1">
-                      <img src="img/events/yocket-webinar.webp" onerror="this.onerror=null;this.src='img/events/yocket-webinar.jpg';" alt="">
-                    </label>
-                </li>
-                <li>
-                    <label class="carousel-label" for="slide-2">
-                        <img src="img/events/mlh-web-scraping.webp" onerror="this.onerror=null;this.src='img/events/mlh-web-scraping.jpg';" alt="">
-                      </label>
-                </li>
-                <li>
-                    <label class="carousel-label" for="slide-3">  
-                      <img src="img/events/hacktober-workshop.webp" onerror="this.onerror=null;this.src='img/events/hacktober-workshop.jpg';" alt="">
-                    </label>
-                </li>
-                <!-- <li>
-                    <label class="carousel-label" for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label class="carousel-label" for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
-                </li>
+          <ul class="carousel__slides">
+            <li class="carousel__slide">
+              <figure>
+                <div>
+                  <img
+                    src="img/events/make-with-hackverse-gaurav.webp"
+                    onerror="this.onerror=null;this.src='img/events/make-with-hackverse-gaurav.jpg';"
+                    alt=""
+                  />
+                </div>
+                <figcaption>
+                  <strong>
+                    <span style="font-size: 1.3em"
+                      >Make With HackVerse: Secure Chat Application with
+                      WebSockets</span
+                    ><br />
+                    Date: 14th February 2021<br />
+                    Time: 4:00 PM<br />
+                    <a href="https://youtu.be/bQLutm4hS6w">Join On Youtube!</a
+                    ><br /><br />
+                    A hands-on workshop by Gaurav Chaurasia where you will build
+                    a chat application from scratch, step-by-step.<br /><br />
+                    Prerequisites: Basics of HTML, CSS, Javascript (DOM
+                    Manipulation).<br />
+                    Node.js must be pre-installed on your system.<br />
+                    Check out the
+                    <a
+                      href="https://bit.ly/2ZbNouP"
+                      style="font-size: 1em !important"
+                      >Installation Guide</a
+                    ><br /> </strong
+                  ><br />
+                </figcaption>
+              </figure>
+            </li>
+            <li class="carousel__slide">
+              <figure>
+                <div>
+                  <img
+                    src="img/events/codechef-workshop.webp"
+                    onerror="this.onerror=null;this.src='img/events/codechef-workshop.jpg';"
+                    alt=""
+                  />
+                </div>
+                <figcaption>
+                  <strong>
+                    <span style="font-size: 1.3em"
+                      >HeadStart to Competitive Programming</span
+                    ><br />
+                    Date: 6th February 2021<br />
+                    Time: 1:00 PM<br />
+                    Access Code: HEADSTART <br />
+                    <a
+                      href="https://unacademy.com/class/headstart-to-competitive-programming/OIZ5ZAN6"
+                      >Join Now!</a
+                    ><br /><br />
+                    Brush up your coding skills with this workshop by CodeChef
+                    in association with HackVerse.<br /><br />
+                    Sanket Singh, SDE at LinkedIn, will be hosting this hands-on
+                    workshop with fun-filled activities in the lineup to provide
+                    you a headstart in cracking coding interviews. </strong
+                  ><br />
+                </figcaption>
+              </figure>
+            </li>
+            <li class="carousel__slide">
+              <figure>
+                <div>
+                  <img
+                    src="img/events/yocket-webinar.webp"
+                    onerror="this.onerror=null;this.src='img/events/yocket-webinar.jpg';"
+                    alt=""
+                  />
+                </div>
+                <figcaption>
+                  <strong
+                    >HackVerse 2.0 in association with Yocket is here to help
+                    you to build an amazing profile for top universities.<br /><br />
+                    Attend the Webinar for free guidance from Expert Counselors
+                    on securing admissions to top universities abroad.<br /><br />
+                    Date: 30th January, 2021<br />
+                    Time: 4:30 PM<br />
+                    <a href="https://event.webinarjam.com/register/366/844q6tvg"
+                      >Register Now!</a
+                    ></strong
+                  ><br />
+                </figcaption>
+              </figure>
+            </li>
+            <li class="carousel__slide">
+              <figure>
+                <div>
+                  <img
+                    src="img/events/mlh-web-scraping.webp"
+                    onerror="this.onerror=null;this.src='img/events/mlh-web-scraping.jpg';"
+                    alt=""
+                  />
+                </div>
+                <figcaption>
+                  <strong
+                    >MLH Localhost session on Web Scraping in Python hosted by
+                    S.R.Sahith<br /><br />
+                    The session covered Web Scraping using BeautifulSoup and
+                    Regular Expression Python libraries to create a bot of any
+                    Twitter celebrity!<br /><br />
+                    <a href="https://youtu.be/98k5QSqDhXQ"
+                      >Watch on Youtube</a
+                    ></strong
+                  >
+                </figcaption>
+              </figure>
+            </li>
+            <li class="carousel__slide">
+              <figure>
+                <div>
+                  <img
+                    src="img/events/hacktober-workshop.webp"
+                    onerror="this.onerror=null;this.src='img/events/hacktober-workshop.jpg';"
+                    alt=""
+                  />
+                </div>
+                <figcaption>
+                  <strong
+                    >Online Meetup at NITK Surathkal organized as part of
+                    Hacktoberfest<br /><br />
+                    Maintainers were invited to guide would-be contributors
+                    towards issues that will help move the project forward, and
+                    contributors get the opportunity to give back to the
+                    projects .<br /><br />
+                    <a
+                      href="https://youtube.com/playlist?list=PL9G8ordCN9gt1zZhGA6HcoYjoiwj_ac0z"
+                      >Watch on Youtube</a
+                    ></strong
+                  >
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+
+          <ul class="carousel__thumbnails">
+            <li>
+              <label class="carousel-label" for="slide-1">
+                <img
+                  src="img/events/make-with-hackverse-gaurav.webp"
+                  onerror="this.onerror=null;this.src='img/events/make-with-hackverse-gaurav.jpg';"
+                  alt=""
+                />
+              </label>
+            </li>
+            <li>
+              <label class="carousel-label" for="slide-2">
+                <img
+                  src="img/events/codechef-workshop.webp"
+                  onerror="this.onerror=null;this.src='img/events/codechef-workshop.jpg';"
+                  alt=""
+                />
+              </label>
+            </li>
+            <li>
+              <label class="carousel-label" for="slide-3">
+                <img
+                  src="img/events/yocket-webinar.webp"
+                  onerror="this.onerror=null;this.src='img/events/yocket-webinar.jpg';"
+                  alt=""
+                />
+              </label>
+            </li>
+            <li>
+              <label class="carousel-label" for="slide-4">
+                <img
+                  src="img/events/mlh-web-scraping.webp"
+                  onerror="this.onerror=null;this.src='img/events/mlh-web-scraping.jpg';"
+                  alt=""
+                />
+              </label>
+            </li>
+            <li>
+              <label class="carousel-label" for="slide-5">
+                <img
+                  src="img/events/hacktober-workshop.webp"
+                  onerror="this.onerror=null;this.src='img/events/hacktober-workshop.jpg';"
+                  alt=""
+                />
+              </label>
+            </li>
+            <!-- 
                 <li>
                     <label class="carousel-label" for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label> 
                 </li>-->
-            </ul>
+          </ul>
         </div>
-
       </div>
     </section>
-
     <!--Section Breaker-->
     <div class="section-divider unselectable" style="background-color: #2df0df">
       <img
@@ -358,45 +591,843 @@
             </div>
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-          "
-        >
-          <div class="pyp">
-            <h4 class="mb-4" style="color: #000">Previous Edition Prizes</h4>
-            <img
-              class="prize"
-              style="width: 50%"
-              src="./img/Prizes.png"
-              alt="pic"
-            />
-          </div>
 
-          <div class="pyp">
-            <h4 class="mb-4 mt-5" style="color: #000">This Edition's Prizes</h4>
-            <div
-              class="card text-center text-white bg-primary"
-              style="
-                width: 18rem;
-                height: 7rem;
-                background-color: rgba(0, 0, 0, 0);
-              "
-            >
-              <div class="card-body" style="font-family: Barlow Semi Condensed">
-                <h5 class="card-body">COMING SOON!</h5>
+        <div class="prize-body">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="prize-wrapper">
+                <div class="prize-card prize-card-size">
+                  <input
+                    type="checkbox"
+                    id="card1"
+                    class="more"
+                    aria-hidden="true"
+                  />
+                  <div class="prize-content">
+                    <div class="front">
+                      <div class="inner">
+                        <h6
+                          class="ticket-plan"
+                          style="background-color: gold !important"
+                        >
+                          1st Prize
+                        </h6>
+                        <div
+                          class="ticket-icon"
+                          style="
+                            padding-bottom: 20px !important;
+                            padding-top: 20px !important;
+                          "
+                        >
+                          <img src="img/Gold.png" alt="1st Prize" />
+                        </div>
+                        <div>
+                          <h2
+                            class="ticket-price"
+                            style="font-size: 2.2em !important"
+                          >
+                            <span>₹</span>50,000
+                          </h2>
+                        </div>
+
+                        <!--label for="card1" class="prize-button" aria-hidden="true">
+                                    Details
+                                </label-->
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="inner">
+                        <div class="description">
+                          <ul style="list-style-type: square">
+                            <li>Clerky Life Time Membership</li>
+                            <li>Schwag Bag</li>
+                            <li></li>
+                            <li></li>
+                          </ul>
+                        </div>
+                        <div class="location">1st Prize</div>
+                        <div class="price">₹00,000</div>
+                        <label
+                          for="card1"
+                          class="prize-button return"
+                          aria-hidden="true"
+                        >
+                          <i class="fas fa-arrow-left"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-4 order-lg-first">
+              <div class="prize-wrapper prize-step">
+                <div class="prize-card prize-card-size">
+                  <input
+                    type="checkbox"
+                    id="card2"
+                    class="more"
+                    aria-hidden="true"
+                  />
+                  <div class="prize-content">
+                    <div class="front">
+                      <div class="inner">
+                        <h6
+                          class="ticket-plan"
+                          style="background-color: #c0c0c0 !important"
+                        >
+                          2nd Prize
+                        </h6>
+                        <div
+                          class="ticket-icon"
+                          style="
+                            padding-bottom: 20px !important;
+                            padding-top: 20px !important;
+                          "
+                        >
+                          <img src="img/Silver.png" alt="2nd Prize" />
+                        </div>
+                        <div>
+                          <h2
+                            class="ticket-price"
+                            style="font-size: 2.2em !important"
+                          >
+                            <span>₹</span>35,000
+                          </h2>
+                        </div>
+
+                        <!-- <label for="card2" class="prize-button" aria-hidden="true">
+                                  Details
+                              </label> -->
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="inner">
+                        <div class="description">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Vitae, accusamus.
+                          </p>
+                        </div>
+                        <div class="location">Warsaw, Poland</div>
+                        <div class="price">38€ / day</div>
+                        <label
+                          for="card2"
+                          class="prize-button return"
+                          aria-hidden="true"
+                        >
+                          <i class="fas fa-arrow-left"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--style="background: linear-gradient(0deg, #5588cc , white) !important;"-->
+            <div class="col-sm-12 col-md-12 col-lg-4 order-lg-last">
+              <div class="prize-wrapper prize-step">
+                <div class="prize-card prize-card-size">
+                  <input
+                    type="checkbox"
+                    id="card3"
+                    class="more"
+                    aria-hidden="true"
+                  />
+                  <div class="prize-content">
+                    <div class="front">
+                      <div class="inner">
+                        <h6
+                          class="ticket-plan"
+                          style="background-color: #cd7f32 !important"
+                        >
+                          3rd Prize
+                        </h6>
+                        <div
+                          class="ticket-icon"
+                          style="
+                            padding-bottom: 20px !important;
+                            padding-top: 20px !important;
+                          "
+                        >
+                          <img src="img/Bronze.png" alt="3rd Prize" />
+                        </div>
+                        <div>
+                          <h2
+                            class="ticket-price"
+                            style="font-size: 2.2em !important"
+                          >
+                            <span>₹</span>25,000
+                          </h2>
+                        </div>
+
+                        <!-- <label for="card3" class="prize-button" aria-hidden="true">
+                                    Details
+                                </label> -->
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="inner">
+                        <div class="description">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Vitae, accusamus.
+                          </p>
+                        </div>
+                        <div class="location">Warsaw, Poland</div>
+                        <div class="price">38€ / day</div>
+                        <label
+                          for="card3"
+                          class="prize-button return"
+                          aria-hidden="true"
+                        >
+                          <i class="fas fa-arrow-left"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <div class="section-heading-2">
+              <h4
+                class="text-center"
+                style="
+                  margin-top: 40px;
+                  color: white;
+                  font-size: 1.8em !important;
+                "
+              >
+                <a href="#tracks">Track Prizes</a> worth ₹50,000 and more
+                available
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <!--API Prizes-->
+        <div class="row" style="padding-bottom: 30px">
+          <div class="col-12">
+            <div
+              class="section-heading-2"
+              style="
+                margin-top: 30px;
+                margin-bottom: 0px !important;
+                font-size: 2.5em;
+              "
+            >
+              <h4 class="text-center">Special Prizes</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="prize-wrapper">
+              <div class="prize-card api-card-size">
+                <input
+                  type="checkbox"
+                  id="card5"
+                  class="more"
+                  aria-hidden="true"
+                />
+                <div class="prize-content">
+                  <div
+                    class="front"
+                    style="
+                      background: linear-gradient(
+                        180deg,
+                        rgb(0, 215, 253),
+                        rgb(219, 247, 252)
+                      ) !important;
+                    "
+                  >
+                    <div class="inner">
+                      <h6 class="api-plan">Matic</h6>
+                      <div class="api-icon">
+                        <img
+                          style="
+                            width: 200px;
+                            height: auto;
+                            margin-bottom: 30px;
+                            margin-top: 50px;
+                          "
+                          src="img/sponsors-img/matic.webp"
+                          onerror="this.onerror=null;this.src='img/sponsors-img/matic.png';"
+                          alt="Clerky"
+                        />
+                      </div>
+                      <!--div >
+                                    <h2 class="api-price" style="color:black !important;">HACK USING ETHEREUM</h2>
+                                </div-->
+                      <div>
+                        <h2
+                          class="ticket-price"
+                          style="color: black !important"
+                        >
+                          <span>₹</span>15,000
+                        </h2>
+                      </div>
+
+                      <label
+                        for="card5"
+                        class="prize-button"
+                        aria-hidden="true"
+                        style="color: black !important; border-color: black"
+                      >
+                        Details
+                      </label>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <div class="description">
+                        <ul style="list-style-type: square">
+                          <li>
+                            ₹15,000 for the best hack built on Ethereum and
+                            Matic OR<br />10,000 for the best hack built on
+                            Ethereum<br />
+                          </li>
+                          <li>
+                            Eligibility to apply for internship/full-time roles
+                            and seed funding of up to 5,000 USD for winners!
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="location">Matic</div>
+                      <div class="price"><span>₹</span>15,000</div>
+                      <label
+                        for="card5"
+                        class="prize-button return"
+                        aria-hidden="true"
+                      >
+                        <i class="fas fa-arrow-left"></i>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="prize-wrapper">
+              <div class="prize-card api-card-size">
+                <input
+                  type="checkbox"
+                  id="card6"
+                  class="more"
+                  aria-hidden="true"
+                />
+                <div class="prize-content">
+                  <div
+                    class="front"
+                    style="
+                      background: linear-gradient(
+                        180deg,
+                        rgb(0, 215, 253),
+                        rgb(219, 247, 252)
+                      ) !important;
+                    "
+                  >
+                    <div class="inner">
+                      <h6 class="api-plan">Portis</h6>
+                      <div class="api-icon">
+                        <img
+                          style="
+                            width: 200px;
+                            height: auto;
+                            margin-bottom: 25px;
+                            margin-top: 35px;
+                          "
+                          src="img/sponsors-img/Portis_Logo-Black.png"
+                          alt="Portis"
+                        />
+                      </div>
+                      <div>
+                        <h2
+                          class="ticket-price"
+                          style="color: black !important"
+                        >
+                          <span>₹</span>15,000
+                        </h2>
+                      </div>
+
+                      <label
+                        for="card6"
+                        class="prize-button"
+                        aria-hidden="true"
+                        style="color: black !important; border-color: black"
+                      >
+                        Details
+                      </label>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <div class="description">
+                        <p>₹15,000 for best Dapp built on Portis</p>
+                      </div>
+                      <div class="location">Portis</div>
+                      <div class="price"><span>₹</span>15,000</div>
+                      <label
+                        for="card6"
+                        class="prize-button return"
+                        aria-hidden="true"
+                      >
+                        <i class="fas fa-arrow-left"></i>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="prize-wrapper">
+              <div class="prize-card api-card-size">
+                <input
+                  type="checkbox"
+                  id="card7"
+                  class="more"
+                  aria-hidden="true"
+                />
+                <div class="prize-content">
+                  <div
+                    class="front"
+                    style="
+                      background: linear-gradient(
+                        180deg,
+                        rgb(0, 215, 253),
+                        rgb(219, 247, 252)
+                      ) !important;
+                    "
+                  >
+                    <div class="inner">
+                      <h6 class="api-plan">Tezos</h6>
+                      <div class="api-icon">
+                        <img
+                          style="
+                            width: 200px;
+                            height: auto;
+                            margin-bottom: 25px;
+                            margin-top: 35px;
+                          "
+                          src="img/sponsors-img/Tezos_Logo-Colored.png"
+                          alt="Tezos"
+                        />
+                      </div>
+                      <div>
+                        <h2
+                          class="ticket-price"
+                          style="color: black !important"
+                        >
+                          <span>₹</span>20,000
+                        </h2>
+                      </div>
+
+                      <label
+                        for="card7"
+                        class="prize-button"
+                        aria-hidden="true"
+                        style="color: black !important; border-color: black"
+                      >
+                        Details
+                      </label>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <div class="description">
+                        <p>
+                          ₹20,000 for best Dapp built on Tezos<br />
+                          <br />Continuity Grant opportunity for exceptional
+                          builders
+                        </p>
+                      </div>
+                      <div class="location">Tezos</div>
+                      <div class="price"><span>₹</span>20,000</div>
+                      <label
+                        for="card7"
+                        class="prize-button return"
+                        aria-hidden="true"
+                      >
+                        <i class="fas fa-arrow-left"></i>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="prize-wrapper">
+              <div class="prize-card api-card-size">
+                <input
+                  type="checkbox"
+                  id="card4"
+                  class="more"
+                  aria-hidden="true"
+                />
+                <div class="prize-content">
+                  <div
+                    class="front"
+                    style="
+                      background: linear-gradient(
+                        180deg,
+                        rgb(0, 215, 253),
+                        rgb(219, 247, 252)
+                      ) !important;
+                    "
+                  >
+                    <div class="inner">
+                      <h6 class="api-plan">echoAR</h6>
+                      <div class="api-icon">
+                        <img
+                          style="
+                            width: 200px;
+                            height: auto;
+                            margin-bottom: 17px;
+                            margin-top: 35px;
+                          "
+                          src="img/sponsors-img/echoAR2020.webp"
+                          alt="echoAR"
+                        />
+                      </div>
+                      <div>
+                        <h2
+                          class="ticket-price"
+                          style="color: black !important"
+                        >
+                          <span>$</span>50*
+                        </h2>
+                      </div>
+
+                      <label
+                        for="card4"
+                        class="prize-button"
+                        aria-hidden="true"
+                        style="color: black !important; border-color: black"
+                      >
+                        Details
+                      </label>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <div class="description">
+                        <p>Amazon Gift Card worth $50</p>
+                      </div>
+                      <div class="location">echoAR</div>
+                      <div class="price">$50</div>
+                      <label
+                        for="card4"
+                        class="prize-button return"
+                        aria-hidden="true"
+                      >
+                        <i class="fas fa-arrow-left"></i>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prize-body">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="prize-wrapper">
+                <div class="prize-card prize-card-size">
+                  <input
+                    type="checkbox"
+                    id="card-best-hw"
+                    class="more"
+                    aria-hidden="true"
+                  />
+                  <div class="prize-content">
+                    <div
+                      class="front"
+                      style="
+                        background: linear-gradient(
+                          180deg,
+                          rgb(0, 215, 253),
+                          rgb(219, 247, 252)
+                        ) !important;
+                      "
+                    >
+                      <div class="inner">
+                        <h6
+                          class="mlh-plan"
+                          style="background-color: black !important"
+                        >
+                          Best Hardware Hack
+                        </h6>
+                        <div
+                          class="ticket-icon"
+                          style="
+                            padding-bottom: 20px !important;
+                            padding-top: 20px !important;
+                          "
+                        >
+                          <img
+                            style="width: 200px; height: auto"
+                            src="img/sponsors-img/digiKey.png"
+                            alt="DigiKey"
+                          />
+                        </div>
+                        <div>
+                          <h2 class="mlh-price">Grove Beginner Kits</h2>
+                        </div>
+
+                        <label
+                          for="card-best-hw"
+                          class="prize-button"
+                          aria-hidden="true"
+                          style="color: black !important; border-color: black"
+                        >
+                          Details
+                        </label>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="inner">
+                        <div class="description">
+                          <ul style="list-style-type: square">
+                            <li>
+                              Using your preferred hardware or hardware
+                              emulator, build a hack for your chance to win a
+                              Grove Beginner Kit, with Arduino Uno R3
+                              included<br />
+                            </li>
+                            <li>
+                              Two winning teams to be selected for this
+                              category<br />
+                            </li>
+                            <li>
+                              Each winning team member will receive a prize!
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="location">DigiKey</div>
+                        <div class="price">Grove Beginner Kits</div>
+                        <label
+                          for="card-best-hw"
+                          class="prize-button return"
+                          aria-hidden="true"
+                        >
+                          <i class="fas fa-arrow-left"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="prize-wrapper">
+                <div class="prize-card prize-card-size">
+                  <input
+                    type="checkbox"
+                    id="card-best-begin"
+                    class="more"
+                    aria-hidden="true"
+                  />
+                  <div class="prize-content">
+                    <div
+                      class="front"
+                      style="
+                        background: linear-gradient(
+                          180deg,
+                          rgb(0, 215, 253),
+                          rgb(219, 247, 252)
+                        ) !important;
+                      "
+                    >
+                      <div class="inner">
+                        <h6
+                          class="mlh-plan"
+                          style="background-color: black !important"
+                        >
+                          Best Beginner Hack
+                        </h6>
+                        <div
+                          class="ticket-icon"
+                          style="
+                            padding-bottom: 20px !important;
+                            padding-top: 20px !important;
+                          "
+                        >
+                          <img
+                            style="
+                              width: 200px;
+                              height: auto;
+                              padding-top: 10px;
+                              padding-bottom: 10px;
+                            "
+                            src="img/sponsors-img/mlh-logo-color.svg"
+                            alt="DigiKey"
+                          />
+                        </div>
+                        <div>
+                          <h2 class="mlh-price">Grove Starter Kit</h2>
+                        </div>
+
+                        <label
+                          for="card-best-begin"
+                          class="prize-button"
+                          aria-hidden="true"
+                          style="color: black !important; border-color: black"
+                        >
+                          Details
+                        </label>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="inner">
+                        <div class="description">
+                          <ul style="list-style-type: square">
+                            <li>
+                              The Best team of beginners will take home arduino
+                              starter kits to continue hacking on at future
+                              events.<br />
+                            </li>
+                            <li>
+                              Teams must be at least 50% first time hackers to
+                              be eligible.
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="location">MLH</div>
+                        <div class="price">Grove Starter Kits</div>
+                        <label
+                          for="card-best-begin"
+                          class="prize-button return"
+                          aria-hidden="true"
+                        >
+                          <i class="fas fa-arrow-left"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="prize-wrapper">
+                <div class="prize-card prize-card-size">
+                  <input
+                    type="checkbox"
+                    id="card-best-domain"
+                    class="more"
+                    aria-hidden="true"
+                  />
+                  <div class="prize-content">
+                    <div
+                      class="front"
+                      style="
+                        background: linear-gradient(
+                          180deg,
+                          rgb(0, 215, 253),
+                          rgb(219, 247, 252)
+                        ) !important;
+                      "
+                    >
+                      <div class="inner">
+                        <h6
+                          class="mlh-plan"
+                          style="background-color: black !important"
+                        >
+                          Best Domain Name
+                        </h6>
+                        <div
+                          class="ticket-icon"
+                          style="
+                            padding-bottom: 20px !important;
+                            padding-top: 20px !important;
+                          "
+                        >
+                          <img
+                            style="
+                              width: 200px;
+                              height: auto;
+                              padding-top: 30px;
+                              padding-bottom: 30px;
+                            "
+                            src="img/sponsors-img/godaddy.svg"
+                            alt="DigiKey"
+                          />
+                        </div>
+                        <div>
+                          <h2 class="mlh-price">Hack from Home Kit</h2>
+                        </div>
+
+                        <label
+                          for="card-best-domain"
+                          class="prize-button"
+                          aria-hidden="true"
+                          style="color: black !important; border-color: black"
+                        >
+                          Details
+                        </label>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="inner">
+                        <div class="description">
+                          <ul style="list-style-type: square">
+                            <li>
+                              GoDaddy Registry is giving you everything you need
+                              to be the best hacker no matter where you are.<br />
+                            </li>
+                            <li>
+                              Register your domain name with GoDaddy Registry
+                              for a chance to win a Hack from Home Kit!<br />
+                            </li>
+                            <li>
+                              Each Kit contains wireless earbuds, blue light
+                              glasses, selfie ring light and a pouch for easy
+                              transport.
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="location">GoDaddy</div>
+                        <div class="price">Hack from Home Kit</div>
+                        <label
+                          for="card-best-domain"
+                          class="prize-button return"
+                          aria-hidden="true"
+                        >
+                          <i class="fas fa-arrow-left"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!---->
       </div>
     </section>
 
-    <!--Section Breaker Stat/Sponsors-->
-    <div class="section-divider sponser-color unselectable">
+    <!--Section Breaker Prizes/Sponsors-->
+
+    <div class="section-divider tracks-color unselectable">
       <img
         src="./img/Sea creatures/S1.png"
         style="
@@ -421,6 +1452,222 @@
         alt="Sea creature"
         id="sea-creatures"
       />
+      <img
+        src="img/section_breaker_blue/W4.webp"
+        onerror="this.onerror=null;this.src='img/section_breaker_blue/W4.png';"
+      />
+    </div>
+
+    <!--------------------------------------------------------------------------------------------------------------------------->
+    <!--Tracks-->
+
+    <section
+      style="padding-top: 30px"
+      class="what-we-offer-area section-padding-100-70"
+      id="tracks"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading-2">
+              <h4 class="text-center" style="margin-bottom: 70px; color: black">
+                Tracks
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-4 col-xl-4">
+            <div
+              class="single-we-offer-content text-center wow fadeInUp"
+              data-wow-delay="0.3s"
+            >
+              <div
+                style="background-image: none; background: none"
+                class="offer-icon"
+              >
+                <img
+                  src="img/tracks/fun.webp"
+                  onerror="this.onerror=null;this.src='img/tracks/Fun.png';"
+                  alt="Let's Have Fun"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <h5 style="padding-top: 10px">Let's Have Fun</h5>
+              <p>
+                "Recreate a newer version of any of your Favourite Game or any
+                New Game. Not just games, your project can include any hacks
+                that can make you and your pals have Fun together!"
+              </p>
+              <h5>
+                Track Prize<br /><strong><span>₹</span>10,000</strong>
+              </h5>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-xl-4">
+            <div
+              class="single-we-offer-content text-center wow fadeInUp"
+              data-wow-delay="0.3s"
+            >
+              <div
+                style="background-image: none; background: none"
+                class="offer-icon"
+              >
+                <img
+                  src="img/tracks/connect.webp"
+                  onerror="this.onerror=null;this.src='img/tracks/Connect.png';"
+                  alt="Let's Connect"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <h5 style="padding-top: 10px">Let's Connect</h5>
+              <p>
+                "Getting bored with your Virtual Setup? Find ways of making your
+                Virtual Education, Classrooms, Gatherings or even Work From Home
+                more Interactive and Easy to work with!"
+              </p>
+              <h5>
+                Track Prize<br /><strong><span>₹</span>10,000</strong>
+              </h5>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-xl-4">
+            <div
+              class="single-we-offer-content text-center wow fadeInUp"
+              data-wow-delay="0.3s"
+            >
+              <div
+                style="background-image: none; background: none"
+                class="offer-icon"
+              >
+                <img
+                  src="img/tracks/fitness.webp"
+                  onerror="this.onerror=null;this.src='img/tracks/Fitness.png';"
+                  alt="Let's Stay Fit"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <h5 style="padding-top: 10px">Let's Stay Fit</h5>
+              <p>
+                "Health is Wealth! Especially during these tough times. Design
+                ways of keeping yourself and your loved ones safe by making
+                Healthcare more efficient and easily accessible."
+              </p>
+              <h5 style="padding-top: 22px">
+                Track Prize<br /><strong><span>₹</span>10,000</strong>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-4 col-xl-4">
+            <div
+              class="single-we-offer-content text-center wow fadeInUp"
+              data-wow-delay="0.3s"
+            >
+              <div
+                style="background-image: none; background: none"
+                class="offer-icon"
+              >
+                <img
+                  src="img/tracks/contactless.webp"
+                  onerror="this.onerror=null;this.src='img/tracks/Contactless.png';"
+                  alt="Let's Go Contactless"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <h5 style="padding-top: 10px">Let's Go Contactless</h5>
+              <p>
+                "Want to Stay Safe from the Virus 🦠? Going Contactless is the
+                Key. Design a contactless alternative for any activity that
+                requires human interaction!"
+              </p>
+              <h5>
+                Track Prize<br /><strong><span>₹</span>10,000</strong>
+              </h5>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-xl-4">
+            <div
+              class="single-we-offer-content text-center wow fadeInUp"
+              data-wow-delay="0.3s"
+            >
+              <div
+                style="background-image: none; background: none"
+                class="offer-icon"
+              >
+                <img
+                  src="img/tracks/security.webp"
+                  onerror="this.onerror=null;this.src='img/tracks/Security.png';"
+                  alt="Let's Stay Safe"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <h5 style="padding-top: 10px">Let's Stay Safe</h5>
+              <p>
+                "With the surge in Crime Rates, its better to be “Safe than
+                Sorry”. Come up with hacks of making the Community safe, secure
+                and a better place to live in."
+              </p>
+              <h5>
+                Track Prize<br /><strong><span>₹</span>10,000</strong>
+              </h5>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-xl-4">
+            <div
+              class="single-we-offer-content text-center wow fadeInUp"
+              data-wow-delay="0.3s"
+            >
+              <div
+                style="background-image: none; background: none"
+                class="offer-icon"
+              >
+                <img
+                  src="img/tracks/innovate.webp"
+                  onerror="this.onerror=null;this.src='img/tracks/Innovate.png';"
+                  alt="Let's Innovate"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <h5 style="padding-top: 10px">Let's Innovate</h5>
+              <p>
+                "Technology makes your everyday life easy. So put your thinking
+                caps 🧢 on and Innovate!"
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <div class="section-heading-2">
+              <h4
+                class="text-center"
+                style="
+                  margin-top: 40px;
+                  color: black;
+                  font-size: 1.8em !important;
+                "
+              >
+                Check out the <a href="https://hack.mlh.io/software/" target="_blank" >Free APIs</a> available during
+                HackVerse 2.0!
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--TRACKS End-->
+    <div class="section-divider sponser-color unselectables">
       <img
         src="img/section_breaker_blue/W4.webp"
         onerror="this.onerror=null;this.src='img/section_breaker_blue/W4.png';"
@@ -459,6 +1706,7 @@
           </h5>
         </div>
 
+        <!--ROW 1-->
         <div class="row align-items-center">
           <div class="col-6 col-md-4 col-lg-3">
             <a
@@ -469,6 +1717,39 @@
                 src="img/sponsors-img/devfolio.webp"
                 onerror="this.onerror=null;this.src='img/sponsors-img/devfolio.png';"
                 alt="Devfolio"
+            /></a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.digitalocean.com/"
+              ><img
+                src="img/sponsors-img/digital-ocean.webp"
+                onerror="this.onerror=null;this.src='img/sponsors-img/digital-ocean.png';"
+                alt="Digital Ocean"
+            /></a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.geeksforgeeks.org/"
+              ><img
+                src="img/sponsors-img/GFG LOGO-1.png"
+                onerror="this.onerror=null;this.src='img/sponsors-img/GFG LOGO-1.png';"
+                alt="GeeksforGeeks"
+            /></a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.codechef.com/"
+              ><img
+                src="img/sponsors-img/codechef.webp"
+                onerror="this.onerror=null;this.src='img/sponsors-img/codechef.png';"
+                alt="Codechef"
             /></a>
           </div>
           <!-- <div id="wells-fargo" class="col-6 col-md-4 col-lg-3">
@@ -494,39 +1775,9 @@
                 alt="Fidelity"
             /></a>
           </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linode.com/"
-              ><img
-                src="img/sponsors-img/linode-full-RGB-fc.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/linode-full-RGB-fc.png';"
-                alt="Linode"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.digitalocean.com/"
-              ><img
-                src="img/sponsors-img/digital-ocean.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/digital-ocean.png';"
-                alt="Digital Ocean"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.bseipf.com/"
-              ><img
-                src="img/sponsors-img/IPF Logo.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/IPF Logo.jpg';"
-                alt="BSEIPF"
-            /></a>
           </div> -->
+
+          <!--ROW 2-->
           <div class="col-6 col-md-4 col-lg-3">
             <a
               target="_blank"
@@ -564,25 +1815,12 @@
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.stickermule.com/"
-              ><img
-                src="img/sponsors-img/sticker-mule-logo.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/sticker-mule-logo-light.png';"
-                alt="StickerMule"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.geeksforgeeks.org/"
-              ><img
-                src="img/sponsors-img/GFG LOGO-1.png"
-                onerror="this.onerror=null;this.src='img/sponsors-img/GFG LOGO-1.png';"
-                alt="GFG"
+              href="https://www.technoforte.co.in//"
+              ><img src="img/sponsors-img/technofotre.png" alt="technoforte"
             /></a>
           </div>
 
+          <!--ROW 3-->
           <div class="col-6 col-md-4 col-lg-3">
             <a
               target="_blank"
@@ -591,285 +1829,55 @@
               ><img
                 src="img/sponsors-img/echoAR2020.webp"
                 onerror="this.onerror=null;this.src='img/sponsors-img/echoAR2020.webp';"
-                alt="GFG"
-            /></a>
-          </div>
-
-          <!--
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.elastic.co/"
-              ><img
-                id="elastic"
-                src="img/sponsors-img/logo-elastic.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/logo-elastic.svg';"
-                alt="Elastic"
+                alt="echoAR"
             /></a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.gatsbyjs.org/"
+              href="https://yocket.in/"
               ><img
-                id="gatsbyjs"
-                src="img/sponsors-img/Gatsby-Logo.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/Gatsby-Logo.svg';"
-                alt="Gatsby"
+                style="height: 100px"
+                src="img/sponsors-img/yocket-sm.webp"
+                onerror="this.onerror=null;this.src='img/sponsors-img/yocket-sm.png';"
+                alt="Yocket"
             /></a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.unnathi.careers/"
+              href="https://www.qfuss.com/"
               ><img
-                style="padding-bottom: 10%"
-                src="img/sponsors-img/unnathiIBM.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/unnathiIBM.png';"
-                alt="Unnathi Career Academy Pvt. Ltd."
-            /></a>
-          </div>
-          <div id="jet-brains" class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.jetbrains.com/"
-              ><img
-                src="img/sponsors-img/jetbrains-variant-4.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/jetbrains-variant-4.png';"
-                alt="JetBrains"
-            /></a>
-          </div>
-          <div id="zebronics" class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://zebronics.com/"
-              ><img
-                src="img/sponsors-img/zebronics.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/zebronics.jpg';"
-                alt="Zebronics"
+                style="height: 100px"
+                src="img/sponsors-img/qFuss.webp"
+                onerror="this.onerror=null;this.src='img/sponsors-img/qFuss.png';"
+                alt="qFuss"
             /></a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.codechef.com/"
+              href="https://givemycertificate.com/"
               ><img
-                src="img/sponsors-img/codechef.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/codechef.png';"
-                alt="Codechef"
-            /></a>
-          </div>
-          <div id="zulip" class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://zulipchat.com/"
-              ><img
-                src="img/sponsors-img/zulip.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/zulip.png';"
-                alt="Zulip"
-            /></a>
-          </div>
-          <div id="dev" class="col-6 col-md-4 col-lg-3">
-            <a target="_blank" rel="noopener noreferrer" href="https://dev.to/"
-              ><img
-                src="img/sponsors-img/dev.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/dev.png';"
-                alt="DEV"
+                src="img/sponsors-img/GMC.webp"
+                onerror="this.onerror=null;this.src='img/sponsors-img/GMC.png';"
+                alt="givemycertificate"
             /></a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.creative-tim.com/"
+              href="http://hackp.ac/mlh-stickermule-hackathons"
               ><img
-                src="img/sponsors-img/tim-horizontal-logo-transparent-bg.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/tim-horizontal-logo-transparent-bg.png';"
-                alt="Creative Tim"
+                src="img/sponsors-img/sticker-mule-logo.webp"
+                onerror="this.onerror=null;this.src='img/sponsors-img/sticker-mule-logo-light.png';"
+                alt="StickerMule"
             /></a>
           </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://cloudsploit.com/"
-              ><img
-                src="img/sponsors-img/cloudsploit.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/cloudsploit.png';"
-                alt="CloudSploit"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.wolfram.com/language/"
-              ><img
-                src="img/sponsors-img/wolfram.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/wolfram.png';"
-                alt="Wolfram Language"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://codingblocks.com/"
-              ><img
-                src="img/sponsors-img/Logo_DarkGrey_ NoShadow.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/Logo_DarkGrey_ NoShadow.png';"
-                alt="Coding Blocks"
-            /></a>
-          </div>
-          <div id="monster" class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.monsterenergy.com/"
-              ><img
-                src="img/sponsors-img/monster.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/monster.png';"
-                alt="Monster"
-            /></a>
-          </div>
-         
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.bugsee.com/"
-              ><img
-                src="img/sponsors-img/bugsee.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/bugsee.png';"
-                alt="Bugsee"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://balsamiq.com/"
-              ><img
-                src="img/sponsors-img/balsamiq-logo.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/balsamiq-logo-screen.jpg';"
-                alt="Balsamiq"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.sketch.com/"
-              ><img
-                src="img/sponsors-img/sketch-logo-light-transparent@2x.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/sketch-logo-light-transparent@2x.png';"
-                alt="Sketch"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://restdb.io/"
-              ><img
-                style="padding-bottom: 10%"
-                src="img/sponsors-img/restdb-logo.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/restdb-logo-white.png';"
-                alt="restdb.io"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://progate.com/"
-              ><img
-                style="padding-bottom: 10%"
-                src="img/sponsors-img/progate.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/progate.png';"
-                alt="Progate"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a target="_blank" rel="noopener noreferrer" href=""
-              ><img
-                style="padding-bottom: 10%"
-                src="img/sponsors-img/av8.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/av8.png';"
-                alt="AV8 Juice"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a target="_blank" rel="noopener noreferrer" href="https://zubi.io/"
-              ><img
-                style="width: 30%; margin-left: 25%"
-                src="img/sponsors-img/zubi-logo_black.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/zubi-logo_black.png';"
-                alt="Zubi.io"
-            /></a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://rosenfeldmedia.com/"
-              ><img
-                src="img/sponsors-img/rosenfeld.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/rosenfeld.svg';"
-                alt="Rosenfeld"
-            /></a>
-          </div>
-          <div id="sticker-you" class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.stickeryou.com/"
-              ><img
-                src="img/sponsors-img/stickeryou.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/stickeryou.png';"
-                alt="StickerYou"
-            /></a>
-          </div>
-          <div id="memsis" class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="http://memsisrental.com/"
-              ><img
-                src="img/sponsors-img/memsis.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/memsis.png';"
-                alt="Memsis"
-            /></a>
-          </div>
-          <div id="bounce" class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://metrobikes.in/"
-              ><img
-                src="img/sponsors-img/bounce.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/bounce.png';"
-                alt="Bounce"
-            /></a>
-          </div>
-          <div id="fold" class="col-6 col-md-4 col-lg-3">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://fold.money/"
-              ><img
-                src="img/sponsors-img/fold.webp"
-                onerror="this.onerror=null;this.src='img/sponsors-img/fold.png';"
-                alt="Fold Money"
-            /></a>
-          </div> -->
         </div>
       </div>
     </section>
@@ -882,77 +1890,6 @@
         onerror="this.onerror=null;this.src='img/section_breaker_blue/W7.png';"
       />
     </div>
-    
-    
-    <!--------------------------------------------------------------------------------------------------------------------------->
-    <!-- Tracks -->
-    <section id="tracks" class="part-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-12">
-            <div class="section-heading-2">
-              <h4 class="text-center" style="margin-bottom: 70px; color: black">
-                Tracks
-              </h4>
-            </div>
-          </div>
-        </div>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-          "
-        >
-          <img style="width: 40vh" src="./img/Sea creatures/S5.png" alt="pic" />
-          <div
-            class="card text-center text-white bg-primary"
-            style="
-              width: 18rem;
-              height: 7rem;
-              background-color: rgba(0, 0, 0, 0);
-            "
-          >
-            <div class="card-body" style="font-family: Barlow Semi Condensed">
-              <h5 class="card-body">COMING SOON!</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider sponser-color unselectable">
-      <img
-        src="./img/Sea creatures/S1.png"
-        style="
-          height: auto;
-          position: absolute;
-          z-index: 4;
-          left: 1%;
-          transform: translateY(12%);
-        "
-        alt="Sea creature"
-        id="sea-creatures"
-      />
-      <img
-        src="./img/Sea creatures/S4.png"
-        style="
-          height: auto;
-          position: absolute;
-          z-index: 4;
-          right: 1%;
-          transform: translateY(25%);
-        "
-        alt="Sea creature"
-        id="sea-creatures"
-      />
-      <img
-        src="img/section_breaker_blue/W4.webp"
-        onerror="this.onerror=null;this.src='img/section_breaker_blue/W4.png';"
-      />
-    </div>
-
 
     <!--------------------------------------------------------------------------------------------------------------------------->
     <!--FAQ Section-->
@@ -988,8 +1925,8 @@
                 ></a>
                 <div id="faq2" class="collapse" data-parent="#faq-list">
                   <p>
-                    Students enrolled in any college in India can apply for the
-                    hackathon.
+                    Only Current Students (both Indian and International) are
+                    allowed to apply.
                   </p>
                 </div>
               </li>
@@ -1120,16 +2057,22 @@
       />
     </div>
 
-    
     <!--------------------------------------------------------------------------------------------------------------------------->
     <!--Contact Us (Footer)-->
     <!-- Footer Area Start -->
     <footer id="footer" class="footer-area">
       <div class="main-footer-area">
         <div class="container">
-          <div class="row">
+          <div
+            class="row"
+            style="
+              width: 100% !important;
+              position: relative;
+              text-align: center !important;
+            "
+          >
             <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-md-5">
               <div class="single-footer-widget">
                 <!-- Footer Logo -->
                 <a href="#" class="footer-logo">
@@ -1191,7 +2134,7 @@
             </div>
 
             <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-12 col-md-3">
               <div class="single-footer-widget">
                 <!-- Widget Title -->
                 <h5 class="widget-title">Contact</h5>
@@ -1228,14 +2171,32 @@
               </div>
             </div>
 
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-md-3">
+              <div class="single-footer-widget">
+                <h5 class="widget-title" style="text-align: center !important">
+                  Community Partners
+                </h5>
+                <div class="comm-part">
+                  <a href="https://hackon.tech/">hackon.tech</a><br />
+                  <a href="https://nitk.acm.org/">ACM NITK</a><br />
+                  <a href="https://ie.nitk.ac.in/">IE NITK</a><br />
+                  <a href="https://ieee.nitk.ac.in/">IEEE NITK</a><br />
+                  <a href="https://ietnitk.netlify.app/">IET NITK</a><br />
+                  <a href="https://iste.nitk.ac.in/">ISTE NITK</a><br />
+                  <a href="https://webclub.nitk.ac.in/">WEC NITK</a><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single Footer Widget Area -->
+          <div class="row">
+            <div class="col-12">
               <div class="single-footer-widget">
                 <h5 class="widget-title">Campus</h5>
 
                 <div class="footer-gallery" style="pointer-events: none">
                   <div class="row">
-                    <div class="col-4">
+                    <div class="col-6 col-md-2">
                       <a href="/img/nitk/01.webp" class="single-gallery-item"
                         ><img
                           src="img/nitk/01.webp"
@@ -1243,7 +2204,7 @@
                           alt="NITK, Surathkal"
                       /></a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-md-2">
                       <a href="/img/nitk/02.webp" class="single-gallery-item"
                         ><img
                           src="img/nitk/02.webp"
@@ -1251,7 +2212,7 @@
                           alt="NITK, Surathkal"
                       /></a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-md-2">
                       <a href="/img/nitk/03.webp" class="single-gallery-item"
                         ><img
                           src="img/nitk/03.webp"
@@ -1259,7 +2220,7 @@
                           alt="NITK, Surathkal"
                       /></a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-md-2">
                       <a href="/img/nitk/04.webp" class="single-gallery-item"
                         ><img
                           src="img/nitk/04.webp"
@@ -1267,7 +2228,7 @@
                           alt="NITK, Surathkal"
                       /></a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-md-2">
                       <a href="/img/nitk/05.webp" class="single-gallery-item"
                         ><img
                           src="img/nitk/05.webp"
@@ -1275,7 +2236,7 @@
                           alt="NITK, Surathkal"
                       /></a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-md-2">
                       <a href="/img/nitk/06.webp" class="single-gallery-item">
                         <img
                           src="img/nitk/06.webp"
@@ -1291,14 +2252,13 @@
         </div>
       </div>
 
-
-    <!--------------------------------------------------------------------------------------------------------------------------->      
+      <!--------------------------------------------------------------------------------------------------------------------------->
       <!-- Copywrite Area -->
       <div class="container">
         <div class="copywrite-content">
           <div class="row">
             <!-- Copywrite Text -->
-            <div class="col-12 text-center">
+            <div class="col-12 col-md-6 text-center">
               <div class="copywrite-text">
                 <p style="color: white">
                   Copyright &copy; 2021 All rights reserved |
@@ -1320,7 +2280,7 @@
               </div>
             </div>
             <!-- Footer Menu -->
-            <div class="col-12 text-center">
+            <div class="col-12 col-md-6 text-center">
               <div class="footer-menu">
                 <ul class="nav">
                   <!-- <li>
@@ -1334,14 +2294,31 @@
                   </li> -->
                   <li>
                     <a
-                      style="color: white"
                       target="_blank"
                       rel="noopener noreferrer"
                       href="https://mlh.io/code-of-conduct"
                     >
-                      Code of Conduct</a
+                      • MLH Code of Conduct</a
                     >
                   </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://devfolio.co/code-of-conduct"
+                    >
+                      • Devfolio Code of Conduct</a
+                    >
+                  </li>
+                  <!-- <li>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://docs.google.com/document/d/11bLxjeImDEEguhUjzwwHuEG-50-yyU8iThFozofGKzI/edit"
+                    >
+                      • Terms & Conditions</a
+                    >
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -1350,8 +2327,7 @@
       </div>
     </footer>
 
-    
-    <!--------------------------------------------------------------------------------------------------------------------------->    
+    <!--------------------------------------------------------------------------------------------------------------------------->
     <!-- Footer Area End -->
     <!--Contact Us (Footer)-->
     <div class="fabs">
@@ -1430,14 +2406,14 @@
         </button>
       </div>
     </div>
-    
-    
+
     <!--------------------------------------------------------------------------------------------------------------------------->
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
@@ -1453,6 +2429,7 @@
       AOS.init();
     </script>
     <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
     <!-- <script src="js/script.js"></script> -->
     <script>
       var welcomeElement = document.getElementsByClassName("welcome")[0];
@@ -1509,8 +2486,32 @@
       //   $(this).addClass("mdc-fab--mini").removeClass("mdc-fab--extended");
       //   $(this).find(".mdc-fab__label").addClass("hidden");
       // });
+
+      function handleTickInit(tick) {
+        const counter = Tick.count.down("2021-02-27T00:00:00Z");
+        console.log(counter);
+        setTimeout((_) => {
+          tick.value = counter.value;
+          counter.onupdate = (value) => {
+            tick.value = value;
+          };
+        }, 1000);
+        counter.onended = (_) => {
+          // Have to add code to make the counter hidden here
+        };
+        // data-value="[00,00,00,00]"
+        // arrive(8, .01) -> round ->
+      }
+
+      $(".active-now").next().slideToggle();
+      $(".row4").next().slideToggle();
+      $(".member-title").click(function(e) {
+        console.log("Clicked");
+        $(this).next().slideToggle();
+        $(this).next().next().next().slideToggle();
+      })
     </script>
-    
+
     <a
       id="mlh-trust-badge"
       style="
