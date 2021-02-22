@@ -10,6 +10,7 @@ body {
   color: #fff;
   font-family: "Poppins";
   font-weight: normal;
+  cursor: default;
 }
 
 /* Welcome Section */
