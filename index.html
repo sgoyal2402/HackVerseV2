@@ -197,26 +197,29 @@
 
         <div class="row">
           <div class="col-12">
-            <div class="section-heading-2" style="margin-bottom: 0px !important; margin-top: 40px;">
-              <h3 class="text-center schedule-header" style=  "color: black;">
+            <div
+              class="section-heading-2"
+              style="margin-bottom: 0px !important; margin-top: 40px"
+            >
+              <h3 class="text-center schedule-header" style="color: black">
                 Schedule
               </h3>
             </div>
           </div>
           <div class="col-12">
             <div id="timeline-content">
-              <div><h4 style="text-align:left">27 Feb 2021</h4></div>
-                
+              <div><h4 style="text-align: left">27 Feb 2021</h4></div>
+
               <ul class="timeline">
-                <li class="event" data-date="10:00AM" style="color:black">
-                  <div class="member-infos" >
-                    <h1 class="member-title active-now" >Opening Ceremony</h1>
+                <li class="event" data-date="10:00AM" style="color: black">
+                  <div class="member-infos">
+                    <h1 class="member-title active-now">Opening Ceremony</h1>
                     <!-- <h2 class="member-location "><a href="">Join us on Discord</a></h2> -->
                   </div>
                 </li>
-                <li id='fader' class="event" data-date="12:00pm">
+                <li id="fader" class="event" data-date="12:00pm">
                   <div class="member-infos">
-                    <h1 class="member-title" >Coding Begins</h1>
+                    <h1 class="member-title">Coding Begins</h1>
                   </div>
                 </li>
                 <li class="event" data-date="5:00pm">
@@ -225,18 +228,22 @@
                   </div>
                 </li>
               </ul>
-    
-              <div><h4 style="text-align:left; padding-top:20px">28 Feb 2021</h4></div>
-              
+
+              <div>
+                <h4 style="text-align: left; padding-top: 20px">28 Feb 2021</h4>
+              </div>
+
               <ul class="timeline">
-                <li class="event" data-date="12:00PM" style="color:black">
-                  <div class="member-infos" >
-                    <h1 class="member-title" >Coding Ends, Judging Begins</h1>
+                <li class="event" data-date="12:00PM" style="color: black">
+                  <div class="member-infos">
+                    <h1 class="member-title">Coding Ends, Judging Begins</h1>
                   </div>
                 </li>
-                <li id='fader' class="event" data-date="6:00pm">
+                <li id="fader" class="event" data-date="6:00pm">
                   <div class="member-infos">
-                    <h1 class="member-title" >Live Judging and Closing Ceremony</h1>
+                    <h1 class="member-title">
+                      Live Judging and Closing Ceremony
+                    </h1>
                   </div>
                 </li>
                 <li class="event" data-date="9:00pm">
@@ -245,14 +252,10 @@
                   </div>
                 </li>
               </ul>
-
             </div>
           </div>
         </div>
-        
 
-
-        
         <!-- <div class="row justify-content-center">
           <div class="col-9 iframe-container">
             <iframe
@@ -1658,8 +1661,11 @@
                   font-size: 1.8em !important;
                 "
               >
-                Check out the <a href="https://hack.mlh.io/software/" target="_blank" >Free APIs</a> available during
-                HackVerse 2.0!
+                Check out the
+                <a href="https://hack.mlh.io/software/" target="_blank"
+                  >Free APIs</a
+                >
+                available during HackVerse 2.0!
               </h4>
             </div>
           </div>
@@ -2310,15 +2316,15 @@
                       • Devfolio Code of Conduct</a
                     >
                   </li>
-                  <!-- <li>
+                  <li>
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://docs.google.com/document/d/11bLxjeImDEEguhUjzwwHuEG-50-yyU8iThFozofGKzI/edit"
+                      href="./docs/HackVerse Terms & Conditions.pdf"
                     >
                       • Terms & Conditions</a
                     >
-                  </li> -->
+                  </li>
                 </ul>
               </div>
             </div>
@@ -2505,11 +2511,11 @@
 
       $(".active-now").next().slideToggle();
       $(".row4").next().slideToggle();
-      $(".member-title").click(function(e) {
+      $(".member-title").click(function (e) {
         console.log("Clicked");
         $(this).next().slideToggle();
         $(this).next().next().next().slideToggle();
-      })
+      });
     </script>
 
     <a
