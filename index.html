@@ -2427,10 +2427,33 @@
       </div>
 
       <div class="social-icons hidden">
+          <button
+            style="background-color: rgb(230, 118, 14)"
+            class="mdc-fab mdc-fab--mini"
+            aria-label="TnC"
+            data-toggle="tooltip" title="Terms and Conditions"
+          >
+          <div class="mdc-fab__ripple"></div>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="./docs/HackVerse Terms & Conditions.pdf"
+            class="mdc-fab__icon fas fa-file-contract"
+            >
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="./docs/HackVerse Terms & Conditions.pdf"
+            class="mdc-fab__label hidden"
+            >TnC</a
+          >
+        </button>
         <button
           style="background-color: hsl(203, 89%, 53%)"
           class="mdc-fab mdc-fab--mini"
           aria-label="Telegram"
+          data-toggle="tooltip" title="HackVerse 2.0 Telegram"
         >
           <div class="mdc-fab__ripple"></div>
           <a
@@ -2451,7 +2474,7 @@
           style="background-color: rgb(66, 66, 66)"
           class="mdc-fab mdc-fab--mini"
           aria-label="blog"
-          data-tip="Hacverse Blog"
+          data-toggle="tooltip" title="HackVerse 2.0 Blog"
         >
           <div class="mdc-fab__ripple"></div>
           <a
@@ -2473,7 +2496,7 @@
           style="background-color: rgb(87, 196, 84)"
           class="mdc-fab mdc-fab--mini"
           aria-label="mail"
-          data-tip="Email"
+          data-toggle="tooltip" title="Mail Us"
         >
           <div class="mdc-fab__ripple"></div>
           <a
@@ -2519,6 +2542,10 @@
     <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
     <!-- <script src="js/script.js"></script> -->
     <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+
       var welcomeElement = document.getElementsByClassName("welcome")[0];
       var imageURL = "";
       var date = new Date();
