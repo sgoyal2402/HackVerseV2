@@ -93,13 +93,13 @@
             </h1>
           </a>
           <div class="extras">
-            <div class="date">
+            <div class="alert alert-light date">
               <span
-                class="material-icons mobile-view-icon"
+                class="material-icons"
                 style="margin-right: 5px"
                 >calendar_today</span
               >
-              <span class="mobile-view-date" style="text-align: left">
+              <span style="text-align: left; color:black">
                 27-28th Feb, 2021</span
               >
             </div>
@@ -108,23 +108,23 @@
                 href="http://hackverse.nitk.ac.in/HackVerse-20"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="revisit"
+                class="revisit alert alert-light"
               >
                 <span
-                  class="material-icons mobile-view-icon"
+                  class="material-icons"
                   style="margin-right: 5px"
                   >history</span
                 >
-                <span class="mobile-view-date" style="text-align: left"
+                <span style="text-align: left; color:black"
                   >Revisit HackVerse '20</span
                 >
               </a>
             </div>
           </div>
           <div class="extras">
-            <div class="alert alert-danger date" style="color: red">
-              <i class="fas fa-exclamation-circle mr-2" aria-hidden="true"></i>
-              Registrations Close on 24th Feb!
+            <div class="alert alert-success date" style="color: #7289da">
+              <i class="fab fa-discord mr-2" aria-hidden="true"></i>
+              <a href="https://discord.gg/sMNZvATkCr" style="color: purple">Join Our Discord Server</a>
             </div>
           </div>
           <div
@@ -2575,7 +2575,7 @@
       // });
 
       function handleTickInit(tick) {
-        const counter = Tick.count.down("2021-02-27T00:00:00Z");
+        const counter = Tick.count.down("2021-02-27T04:30:00Z");
         console.log(counter);
         setTimeout((_) => {
           tick.value = counter.value;

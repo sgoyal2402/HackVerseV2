@@ -72,10 +72,15 @@ body {
 
 .alert {
   padding: 0.5rem 1rem;
+  margin-bottom: 0rem;
+}
+
+.alert-light{
+  background-color: rgb(255, 255, 255, 0.5);
 }
 
 .extras {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .extras .material-icons {
