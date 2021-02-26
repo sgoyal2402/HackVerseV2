@@ -40,7 +40,7 @@ let adv_info = [{
         designation: 'Dean Alumni Affairs and Institutional Relations'
     },
     {
-        name: 'Prof. Aloysius Henry Sequeira',
+        name: 'Prof. M.S. Bhat',
         image_path: 'adv-com/ahs.jpg',
         email: 'ahs@nitk.ac.in',
         linkedin: '#',
@@ -81,13 +81,7 @@ let adv_info = [{
         linkedin: '#',
         designation: 'Associate Dean'
     },
-    {
-        name: "Prof. S. M. Murigendrappa",
-        image_path: "adv-com/S M Murigendrappa-05.JPG",
-        email: "smm@nitk.ac.in",
-        linkedin: "#",
-        designation: "Chairman, Diamond jubilee Core Committee"
-    }
+    
 ]
 
 let fac_info = [{
@@ -117,7 +111,7 @@ let fac_info = [{
 let student_info=[
     {
       "Timestamp": "1/28/2021 19:40:04",
-      "name": "Tharun K",
+      "name": " Tharun K ",
       "image_path": 'students/Tharun Kumar.webp',
       "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1tsLwIsXu16sxqWQSMUWZwiml2z0dCXxn",
       "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1a4yyWRmEyVgvtQbrQrBsm8SazOjKqmPS",
@@ -261,7 +255,7 @@ let student_info=[
     },
     {
       "Timestamp": "1/29/2021 17:33:04",
-      "name": "Rugved",
+      "name": "Rugved Pande",
       "image_path": 'students/RUGVED PRASHANT PANDE..png',
       "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1bakdKbg-MIM12QbeksjFKtrNVvH8IFTp",
       "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1AbayVIWe8LDH4C0_t9VTxsQwFVrxvOuR",
@@ -576,7 +570,7 @@ let student_info=[
     },
     {
       "Timestamp": "1/30/2021 15:04:03",
-      "name": "NISHTHA KUMARI",
+      "name": "Nishtha Kumari",
       "image_path": 'students/NISHTHA KUMARI.webp',
       "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1ejlEyIvmUuHRcc_wvKkLgnUP1ZRFQ8H4",
       "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1ie14V0YlYtlCqcdtlDg8Xar72oRRDxvY",
@@ -627,13 +621,14 @@ function insert_in_div(insert_div, persons,type) {
         else{
             col = "#add8e6";
         }
-        if (person.designation === undefined) person.designation = ''
+        if (person.designation === undefined) person.designation = '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'
+        else person.designation=person.designation+'&nbsp&nbsp'
         div_text = `
-            <div class="col-12 col-md-6 col-lg-3 ">
-            <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" style="z-index:auto;" data-wow-delay="300ms">
+            <div class="col-12 col-md-6 col-lg-3">
+            <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" style="z-index:auto;text-align:center;" data-wow-delay="300ms">
                 <!-- Thumb -->
                 <div class="speaker-single-thumb">
-                    <img src="img/team_page/` + person.image_path + `" class="img-fluid" style="height:280px;border-radius:8%; width:210px;  ">
+                    <img src="img/team_page/` + person.image_path + `" class="img-fluid" style="height:280px;border-radius:6%; width:210px;  ">
                 </div>
                 <!-- Social Info -->
                 <div class="social-info">
@@ -652,16 +647,6 @@ function insert_in_div(insert_div, persons,type) {
     })
 }
 
-function compare(a, b) {
-    if (a.name < b.name) {
-        return -1;
-    }
-    if (a.name > b.name) {
-        return 1;
-    }
-    return 0;
-}
-
 var p_div = document.getElementById('p').getElementsByClassName('row')[0]
 insert_in_div(p_div, p_info,'p')
 
@@ -671,14 +656,15 @@ insert_in_div(adv_div, adv_info,'adv')
 var fac_div = document.getElementById('facad').getElementsByClassName('row')[0]
 insert_in_div(fac_div, fac_info,'facad')
 
-var student_div = document.getElementById('students').getElementsByClassName('row')[0]
 
-student_info.sort(compare)
+
+var student_div = document.getElementById('students').getElementsByClassName('row')[0]
 insert_in_div(student_div, student_info,'s')
 //student_info[1].sort(compare)
 //student_info[2].sort(compare)
 // insert_in_div(student_div, student_info[1],'s')
 // insert_in_div(student_div, student_info[2],'s')
+
 function removee() {var i=0;
   for(i=1;i<=4;i++)
   document.getElementById(i).classList.remove("active");
