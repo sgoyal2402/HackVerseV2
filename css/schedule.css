@@ -185,10 +185,14 @@
   margin-left: 6px;
 }
 
+.timeline .member-location ul{
+  padding-inline-start: 0px !important;
+}
+
 @media only screen and (max-width: 993px) {
     .schedule-header{font-size: 2.5em;}
     .timeline h1{font-size: 1.1em;}
-    .timeline h2 {font-size: 1em;}
+    .timeline .member-location li h5{font-size: 1em;}
     .timeline{padding-inline-start: 20px !important;}
     .timeline .event:after {left: -1.7em !important;}
     .timeline .event:before{
@@ -202,7 +206,7 @@
     #timeline-content{margin-top: 30px;}
     #timeline-content h4{font-size: 1.3em;}
     .timeline h1{font-size: 0.95em;}
-    .timeline h2 {font-size: 0.85em;}
+    ..timeline .member-location li h5{font-size: 0.85em;}
     .timeline{padding-inline-start: 10px !important;}
     .timeline .event:after {left: -1.1em !important;}
     .timeline .event:before{
@@ -216,22 +220,11 @@
     #timeline-content{margin-top: 20px;}
     #timeline-content h4{font-size: 1.1em;}
     .timeline h1{font-size: 0.8em;}
-    .timeline h2 {font-size: 0.7em;}
-    .timeline{padding-inline-start: 5px !important;}
-    .timeline .event:after {left: -0.8em !important;}
+    .timeline .member-location li h5{font-size: 0.7em; font-weight: 600;}
+    .timeline{padding-inline-start: 0px !important;}
+    .timeline .event:after {left: -0.5em !important;}
     .timeline .event:before{
         left:-11em !important;
         font-size: 0.8em;
     }
 }
-
-<!-- Greetings from HackVerse 2.0 -->
-
-HackVerse 2.0 presents to you, Make With HackVerse: Your First Desktop Application Using Java and MySQL.🥳
-Speaker: Manas Trivedi
-Date 📆: 26 February 2021
-Time⏱️: 4:00 PM
-Link: https://youtu.be/kfKOjI9cOOg
-
-It's going to be a hands-on session. Make sure you have the required software installed before the session.
-Installation guide link: http://bit.ly/37Moerg.
