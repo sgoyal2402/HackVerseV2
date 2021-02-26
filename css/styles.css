@@ -177,7 +177,7 @@ body {
   }
 
   .title {
-    font-size: 48px;
+    font-size: 48px !important;
     text-align: left;
   }
 
