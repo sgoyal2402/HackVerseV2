@@ -28,7 +28,12 @@
 
 	.prize-card-size{
 		width: 350px;
-		height: 340px;
+		height: 390px;
+	}
+
+	.prize-card-size-p{
+		width: 350px;
+		height: 290px;
 	}
 	
 	.api-card-size {
@@ -285,7 +290,6 @@
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 1; 
-    padding-top:12px;
 		padding-bottom:12px;
 	}
 

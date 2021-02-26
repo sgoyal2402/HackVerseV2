@@ -72,10 +72,15 @@ body {
 
 .alert {
   padding: 0.5rem 1rem;
+  margin-bottom: 0rem;
+}
+
+.alert-light{
+  background-color: rgb(255, 255, 255, 0.5);
 }
 
 .extras {
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .extras .material-icons {
@@ -762,7 +767,8 @@ body {
   color: #fff;
 }
 
-#faq #faq-list a.collapsed {
+#faq #faq-list a.collapsed,
+#sch #sch-list h1.collapsed {
   color: #fff;
 }
 
@@ -794,6 +800,10 @@ body {
 }
 
 #faq a:not(.collapsed) .fa-plus-circle::before {
+  content: "\f056";
+}
+
+#sch h1:not(.collapsed) .fa-plus-circle::before {
   content: "\f056";
 }
 
