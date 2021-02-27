@@ -87,7 +87,7 @@
           <img class="banner" src="./img/Banner.png" alt="EVENT BY NITK" />
           <h1 class="subtitle mt-3">24-HOUR NATION WIDE HACKATHON</h1>
             <h1 class="title">
-                <a href="https://youtu.be/AooUtb5dGUI" target="_blank" style="color:black">
+                <a href="https://youtu.be/AooUtb5dGUI" class="title" target="_blank" style="color:black"></a>
                   HACK<span style="color: #233452">VERSE</span>
               <span style="color: #db2121">2.0</span>
             </a>
@@ -170,7 +170,31 @@
           </div>
         </div>
 
-        <div class="text-center" style="padding-bottom: 50px">
+        <div class="row justify-content-center">
+          <div class="col-9 iframe-container">
+            <iframe
+              class="responsive-iframe"
+              src="https://www.youtube.com/embed/v6s543aH948"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="section-heading-2"
+              style="margin-bottom: 0px !important; margin-top: 50px"
+            >
+              <h3 class="text-center schedule-header" style="color: black">
+                Coding Begins In
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="text-center" style="padding-bottom: 40px; padding-top: 100px">
           <div class="tick" data-did-init="handleTickInit">
             <div
               data-repeat="true"
@@ -215,7 +239,7 @@
                 <li class="event" data-date="09:30AM" style="color: black">
                   <div class="member-infos">
                     <h1 class="member-title active-sch" style="cursor: pointer">
-                      Opening Ceremony
+                      Opening Ceremony - <a href="https://youtu.be/v6s543aH948" target="_blank">Join On Youtube</a>
                       <i class="fa fa-plus-circle float-right exp-sch"></i>
                     </h1>
                     <div class="member-location" style="padding-top:5px;">
@@ -2211,6 +2235,9 @@
                 <p style="color: #fff; margin-top: -20px">
                   Hack it till you crack it!
                 </p>
+                <p style="margin-top: -10px">
+                  <a style="color: rgb(0, 255, 242); " href="team.html" target="_blank">Team HackVerse 2.0</a>
+                </p>
 
                 <!-- Social Info -->
                 <div class="social-info">
@@ -2392,7 +2419,7 @@
                     ></i>
                     by
                     <a
-                      href="http://hackverse.nitk.ac.in/HackVerse-20/team"
+                      href="team.html"
                       target="_blank"
                       >HackVerse Team</a
                     >
@@ -2637,7 +2664,7 @@
       // });
 
       function handleTickInit(tick) {
-        const counter = Tick.count.down("2021-02-27T04:00:00Z");
+        const counter = Tick.count.down("2021-02-27T06:30:00Z");
         console.log(counter);
         setTimeout((_) => {
           tick.value = counter.value;
