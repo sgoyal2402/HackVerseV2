@@ -111,7 +111,7 @@ let fac_info = [{
 let student_info=[
     {
       "Timestamp": "1/28/2021 19:40:04",
-      "name": " Tharun K ",
+      "name": "Tharun K ",
       "image_path": 'students/Tharun Kumar.webp',
       "Your photo - JPG/JPEG format (3:4 width-height)": "https://drive.google.com/open?id=1tsLwIsXu16sxqWQSMUWZwiml2z0dCXxn",
       "Your photo - WebP format (3:4 width-height)": "https://drive.google.com/open?id=1a4yyWRmEyVgvtQbrQrBsm8SazOjKqmPS",
@@ -657,8 +657,18 @@ var fac_div = document.getElementById('facad').getElementsByClassName('row')[0]
 insert_in_div(fac_div, fac_info,'facad')
 
 
+function compare(a, b) {
+  if (a.name < b.name) {
+      return -1;
+  }
+  if (a.name > b.name) {
+      return 1;
+  }
+  return 0;
+}
 
 var student_div = document.getElementById('students').getElementsByClassName('row')[0]
+student_info.sort(compare)
 insert_in_div(student_div, student_info,'s')
 //student_info[1].sort(compare)
 //student_info[2].sort(compare)
