@@ -182,6 +182,18 @@
           </div>
         </div>
 
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="section-heading-2"
+              style="margin-bottom: 0px !important; margin-top: 50px"
+            >
+              <h3 class="text-center schedule-header" style="color: black">
+                Coding Begins In
+              </h3>
+            </div>
+          </div>
+        </div>
         <div class="text-center" style="padding-bottom: 40px; padding-top: 100px">
           <div class="tick" data-did-init="handleTickInit">
             <div
@@ -2652,7 +2664,7 @@
       // });
 
       function handleTickInit(tick) {
-        const counter = Tick.count.down("2021-02-27T04:00:00Z");
+        const counter = Tick.count.down("2021-02-27T06:30:00Z");
         console.log(counter);
         setTimeout((_) => {
           tick.value = counter.value;
